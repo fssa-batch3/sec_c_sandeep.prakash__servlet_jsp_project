@@ -4,9 +4,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Book and Play</title>
   <link rel="stylesheet" type="text/css"
 	href="/bookandplay-web/assets/css/userlogin.css">
+		    <link rel="icon" type="image/icon" href="https://iili.io/J9lLgxR.png">
 </head>
 <body>
 <div id="container">
@@ -14,7 +15,7 @@
     <div class="forms">
       <h1 class="sign">Sign in</h1>
       <form id="loginform"  action="userlogin" method="post">
-        <input type="email"   name="uemail_id"placeholder="Email address " id="email" aria-label="email" pattern="^[a-zA-Z0-9][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+        <input type="email"   name="uemail_id"placeholder="Email address " id="email" aria-label="email" pattern="^[a-zA-Z0-9][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" autofocus>
 <br>
         <input type="password" name="userpass" placeholder="Password" id="password" aria-label="password" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
         title="PLease fill the password with one symbols and Upper case" required>
@@ -26,7 +27,7 @@
         <p class="newsign">New user</p>
 <br>
         <!-- <button id="newlogin" type="button" onclick="getData()">Create New Account</button><br> -->
-        <a href="../../pages/login/signup.html">
+        <a href="/bookandplay-web/usersignup.jsp">
 <input type="button" value="Create New Account" id="newlogin"
             aria-label="button"></a>
 <br>

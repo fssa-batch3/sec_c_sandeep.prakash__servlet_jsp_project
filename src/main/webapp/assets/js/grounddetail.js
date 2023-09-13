@@ -1113,7 +1113,7 @@ extraHours.addEventListener("change", () => {
   } else if (value == 3) {
     p_priceamount.innerText = three;
   } else {
-    p_priceamount.innerText = show2.ground_price;
+    p_priceamount.innerText = show2.price;
   }
 });
 

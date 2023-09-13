@@ -45,32 +45,36 @@ public class UpdateUser extends HttpServlet {
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		PrintWriter out = response.getWriter();
 		String id = request.getParameter("uId");
+		System.out.println(id);
 	
 		String fName = request.getParameter("fname");
 		System.out.println(fName+"update");
-		String lName = request.getParameter("lname");
-		System.out.println(request.getParameter("uphonenumber"));
-	long phoneNumber =Long.parseLong( request.getParameter("uphonenumber"));
+		String lName = request.getParameter("lname1");
+		//System.out.println(request.getParameter("uphonenumber1"));
+	long phoneNumber =Long.parseLong(request.getParameter("uphonenumber1"));
 	System.out.println(phoneNumber);
 		//String userPass = request.getParameter("upassword");
 		String userPlayerStatus = request.getParameter("joinplayer");
 		
 		System.out.println(userPlayerStatus);
-		String userAge = request.getParameter("uage");
+		String userAge = request.getParameter("uage1");
 			
 		System.out.println(userAge);
-		String userGender = request.getParameter("ugender");
+		String userGender = request.getParameter("ugender1");
 		System.out.println(userGender);
-		String userLocation = request.getParameter("ulocation");
-		String startTimeStr = request.getParameter("ustartTime");
-		String endTimeStr = request.getParameter("uendTime");
-		String aboutplayer=request.getParameter("uabout");
-		String[] selectedSports = request.getParameterValues("sportsKnown");
+		String userLocation = request.getParameter("ulocation1");
+		String startTimeStr = request.getParameter("ustartTime1");
+		String endTimeStr = request.getParameter("uendTime1");
+		String aboutplayer=request.getParameter("uabout1");
+		String[] selectedSports = request.getParameterValues("sportsKnown1");
+		System.out.println(Arrays.toString(selectedSports)+"datas");
 		
+System.out.println(startTimeStr+"mavan");
+System.out.println(endTimeStr+"mavaniii");
 
 		LocalTime localTime = null;
 		LocalTime localTime2 = null;
-		if(startTimeStr!=null) {
+		if(startTimeStr!="") {
 			try {
 				SimpleDateFormat inputFormat = new SimpleDateFormat("hh:mm a");
 				Date date = inputFormat.parse(startTimeStr);
@@ -84,7 +88,7 @@ public class UpdateUser extends HttpServlet {
 
 			
 		}
-		if(endTimeStr!=null) 
+		if(endTimeStr!="") 
 		{
 			
 			try {
@@ -99,7 +103,7 @@ public class UpdateUser extends HttpServlet {
 			}
 		}
 		boolean status=true;
-		if(userPlayerStatus==null) {
+		if( Boolean.parseBoolean(userPlayerStatus)==false) {
 			status=false;
 		}
 		
@@ -117,7 +121,6 @@ public class UpdateUser extends HttpServlet {
 			User user1 = new UserBuilder().userIdBuild(Integer.parseInt(id))
 					.firstNameBuild(fName).lastNameBuild(lName)
 					.phoneNumberBuild(phoneNumber)
-		
 					.playerStatusBuild(status)
 					.ageBuild(Integer.parseInt(userAge))
 					.genderBuild(userGender).knownSportsBuild(Arrays.asList(selectedSports)).locationBuild(userLocation)
@@ -128,8 +131,9 @@ public class UpdateUser extends HttpServlet {
 				if (us.updateUserPlayer(user1)) {
 					out.append("<h1>success registereds</h1>");
 					out.println("success");
-					RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/userlogin.jsp");
-					dispatcher.forward(request, response);
+					System.out.println("update don");
+//					RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/userlogin.jsp");
+//					dispatcher.forward(request, response);
 				}
 
 			} catch (DAOException | SQLException e) {
@@ -149,8 +153,9 @@ public class UpdateUser extends HttpServlet {
 				if (us.updateUserOnly(user2)) {
 					out.append("<h1>success updated</h1>");
 					out.println("success");
-					RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/userlogin.jsp");
-					dispatcher.forward(request, response);
+					System.out.println("update don");
+//					RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/userlogin.jsp");
+//					dispatcher.forward(request, response);
 				}
 				else {
 					

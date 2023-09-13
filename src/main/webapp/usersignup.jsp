@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Book and Play</title>
 
     <link rel="icon" type="image/icon" href="../../assets/images/faviicon...png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -13,6 +13,7 @@
   <link rel="stylesheet" type="text/css"
 	href="/bookandplay-web/assets/css/usersignup.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    	    <link rel="icon" type="image/icon" href="https://iili.io/J9lLgxR.png">
 </head>
 <body>
 

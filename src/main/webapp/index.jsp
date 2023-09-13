@@ -6,9 +6,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Book and Play</title>
   <link rel="stylesheet" type="text/css"
 	href="/bookandplay-web/assets/css/index.css">
+		    <link rel="icon" type="image/icon" href="https://iili.io/J9lLgxR.png">
 </head>
 <body>
 <!-- header -->

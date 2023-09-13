@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Book and Play</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
@@ -13,23 +13,22 @@
         integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-      <link rel="stylesheet" type="text/css" href="/bookandplay-web/assets/css/groundregistration.css">
-   
+    
+     <link rel="stylesheet" type="text/css"
+	href="/bookandplay-web/assets/css/groundregistration.css">
+		    <link rel="icon" type="image/icon" href="https://iili.io/J9lLgxR.png">
 </head>
 <body>
       <div class="formcontainer">
-        <button class="closebtn">
-            <i class="fa-solid fa-xmark fa-bounce"></i>
-        </button>
 
         <form id="formbtn" action="groundregistration1" method="post">
             <div class="box1">
                 <div class="groundname">
                     <label class="labelgroname"> Ground Name:</label>
-                    <input type="name" placeholder="Ground Name " id="groname" name="groname1" aria-label="name"
+                    <input type="name" placeholder="Ground Name" id="groname" name="groname1" aria-label="name"
                         pattern="^[a-zA-Z ]{3,50}$"
                         title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 50 characters."
-                        required>
+                        required autofocus>
                     <br>
                 </div>
 

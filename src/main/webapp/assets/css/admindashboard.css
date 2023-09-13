@@ -1,0 +1,778 @@
+@charset "ISO-8859-1";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+
+
+.sidebar{
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+    grid-template-rows: 99vh;
+    grid-gap: 30px;
+   
+}
+.sidebar1{
+    background-color: rgba(32,56,120,255);
+    position: relative;
+    left: 10px;
+    border-radius: 10px;
+  margin: 10px 10px;
+  /* position: static; */
+}
+.sidebar2{
+    background-color: rgba(241, 251, 255, 255);
+    position: relative;
+    height: 90vh;
+    right: 5px;
+    border-radius: 10px;
+  margin: 30px 0px;
+}
+
+.profileimg{
+    width: 130px;
+    height: 130px;
+    padding: 37px 30px;
+    border-radius: 50px;
+}
+.nameperson{
+        position: relative;
+        right: 10px;
+        color: #fff;
+}
+.name-rankdisplay{
+    position: relative;
+    left: 50px;
+    bottom: 30px;
+}
+.rankdisplay{
+    display: flex;
+position: relative;
+top: 30px;
+}
+.rank{
+    position: relative;
+    right: 10px;
+}
+#editbutton{
+    width: 130px;
+    height: 30px;
+    position: relative;
+    left: 38px;
+    bottom: 10px;
+    background: #b9c1d6;
+    border: none;
+  box-shadow: inset;
+  border-radius: 7px;
+    
+}
+.fillbutton{
+    
+    width: 130px;
+    height: 30px;
+    position: relative;
+    left:  30px;
+    bottom: 25px;
+    background-color: rgb(83, 146, 198);
+    border: none;
+  box-shadow: inset;
+
+
+}
+
+
+
+.hr{
+    width: 300px;
+    height: 1px;
+    background-color: aliceblue;
+    margin-left: 2px;
+}
+.dashboard,.message,.bookinghistory,.analytics{
+    font-size: 20px;
+  padding: 52px 20px;
+  color: #fff;
+}
+
+.dashboard span,.message span,.bookinghistory span,.analytics span{
+    position: relative;
+    left: 20px;
+}
+.labelnamea{
+    position: relative;
+    left: 205px;
+    color: #000000;
+}
+#age{
+    /* position: relative;
+    left:0px; */
+
+}
+.labelname,p{
+    color: #000000;
+}
+.logout{
+    font-size: 15px;
+    padding: 2px 2px;
+    padding-right: 20px;
+    position: relative;
+  top: 290px;
+    width: 110px;
+    height: 30px;
+    position: relative;
+    left: 20px;
+    
+}
+.logout span{
+    position: relative;
+    left: 20px;
+
+}
+.friendslist{
+    font-size: 20px;
+    padding: 30px 30px;
+    position: relative;
+    top: 20px;
+
+}
+
+.friendsrequest{
+    font-size: 20px;
+    padding: 30px 30px;
+    position: relative;
+    top: 20px;
+
+}
+.friendslist span,.friendsrequest span{
+    position: relative;
+    left: 20px;
+
+}
+
+.bxs-plus-circle{
+    position: relative;
+    right:48px;
+    bottom: 35px;
+cursor: pointer;
+}
+
+#input-file{
+    display: none;
+}
+
+
+
+
+
+
+
+
+input[disabled] {
+    color: #000000;
+  }
+
+/* sidebar2 */
+
+
+.container2 {
+
+    position: relative;
+    right: 120px;
+    top: 3px;
+    /* bottom: 70px; */
+    height:730px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+
+}
+
+
+
+
+.container2::-webkit-scrollbar {
+    width: 1em;
+
+  }
+   
+  .container2::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+  .container2::-webkit-scrollbar-thumb {
+    /* background-color: rgb(255, 255, 255); */
+    outline: 1px solid rgba(32,56,120,255);
+  }
+  
+form input {
+    width: 320px;
+    height: 27px;
+    border: 1px solid black;
+    padding-left: 7px;
+    outline: none;
+    border-radius: 0px;
+
+}
+
+
+
+.forms h1,form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgb(255, 255, 255);
+
+}
+
+.forms {
+    position: relative;
+  top: 5px;
+    border: 2px solid rgb(180, 176, 176);
+    width: 850px;
+    left: 15%;
+    border-radius: 2%;
+    box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
+    height: 790px;
+    background-color: rgba(32,56,120,255);
+
+}
+
+#name1,#name2 {
+    width: 50%;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid black;
+
+}
+
+#age {
+    width: 50%;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid black;
+
+}
+#userEmail{
+    width: 50%;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: rgb(187, 192, 192);
+}
+#phoneno1{
+    width: 50%;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+#password{
+    width: 50%;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+
+.labelnamel,.labelnametime,.labelnamea,.labelnames{
+    /* font-size: 10px; */
+    font-weight: 500;
+    color: black;
+    position: relative;
+ 
+}
+#sportss {
+    width: 50%;
+    height: 35px;
+    position: relative;
+    bottom: 20px;
+
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+#sportsvalue{
+    width: 120px;
+    height: 30px;
+    color: black;
+}
+.timings {
+    width: 50%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    color: black;
+
+}
+#locationselect{
+    width: 50%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    color: black;
+
+}
+#timingsfrom,#timingsto{
+    width: 50%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    color: black;
+
+
+
+}
+/* button */
+
+.profile2 {
+    font-size: medium;
+    padding: 9px 38px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 5px;
+    position: relative;
+    background-color: rgba(4, 133, 49, 0.813);
+    margin-left: 10px;
+    /* left: 163px; */
+    box-shadow: 0 3px 10px rgb(3, 10, 87);
+    border-radius: 7px;
+
+}
+
+.profile2:hover{
+    background-color: rgba(64, 143, 91, 0.813);
+}
+#checkjoinplayer1{
+    font-size: 10px;
+    position: relative;
+    left: 143px;
+    top: 35px;
+}
+.joinplayer label{
+position: relative;
+left: 150px;
+top: 37px;
+font-size: 20px;
+
+
+}
+.timep{
+    position: relative;
+}
+
+
+/* fill */
+.formcontainer{
+   
+    position: relative;
+    bottom: 460px;
+    display: none;
+    width: 990px;
+    height:830px;
+    top: 50%;
+    left: 62%;
+    transform: translate(-50%,-50%);
+    padding: 0px 43px;
+    border-radius: 5%;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.closebtn{
+    position: relative;
+    left: 960px;
+    top: 20px;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+/* textarea{
+   resize: none; 
+}
+.formcontainer{
+    position: relative;
+    padding-left: 470px;
+    top: 70px;
+    font-size: 23px;
+}
+#groname{
+    width: 390px;
+    height: 30px;
+}
+.labelname{
+    position: relative;
+    right: 90px;
+} */
+
+.labelname{
+    color: rgb(0, 0, 0);
+    font-size: large;
+}
+textarea{
+   resize: none; 
+}
+
+.box1{
+    /* display: flex; */
+    position: relative;
+    right: 250px;
+top: 70px;
+   
+  
+  
+}
+#grolname{
+    position: relative;
+    /* right: 250px; */
+top: 50px;
+color: black;
+   
+
+}
+#groname{
+    position: relative;
+    bottom: 10px;
+}
+.labelgroname{
+    position: relative;
+    bottom: 10px;
+    color: black;
+
+}
+
+.labelnamep{
+    position: relative;
+    /* right: 250px; */
+top: 50px;
+color: black;
+
+}
+#grolink{
+    position: relative;
+    /* right: 250px; */
+top: 60px;
+   
+
+}
+.labelnamell{
+    position: relative;
+    /* right: 250px; */
+top: 60px;
+color: black;
+
+}
+.groundlocationbox{
+    /* display: flex; */
+    position: relative;
+    left: 250px;
+    color: black;
+
+
+}
+.groundimageupload{
+    position: relative;
+    right: 290px;
+    top: 70px;
+  
+    color: black;
+
+}
+.sportsavailable{
+    position: relative;
+    right: 290px;
+    top: 130px;
+    color: black;
+
+}
+#sportsavail1,#sportsavail2,#sportsavail3{
+    position: relative;
+    right: 120px;
+    top: 50px;
+    color: black;
+
+}
+.sname{
+    position: relative;
+    right: 245px;
+    color: black;
+    top: 42px;
+}
+.labelnames{
+    position: relative;
+    left: 20px;
+    top: 25px;
+    color: black;
+}
+.groundtiming{
+    position: relative;
+    left: 370px;
+    width: 270px;
+    top: 50px;
+    text-align: center;
+    /* bottom: 130px; */
+  
+    color: black;
+
+}
+.groundrules{
+    position: relative;
+    left: 20px;
+    bottom: 67px;
+
+    color: black;
+
+}
+.groundprice{
+    position: relative;
+    left: 50px;
+  
+    color: black;
+
+  
+
+
+}
+#amount{
+    width: 200px;
+    position: relative;
+    color: black;
+
+    
+}
+.values{
+    text-align: center;
+    position: relative;
+    left: 320px;
+    top: 120px;
+  
+
+}
+#submitbtn{
+    position: relative;
+    bottom: 50px;
+    width: 200px;
+    height: 50px;
+    background-color: rgb(88, 253, 88);
+    outline: none;
+
+}
+#submitbtn:hover{
+    background-color: greenyellow;
+}
+
+
+
+/* #amount{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+} */
+
+#amount::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+}
+
+#increaseamount::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+  }
+
+#sportscourts{
+    position: relative;
+    right:390px;
+    width: 80px;
+    bottom: 30px;
+}
+.court{
+    position: relative;
+    right:390px;
+    bottom: 30px;
+    color: black;
+
+}
+#increaseamount{
+    width: 90px;
+    position: relative;
+    bottom: 70px;
+    right: 300px;
+    color: black;
+
+}
+.increaseamountword{
+    position: relative;
+    bottom: 70px;
+    right: 300px;
+    color: black;
+
+
+}
+
+
+.nj-timepick {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 5000;
+    transition: right 0.7s ease;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+
+
+
+
+
+
+
+  .logout span{
+    position: relative;
+    left: 20px;
+
+}
+
+
+
+
+/* <!-- HTML !-->
+<button class="button-11" role="button">Button 11</button> */
+
+/* CSS */
+.logout {
+  /* display: flex; */
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  color: #3D3D3D;
+  background: #fff;
+  border: none;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  font-size: 15px;
+  padding: 9px 2px;
+  padding-right: 20px;
+  position: relative;
+  top: 239px;
+  width: 110px;
+  height: 37px;
+  position: relative;
+  left: 20px;
+}
+
+.logout:focus {
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}
+
+
+.logout:hover,
+.logout:focus {
+  background-color: rgb(112, 113, 113);
+  color: #fff;
+}
+
+
+
+.message:hover,
+.message:focus {
+    background-color: rgba(241, 251, 255, 255);
+  color: #000000;
+  border-radius: 10px;
+  /* margin: 0px 0px;
+  height: 10px; */
+  /* width: 260px; */
+  /* height: 0px; */
+}
+
+
+.bookinghistory:hover,
+.bookinghistory:focus {
+    background-color: rgba(241, 251, 255, 255);
+  color: #000000;
+  border-radius: 10px;
+  /* margin: 0px 0px;
+  height: 10px; */
+
+  /* width: 260px; */
+  /* height: 10px; */
+}
+
+.analytics:hover,
+.analytics:focus {
+    background-color: rgba(241, 251, 255, 255);
+  color: #000000;
+  border-radius: 10px;
+  /* margin: 0px 3px;
+  height: 10px; */
+  /* width: 260px; */
+  /* height: 10px; */
+}
+
+
+
+.friendsrequest:hover,
+.friendsrequest:focus {
+    background-color: rgba(241, 251, 255, 255);
+  color: #000000;
+  border-radius: 10px;
+  /* margin: 0px 3px;
+  height: 10px; */
+  /* width: 260px; */
+  /* height: 10px; */
+}
+
+ .fa-eye-slash,.fa-eye{
+    position: relative;
+    bottom: 30px;
+    left: 90px;
+    color: black;
+} 
+
+
+/* <i class="fa-regular fa-eye-slash"></i>
+
+<i class="fa-solid fa-eye"></i> */
+
+#gender{
+   
+    width: 50%;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid black;
+
+}
+#startTime,#endTime{
+    width: 250px;
+    height: 30px;
+}

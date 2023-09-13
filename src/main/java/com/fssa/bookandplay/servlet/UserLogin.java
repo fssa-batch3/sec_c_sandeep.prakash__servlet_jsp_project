@@ -55,7 +55,7 @@ public class UserLogin extends HttpServlet {
 	                HttpSession session = request.getSession();
 	             // JSONObject userJson = new JSONObject(userdata); 
 	                session.setAttribute("userLogin", userdata);
-	    			System.out.println("Existing Session user ID:" + session.getId());
+	    			System.out.println("Existing Session  user ID:" + session.getId());
 	              //  request.getRequestDispatcher("/GetUserSession").forward(request, response);
 	              response.sendRedirect("/bookandplay-web/index.jsp");
 	               // System.out.println("login sucess");

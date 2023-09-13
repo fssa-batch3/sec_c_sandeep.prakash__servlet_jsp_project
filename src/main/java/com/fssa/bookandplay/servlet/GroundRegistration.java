@@ -119,7 +119,7 @@ public class GroundRegistration extends HttpServlet {
 			
 			e.printStackTrace();
 		}
-		RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/groundupdateview.jsp");
+		RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/admindashboard.jsp");
 		dispatcher.forward(request, response);
 
 	}

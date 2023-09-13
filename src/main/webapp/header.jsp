@@ -6,10 +6,10 @@
 
     <ul>
       <li>
-<a href="#">Home</a> 
+<a href="/bookandplay-web/index.jsp">Home</a> 
 </li>
       <li>
-<a href="./pages/bookinground/bookground.html">Book Grounds</a>
+<a href="/bookandplay-web/GetAllGroundList">Book Grounds</a>
 </li>
       <li >
 <a class="findplayers" href="./pages/player/findplayers.html">Find Players</a>
@@ -18,7 +18,7 @@
 <a href="./pages/contactus/contact.html">Contact us</a>
 </li>
       <li>
-<a href="./pages/login/login.html">
+<a href="/bookandplay-web/userlogin.jsp">
  <button class="login">Login</button>
 </a>
 </li>

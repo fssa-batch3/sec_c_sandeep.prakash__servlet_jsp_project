@@ -49,18 +49,18 @@ public class AdminLogin extends HttpServlet {
 	            if (user != null) {
 	                HttpSession session = request.getSession();
 	                session.setAttribute("adminuser", user);
-	                response.sendRedirect("/bookandplay-web/groundregistration.jsp");
+	                
+	                System.out.println(session.getId());
+	                response.sendRedirect("/bookandplay-web/admindashboard.jsp");
 	                System.out.println("sucess");
 	            } else {
 	                request.setAttribute("message", "Invalid email or password.");
 	                request.getRequestDispatcher("groundadminlogin.jsp").forward(request, response);
-	           
+	  
 	            }
 	        } catch (DAOException | SQLException e) {
 	            e.printStackTrace();
 	        }
-		
-		
 	}
 
 	/**

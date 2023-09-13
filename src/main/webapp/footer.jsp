@@ -48,5 +48,5 @@
         </div>
       </div>
     </div>
-    <a class="adminlogin" href="./pages/admin/adminlogin.html" aria-label="linkedin ">Join as a seller </a>
+    <a class="adminlogin" href="/bookandplay-web/groundadminlogin.jsp" aria-label="linkedin ">Join as a seller </a>
   </footer>

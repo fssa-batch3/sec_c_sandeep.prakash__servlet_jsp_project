@@ -86,13 +86,35 @@ const endTimepicker = flatpickr("#endTime", timePicker);
 axios.get(url)
          .then(function (response) {
              // handle success
-            // console.log(response.data);
+            console.log(response.data);
              const responseUserData = response.data.substring(response.data.indexOf('{'));
              const userLogin = JSON.parse(responseUserData);
  
 
 id.value=userLogin.userId;
 
+
+
+
+function convertTo12HourFormat(timeString) {
+    // Split the time string into hours and minutes
+    const [hours, minutes] = timeString.split(':');
+  
+    // Convert hours to a number
+    const hour = parseInt(hours);
+  
+    // Determine if it's AM or PM
+    const period = hour >= 12 ? 'PM' : 'AM';
+  
+    // Convert hours to 12-hour format
+    const formattedHour = hour % 12 === 0 ? 12 : hour % 12;
+  
+    // Create the formatted time string
+    const formattedTime = `${formattedHour}:${minutes} ${period}`;
+  
+    return formattedTime;
+  }
+  
 
         if (userLogin.playerStatus === false) {
             fsidename.innerText = userLogin.firstName;
@@ -140,6 +162,8 @@ agelabel.style.display = "none"
         
         else {
 
+  const formattedStartTime = convertTo12HourFormat(userLogin.timingAvailFrom);
+  const formattedEndTime = convertTo12HourFormat(userLogin.timingAvailTo);
               // if a user is   a player
 
             //  p_jointext.style.display="none";
@@ -162,8 +186,8 @@ agelabel.style.display = "none"
 
                 document.getElementById("locationselect").value = userLogin.location;
                 //  document.getElementById("sportss").value  = user_record[i]["sport_Choosed"];
-                user_timingsfrom.value =userLogin.timingAvailFrom;
-                user_timingsto.value = userLogin.timingAvailTo;
+                user_timingsfrom.value =formattedStartTime;
+                user_timingsto.value = formattedEndTime;
                // cricket.checked = user_record[i]["sports_choosed_cricket"];
                // football.checked = user_record[i]["sports_choosed_football"];
                 //tennis.checked = user_record[i]["sports_choosed_tennis"];
@@ -174,7 +198,16 @@ agelabel.style.display = "none"
                 user_timingsfrom.required = true;
                 user_timingsto.required = true;
 
+const knownSports = userLogin.knownSports;
+const checkboxes = document.querySelectorAll('input[name="sportsKnown1"]');
 
+// Loop through the checkboxes
+checkboxes.forEach(checkbox => {
+    // Check if the checkbox value is in the knownSports array
+    if (knownSports.includes(checkbox.value)) {
+        checkbox.checked = true;
+    }
+});
 
      
 
@@ -327,7 +360,7 @@ editbutn.addEventListener("submit", (e) => {
         tennis.removeAttribute("disabled");
         textarea.removeAttribute("disabled");
         user_genders.removeAttribute("disabled");
-
+console.log(namebox1.value);
 
     }
 
@@ -336,52 +369,31 @@ editbutn.addEventListener("submit", (e) => {
 
     else if (editbutn1.innerHTML == "Save") {
 
+const sportsCheckboxes = document.querySelectorAll('input[name="sportsKnown1"]:checked');
+const sportsKnownValues = Array.from(sportsCheckboxes).map(checkbox => checkbox.value);
+              
+        
+const requestData = 
 
-      
-        editbutn1.innerHTML = "Edit";
-        namebox1.setAttribute("disabled", "");
-                namebox2.setAttribute("disabled", "");
-        // user_email.setAttribute("disabled","")
-        user_phone.setAttribute("disabled", "");
-       // user_password.setAttribute("disabled", "")
-        user_age.setAttribute("disabled", "");
-        user_location.setAttribute("disabled", "")
-        user_sports.setAttribute("disabled", "");
-        user_timingsfrom.setAttribute("disabled", "")
-        user_timingsto.setAttribute("disabled", "");
-        cricket.setAttribute("disabled", "");
-        football.setAttribute("disabled", "");
-        tennis.setAttribute("disabled", "");
-        textarea.setAttribute("disabled", "");
-        user_genders.setAttribute("disabled", "");
-        
-        
-        
-const requestData = {
-	user:id.value,
-            fname: document.getElementById("name1").value,
-            lname: document.getElementById("name2").value,
-            uemail: document.getElementById("userEmail").value,
-            uphonenumber: document.getElementById("phoneno1").value,
-            uage: document.getElementById("age").value,
-            ugender: document.getElementById("gender").value,
-            ulocation: document.getElementById("locationselect").value,
-            ustartTime: document.getElementById("startTime").value,
-            uendTime: document.getElementById("endTime").value,
-            uabout: document.querySelector(".textabout").value,
-            sportsKnown: [] // Initialize an empty array to store selected sports
-        };
+//alert(id.value);
+	"&uId="+id.value+
+	"&fname="+namebox1.value+
+	"&lname1="+namebox2.value+
+	"&uphonenumber1="+user_phone.value+
+	"&joinplayer="+join_as_player.checked+
+	"&uage1="+user_age.value+
+	"&ugender1="+user_genders.value+
+	"&ulocation1="+user_location .value+
+	"&ustartTime1="+user_timingsfrom.value+
+	"&uendTime1="+user_timingsto.value+
+	"&uabout1="+textarea.value+
+	"&sportsKnown1=" + sportsKnownValues.join("&sportsKnown1=");
+          
+       
+        console.log(requestData+"ssan");
 
-        // Get the selected sports checkboxes
-        const sportsCheckboxes = document.getElementsByName("sportsKnown");
-        
-        // Loop through the checkboxes to collect selected values
-        for (const checkbox of sportsCheckboxes) {
-            if (checkbox.checked) {
-                requestData.sportsKnown.push(checkbox.value);
-            }
-        }
-			const url = "http://localhost:8080/bookandplay-web/UpdateUser"; 
+
+			const url = "http://localhost:8080/bookandplay-web/UpdateUser?"; 
 			axios.post(url, requestData)
 			  .then(function (response) {
 			    // handle success
@@ -399,10 +411,26 @@ const requestData = {
 			    // handle error
 			    console.log(error);
 			  })
+        editbutn1.innerHTML = "Edit";
+        namebox1.setAttribute("disabled", "");
+                namebox2.setAttribute("disabled", "");
+        // user_email.setAttribute("disabled","")
+        user_phone.setAttribute("disabled", "");
+       // user_password.setAttribute("disabled", "")
+        user_age.setAttribute("disabled", "");
+        user_location.setAttribute("disabled", "")
+        user_sports.setAttribute("disabled", "");
+        user_timingsfrom.setAttribute("disabled", "")
+        user_timingsto.setAttribute("disabled", "");
+        cricket.setAttribute("disabled", "");
+        football.setAttribute("disabled", "");
+        tennis.setAttribute("disabled", "");
+        textarea.setAttribute("disabled", "");
+        user_genders.setAttribute("disabled", "");
+        
 
-  }
-
-
+}
+ 
 
 })
 

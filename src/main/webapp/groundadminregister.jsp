@@ -4,7 +4,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+  <link rel="stylesheet" type="text/css"
+	href="/bookandplay-web/assets/css/usersignup.css">
+<title>Book and Play</title>
+	    <link rel="icon" type="image/icon" href="https://iili.io/J9lLgxR.png">
 </head>
 <body>
    <div id="container">
@@ -19,7 +22,7 @@
 <br>
                 <div class="boxform">
                     <input type="name" placeholder="Your Name " id="name1" aria-label="name" name="adminname"
-                    pattern="^[a-zA-Z]{3,20}$" title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters." required>
+                    pattern="^[a-zA-Z]{3,20}$" title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters." autofocus required>
 <br>
 
                 </div>

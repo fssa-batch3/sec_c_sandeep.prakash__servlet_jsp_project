@@ -10,8 +10,9 @@
 }
 
 .namediv{
+	width:450px;
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 }
 
 
@@ -252,12 +253,13 @@ form input {
 
 }
 
-#name1 {
+#name1,#name2 {
     width: 50%;
     height: 35px;
     border-radius: 5px;
     border: none;
     border: 1px solid black;
+    padding:2px;
 
 }
 
