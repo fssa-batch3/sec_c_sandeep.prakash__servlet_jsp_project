@@ -1,0 +1,1731 @@
+
+*{
+    margin:0px;
+    padding:0px;
+   
+
+}
+body{
+    overflow-x: hidden;
+}
+/* header */
+header{
+    height: 10vh;
+    background-position: center;
+    background-size: cover;
+    /* background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b); */
+    font-family: 'Noto Serif Khojki', serif;
+    background-color:  rgba(32,56,120,255);
+    background-size: cover;
+}
+.checkbtn{
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    float: right;
+    margin-right: 15px;
+    cursor: pointer;
+    display: none;
+
+}
+#check{
+    display: none;
+}
+ul{
+    display: flex;
+    justify-content:end;
+    margin-right: 2%;
+    position: relative;
+    bottom: 5px;
+}
+ul li{
+    list-style-type: none;
+    padding: 2%;
+ 
+}
+ul li a{
+    text-decoration: none;
+    font-size: larger;
+    color: white;
+}
+ul li a:hover{
+    color: rgb(130, 217, 235);
+  
+}
+
+.login{
+  font-size: medium;
+  padding: 5px 15px;
+  height: 113%;
+  width: 102%;
+  background-color: rgb(5, 34, 120);
+  color: white;
+  position: relative;
+  bottom: 15%;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  
+
+}
+.logo{
+    width:14%;
+    position: relative;
+    bottom: 80px;
+    left: 46px;
+}
+/* header */
+
+/* main1 */
+#main1{
+    height: 15vh;
+    background-image: linear-gradient(to right top, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff);
+    position: sticky;
+    top:0%;
+    z-index: 2;
+    border: 20px solid;
+    /* border-image: repeating-linear-gradient(30deg, #00021a, #00080c, #15034a 20px) 60; */
+    border-color: rgba(32,56,120,255);
+   
+    
+    }
+    .content1{
+        text-align: center;
+        font-size: xx-large;
+        font-weight:bolder;
+        color: rgb(0, 0, 0);
+        
+    }
+    .content2{
+        display: flex;
+        justify-content: center;
+        color: rgb(0, 0, 0);
+    }
+    .cont3{
+        /* background-color: rgb(2, 2, 45); */
+        border: 2px solid  rgba(32,56,120,255);;
+        border-radius: 10%;
+        width: 6%;
+        box-shadow: 0 10px 10px rgba(14, 1, 1, 0.23);
+        display: flex;
+        flex-direction: column;
+         align-items: center;
+        margin-left: 92%;
+       position: relative;
+       bottom: 210px;
+       right: 2%;
+       height: 102px;
+       
+    
+        
+    }
+    .userlogo1{
+        width: 45px;
+        position: relative;
+        top:7px;
+      
+    }
+       .userlogo{
+        width: 65px;
+        height: 65px;
+        position: relative;
+        bottom: 10px;
+        border-radius: 50px;
+      
+    }
+    /* search bar */
+    #searchnav{
+        width: 80%;
+        height: 6vh;
+        max-width: 35%;
+        background:rgba(67, 67, 57, 0.1);
+        display: flex;
+        justify-content: center;
+        border-radius: 2%;
+        position: relative;
+        top:20px;
+        border: 2px solid rgb(0, 0, 0);
+        
+    }
+  
+input[type="search"]::placeholder{
+    font-size: 130%;
+    color: rgb(0, 0, 0);
+ 
+} 
+#search2{
+    background: transparent;
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 20px 20px;
+    color: rgb(0, 0, 0);
+
+}
+
+.fa-magnifying-glass{
+    font-size:150%;
+    color: rgb(0, 0, 0);
+}
+ 
+.searchbtn{
+    background: transparent;
+   cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 0px 20px;
+    color: white;
+
+} 
+.locationselect {
+    width: 10%;
+    height: 44px;
+    background-color: rgb(255, 255, 255);
+
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5%;
+    color: #000000;
+    border: 2px solid rgb(35, 156, 211);
+    position: relative;
+    left: 230px;
+    bottom: 113px;
+
+}
+.locationicon {
+    width: 58px;
+    height: 58px;
+    position: relative;
+    left: 170px;
+    bottom: 62px;
+}
+ /*search bar  */
+
+.userprofile{
+    font-size: 12px;
+    padding: 5px 5px;
+    background-color:  rgba(32,56,120,255);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    position: relative;
+    top:70px;
+  
+  }
+  /* main1 */
+
+  /* main2 */
+  .main2{
+    height: 280vh;
+   background-color:white;
+    overflow: hidden;
+    border: 20px solid;
+    /* border-image: repeating-linear-gradient(30deg, #00021a, #00080c, #15034a 20px) 60;
+    */
+    border-color: rgba(32,56,120,255);
+    background-color: rgba(241, 251, 255, 255);
+    }
+    .parent{
+        margin: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+       grid-row-gap: 60px;
+       
+
+
+    }
+    .child{
+        /* background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b); */
+        height: 232px;
+        width: 80%;
+        color: rgb(255, 255, 255);
+        margin-left: 22%;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        /* background-color: rgba(241, 251, 255, 255); */
+        background-color: rgba(32,56,120,255);
+    }
+    .visit{
+        font-size: medium;
+        padding: 3px 10px;
+        height: 97%;
+        width: 120%;
+        background-color: rgb(241, 235, 249);
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        position: relative;
+        top: 0px;
+        right: 10%;
+        border-radius: 5%;
+    }
+    .visit:hover{
+        background-color: rgb(50, 178, 50);
+        color: white;
+    }
+    
+    .group{
+        display:grid;
+        grid-row-gap: 15px;
+        
+    }
+  
+    .fa-star{
+        color:  #ffcc00;
+        font-size: 14px;
+        position: relative;
+        left: 30px;
+    }
+    .ratings{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        /* left: 20px; */
+        bottom: 59px;
+        right: 20px;
+    
+    }
+    .ratingno{
+        position: relative;
+        font-size:90%;
+        font-weight: bold;
+       left: 7px;
+        color: rgb(255, 255, 255);
+    }
+      .nameplayer{
+        position: relative;
+        bottom: 10px;
+        font-size: 17px;
+       
+    }
+    .sportss{
+        width: 10%;
+        height: 38px;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        font-size: 15px;
+        color: #000000;
+        border: 2px solid rgb(35, 156, 211);
+        border-radius: 5px;
+        position: relative;
+        left: 10px;
+        bottom: 55px;
+        
+    }
+    .selectsportsword{
+        font-size: 20px;
+        position: relative;
+        left: 10px;
+        bottom: 70px;
+    }
+    .selectslocationword{
+        font-size: 20px;
+        position: relative;
+        left: 230px;
+        bottom: 70px;
+    }
+.accept{
+    position: relative;
+    right: 70px;
+}
+.decline{
+    position: relative;
+    left: 70px;
+    bottom: 30px;
+}
+    /* main2 */
+    /* footer */
+ 
+  
+footer{
+    height: 30vh;
+
+    /* background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
+    */
+    background-size: cover;
+    color: white;
+    background-color:  rgba(32,56,120,255);
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+.foot-heading{
+    color: rgb(219, 213, 213);
+    font-size: larger;
+    font-weight: bold;
+   
+}
+.column1{
+    margin-top: 2%;
+}
+p{
+    list-style-type: none;
+    
+ 
+}
+p a{
+    text-decoration: none;
+    font-size:medium;
+    color: rgb(219, 213, 213);
+    line-height: 1.6;
+}
+.fa-brands{
+    font-size:x-large;
+    padding: 1.5%;
+}
+.fa-facebook{
+    color: #3b5998  ;
+}
+.fa-instagram{
+    color: rgb(167, 8, 95);
+}
+.fa-twitter{
+    color: #00acee;
+
+}
+
+.fa-linkedin{
+ color: #0A66C2;
+
+}
+a{
+    text-decoration: none;
+}
+
+
+
+
+.h5tag{
+    position: relative;
+    top: 290px;
+width: 200px;
+    /* top: 50%; */
+    left: 700px;
+    transform: translate(-50%,-50%);
+    padding: 110px;
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.btnok{
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+    border-radius: 6px;
+    color: #3D3D3D;
+    background: #fff;
+    border: none;
+    box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  border: 2px solid black;
+    font-size: 15px;
+    padding: 9px 2px;
+    padding-right: 20px;
+    position: relative;
+    top: 59px;
+    width: 110px;
+    height: 37px;
+    position: relative;
+    left: 0px;
+    cursor: pointer;
+}
+
+/* footer */
+@media screen and (max-width:450px){
+    
+*{
+    margin:0px;
+    padding:0px;
+   
+
+}
+html{
+    overflow-x: hidden;
+}
+/* header */
+header{
+    height: 10vh;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+    font-family: 'Noto Serif Khojki', serif;
+ 
+}
+.checkbtn{
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    float: right;
+    margin-right: 15px;
+    cursor: pointer;
+    display: block;
+
+
+}
+#check{
+    display: none;
+}
+ul{
+    margin-right: 2%;
+    position: relative;
+    left: -100%;
+    width: 90px;
+    display: inline-block;
+    transition: all 0.5s;
+    z-index: 5;
+}
+ul li{
+    list-style-type: none;
+    padding: 2%;
+    background-color: #d0dae3;
+   position: relative;
+   top: 50px;
+   text-align: center;
+ 
+}
+ul li a{
+    text-decoration: none;
+    font-size: 10px;
+    color: #00021a;
+}
+ul li a:hover{
+    color: rgb(130, 217, 235);
+  
+}
+#check:checked ~ul{
+    position: relative;
+    left: 70%;
+   }
+
+.login{
+  font-size: medium;
+  padding: 5px 15px;
+  height: 113%;
+  width: 102%;
+  background-color: rgb(5, 34, 120);
+  color: white;
+  position: relative;
+  bottom: 15%;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  
+
+}
+.logo{
+    width:30%;
+    position: relative;
+    bottom: 45px;
+    left: 46px;
+}
+/* header */
+
+/* main1 */
+#main1{
+    height: 20vh;
+    background-image: linear-gradient(to right top, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff);
+    position: sticky;
+    top:0%;
+    z-index: 2;
+    border: 20px solid;
+    border-image: repeating-linear-gradient(30deg, #00021a, #00080c, #15034a 20px) 60;
+   
+   
+    
+    }
+    .content1{
+        text-align: center;
+        font-size:large;
+        font-weight: bolder;
+        color: rgb(11, 7, 7);
+        position: relative;
+        top: 8px;
+        
+    }
+    .content2{
+        display: flex;
+        justify-content: center;
+        color: rgb(0, 0, 0);
+    }
+    .cont3{
+        background-color: rgb(2, 2, 45);
+        border: 5px solid rgb(25, 11, 82);
+        border-radius: 10%;
+        width: 55px;
+        max-height: 80px;
+        box-shadow: 0 10px 10px rgba(14, 1, 1, 0.23);
+        display: flex;
+        flex-direction: column;
+         align-items: center;
+        margin-left: 92%;
+       position: relative;
+       bottom: 172px;
+       right: 10%;
+       height: 102px;
+    
+        
+    }
+    .userlogo1{
+        width:55px;
+        height: 55px;
+        position: relative;
+        top:10px      
+    }
+    
+       .userlogo{
+        width:35px;
+        position: relative;
+        bottom: 20px;
+        left: 8px;
+          
+    }
+    /* search bar */
+    #searchnav{
+        width: 90%;
+        height: 30px;
+        max-width: 67%;
+        background: rgba(67, 67, 57, 0.1);
+        display: flex;
+        justify-content: center;
+        border-radius: 2%;
+        border: 2px solid rgb(0, 0, 0);
+        position: relative;
+        bottom: 48px;
+        right: 20px;
+        
+    }
+  
+input[type="search"]::placeholder{
+    font-size: 70%;
+    color: rgb(0, 0, 0);
+    position: relative;
+    bottom: 7px;
+    left: 30px;
+ 
+} 
+#search2{
+    background: transparent;
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 20px 5px;
+    color: rgb(0, 0, 0);
+
+}
+
+.fa-magnifying-glass{
+    font-size:150%;
+    color: rgb(0, 0, 0);
+}
+ 
+.searchbtn{
+    background: transparent;
+   cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 0px 20px;
+    color: white;
+
+} 
+.locationselect {
+    width: 32%;
+    height: 24px;
+    background-color: rgb(255, 255, 255);
+    font-size: 17px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5%;
+    color: #000000;
+    border: 2px solid rgb(35, 156, 211);
+    position: relative;
+    left: 170px;
+    bottom: 50px;
+
+}
+.locationicon {
+    width: 38px;
+    height: 38px;
+    position: relative;
+    left: 130px;
+    bottom: 16px;
+}
+ /*search bar  */
+
+.userprofile{
+    font-size: 7px;
+    padding: 3px 3px;
+    background-color: rgb(5, 120, 47);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    position: relative;
+    top:20px   
+  
+  }
+  /* main1 */
+
+  /* main2 */
+  .main2{
+    height: 620vh;
+   background-color:white;
+    overflow: hidden;
+    border: 20px solid;
+    border-image: repeating-linear-gradient(30deg, #00021a, #00080c, #15034a 20px) 60;
+   
+    
+    }
+    .parent{
+        margin: 20px;
+        display: grid;
+        grid-template-columns: 1fr 1fr  ;
+       grid-row-gap: 60px;
+       
+
+
+    }
+    .child{
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+        height: 130px;
+        width: 53%;
+        color: white;
+        margin-left: 22%;
+        border-radius: 10%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+       
+    }
+    .visit{
+        font-size: 13px;
+        padding: 2px 7px;
+        height: 20px;
+        width: 60px;
+        background-color: rgb(241, 235, 249);
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        border-radius: 5px;
+       
+      
+    }
+    .visit:hover{
+        background-color: rgb(50, 178, 50);
+        color: white;
+    }
+    .btn{
+        position: relative;
+        bottom: 20px;
+    }
+    
+    .group{
+        display:grid;
+        grid-row-gap: 15px;
+        
+    }
+  
+    .fa-star{
+        color: goldenrod;
+        font-size: 10px;
+    }
+    .ratings{
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        right: 2px;
+        bottom: 65px;
+    
+    }
+    .ratingno{
+        position: relative;
+        font-size:70%;
+        font-weight: bold;
+       right: 5px;
+        color: rgb(255, 255, 255);
+    }
+      .nameplayer{
+        position: relative;
+        bottom: 20px;
+        right: 2px;
+        font-size: 15px;
+       
+    }
+    .sportss{
+        width: 30%;
+        height: 27px;
+        background-color: rgb(255, 255, 255);
+        text-align: center;
+        font-size: 13px;
+        color: #000000;
+        border: 2px solid rgb(35, 156, 211);
+        border-radius: 5px;
+        position: relative;
+        left: 10px;
+        top: 30px;
+    }
+    .selectsportsword{
+        font-size: 15px;
+        position: relative;
+        left: 120px;
+        top: 25px;
+    }
+    .selectslocationword{
+        font-size: 10px;
+        position: relative;
+        left: 230px;
+        bottom: 130px;
+    }
+
+    /* main2 */
+    /* footer */
+    .userlogo{
+        width: 35px;
+        position: relative;
+        bottom: 10px;
+        left: 10px;
+      
+    }
+    footer {
+    
+        height: 30vh;
+    
+        background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
+    
+        background-size: cover;
+        color: white;
+    
+    }
+    
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    
+    }
+    
+    .foot-heading {
+        color: rgb(219, 213, 213);
+        font-size: 10px;
+        font-weight: bold;
+    
+    }
+    
+    .column1 {
+        margin-top: 2%;
+    }
+    
+    p {
+        list-style-type: none;
+    
+    
+    }
+    
+    p a {
+        text-decoration: none;
+        font-size: 9px;
+        color: rgb(219, 213, 213);
+        line-height: 1.6;
+    }
+    
+    .fa-brands {
+        font-size: smaller;
+        padding: 1.5%;
+    }
+    
+    .fa-facebook {
+        color: #3b5998;
+    }
+    
+    .fa-twitter {
+        color: #00acee;
+    
+    }
+    .fa-instagram{
+        color: rgb(167, 8, 95);
+    }
+    
+    .fa-linkedin {
+        color: #0A66C2;
+    
+    }
+    
+    a {
+        text-decoration: none;
+      
+    }
+/* footer */
+
+}
+@media all and (min-width:750px) and (max-width:1024px) {
+    *{
+        margin:0px;
+        padding:0px;
+       
+    
+    }
+    html{
+        overflow-x: hidden;
+    }
+    /* header */
+    header{
+        height: 10vh;
+        background-position: center;
+        background-size: cover;
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+        font-family: 'Noto Serif Khojki', serif;
+     
+    }
+    .checkbtn{
+        font-size: 22px;
+        color: rgb(255, 255, 255);
+        float: right;
+        margin-right: 15px;
+        cursor: pointer;
+        display: block;
+    
+    
+    }
+    #check{
+        display: none;
+    }
+    ul{
+        margin-right: 2%;
+        position: relative;
+        left: -100%;
+        width: 70px;
+        display: inline-block;
+        transition: all 0.5s;
+        z-index: 5;
+    }
+    ul li{
+        list-style-type: none;
+        padding: 2%;
+        background-color: #d0dae3;
+       position: relative;
+       top: 50px;
+    
+       text-align: center;
+     
+    }
+    ul li a{
+        text-decoration: none;
+        font-size: 10px;
+        color: #00021a;
+    }
+    ul li a:hover{
+        color: rgb(130, 217, 235);
+      
+    }
+    #check:checked ~ul{
+        position: relative;
+        left: 75%;
+       }
+    
+    .login{
+      font-size: medium;
+      padding: 5px 15px;
+      height: 113%;
+      width: 102%;
+      background-color: rgb(5, 34, 120);
+      color: white;
+      position: relative;
+      bottom: 15%;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      
+    
+    }
+    .logo{
+        width:30%;
+        position: relative;
+        bottom: 50px;
+        left: 150px;
+    }
+    /* header */
+    
+    /* main1 */
+    #main1{
+        height: 20vh;
+        background-image: linear-gradient(to right top, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff);
+        position: sticky;
+        top:0%;
+        z-index: 2;
+        border: 20px solid;
+        border-image: repeating-linear-gradient(30deg, #00021a, #00080c, #15034a 20px) 60;
+       
+       
+        
+        }
+        .content1{
+            text-align: center;
+            font-size:large;
+            font-weight: bolder;
+            color: rgb(11, 7, 7);
+            position: relative;
+            top: 8px;
+            
+        }
+        .content2{
+            display: flex;
+            justify-content: center;
+            color: rgb(0, 0, 0);
+        }
+        .cont3{
+            background-color: rgb(2, 2, 45);
+            border: 5px solid rgb(25, 11, 82);
+            border-radius: 10%;
+            width: 55px;
+            max-height: 80px;
+            box-shadow: 0 10px 10px rgba(14, 1, 1, 0.23);
+            display: flex;
+            flex-direction: column;
+             align-items: center;
+            margin-left: 99%;
+           position: relative;
+           bottom: 172px;
+           right: 10%;
+           height: 102px;
+        
+            
+        }
+        .userlogo1{
+            width:35px;
+            position: relative;
+            top:10px      
+        }
+        
+           .userlogo{
+            width:35px;
+            position: relative;
+            bottom: 20px;
+            left: 8px;
+              
+        }
+        /* search bar */
+        #searchnav{
+            width: 90%;
+            height: 30px;
+            max-width: 67%;
+            background: rgba(67, 67, 57, 0.1);
+            display: flex;
+            justify-content: center;
+            border-radius: 2%;
+            border: 2px solid rgb(0, 0, 0);
+            position: relative;
+            bottom: 48px;
+            right: 20px;
+            
+        }
+      
+    input[type="search"]::placeholder{
+        font-size: 70%;
+        color: rgb(0, 0, 0);
+        position: relative;
+        bottom: 7px;
+        left: 30px;
+     
+    } 
+    #search2{
+        background: transparent;
+        flex: 1;
+        border: none;
+        outline: none;
+        padding: 20px 5px;
+        color: rgb(0, 0, 0);
+    
+    }
+    
+    .fa-magnifying-glass{
+        font-size:150%;
+        color: rgb(0, 0, 0);
+    }
+     
+    .searchbtn{
+        background: transparent;
+       cursor: pointer;
+        border: none;
+        outline: none;
+        padding: 0px 20px;
+        color: white;
+    
+    } 
+    .locationselect {
+        width: 32%;
+        height: 24px;
+        background-color: rgb(255, 255, 255);
+        font-size: 17px;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        text-align: center;
+        border-radius: 5%;
+        color: #000000;
+        border: 2px solid rgb(35, 156, 211);
+        position: relative;
+        left: 350px;
+        bottom: 50px;
+    
+    }
+    .locationicon {
+        width: 38px;
+        height: 38px;
+        position: relative;
+        left: 300px;
+        bottom: 16px;
+    }
+     /*search bar  */
+    
+    .userprofile{
+        font-size: 7px;
+        padding: 3px 3px;
+        background-color: rgb(5, 120, 47);
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        border: none;
+        border-radius: 3px;
+        position: relative;
+        top:20px   
+      
+      }
+      /* main1 */
+    
+      /* main2 */
+      .main2{
+        height: 620vh;
+       background-color:white;
+        overflow: hidden;
+        border: 20px solid;
+        border-image: repeating-linear-gradient(30deg, #00021a, #00080c, #15034a 20px) 60;
+       
+        
+        }
+        .parent{
+            margin: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr  ;
+           grid-row-gap: 60px;
+           
+    
+    
+        }
+        .child{
+            background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+            height: 137px;
+            width: 42%;
+            color: white;
+            margin-left: 22%;
+            border-radius: 10%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+           
+        }
+        .visit{
+            font-size: 13px;
+            padding: 2px 7px;
+            height: 20px;
+            width: 60px;
+            background-color: rgb(241, 235, 249);
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+           
+          
+        }
+        .visit:hover{
+            background-color: rgb(50, 178, 50);
+            color: white;
+        }
+        .btn{
+            position: relative;
+            bottom: 20px;
+        }
+        
+        .group{
+            display:grid;
+            grid-row-gap: 15px;
+            
+        }
+      
+        .fa-star{
+            color: goldenrod;
+            font-size: 10px;
+        }
+        .ratings{
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            right: 2px;
+            bottom: 65px;
+        
+        }
+        .ratingno{
+            position: relative;
+            font-size:70%;
+            font-weight: bold;
+           right: 5px;
+            color: rgb(255, 255, 255);
+        }
+          .nameplayer{
+            position: relative;
+            bottom: 20px;
+            right: 2px;
+            font-size: 15px;
+           
+        }
+        .sportss{
+            width: 30%;
+            height: 27px;
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            font-size: 13px;
+            color: #000000;
+            border: 2px solid rgb(35, 156, 211);
+            border-radius: 5px;
+            position: relative;
+            left: 70px;
+            top: 30px;
+        }
+        .selectsportsword{
+            font-size: 15px;
+            position: relative;
+            left: 290px;
+            top: 25px;
+        }
+        .selectslocationword{
+            font-size: 10px;
+            position: relative;
+            left: 30px;
+            bottom: 130px;
+        }
+    
+        /* main2 */
+        /* footer */
+        .userlogo{
+            width: 35px;
+            position: relative;
+            bottom: 10px;
+            left: 10px;
+          
+        }
+        footer {
+        
+            height: 30vh;
+        
+            background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
+        
+            background-size: cover;
+            color: white;
+        
+        }
+        
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        
+        }
+        
+        .foot-heading {
+            color: rgb(219, 213, 213);
+            font-size: 10px;
+            font-weight: bold;
+        
+        }
+        
+        .column1 {
+            margin-top: 2%;
+        }
+        
+        p {
+            list-style-type: none;
+        
+        
+        }
+        
+        p a {
+            text-decoration: none;
+            font-size: 9px;
+            color: rgb(219, 213, 213);
+            line-height: 1.6;
+        }
+        
+        .fa-brands {
+            font-size: smaller;
+            padding: 1.5%;
+        }
+        
+        .fa-facebook {
+            color: #3b5998;
+        }
+        
+        .fa-twitter {
+            color: #00acee;
+        
+        }
+        .fa-instagram{
+            color: rgb(167, 8, 95);
+        }
+        
+        .fa-linkedin {
+            color: #0A66C2;
+        
+        }
+        
+        a {
+            text-decoration: none;
+          
+        }
+    /* footer */
+    
+}
+@media all and (min-width:1024px) and (max-width:1200px){
+        *{
+        margin:0px;
+        padding:0px;
+       
+    
+    }
+    html{
+        overflow-x: hidden;
+    }
+    /* header */
+    header{
+        height: 10vh;
+        background-position: center;
+        background-size: cover;
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+        font-family: 'Noto Serif Khojki', serif;
+     
+    }
+    .checkbtn{
+        font-size: 22px;
+        color: rgb(255, 255, 255);
+        float: right;
+        margin-right: 15px;
+        cursor: pointer;
+        display: block;
+    
+    
+    }
+    #check{
+        display: none;
+    }
+    ul{
+        margin-right: 2%;
+        position: relative;
+        left: -100%;
+        width: 70px;
+        display: inline-block;
+        transition: all 0.5s;
+        z-index: 5;
+    }
+    ul li{
+        list-style-type: none;
+        padding: 2%;
+        background-color: #d0dae3;
+       position: relative;
+       top: 50px;
+    
+       text-align: center;
+     
+    }
+    ul li a{
+        text-decoration: none;
+        font-size: 10px;
+        color: #00021a;
+    }
+    ul li a:hover{
+        color: rgb(130, 217, 235);
+      
+    }
+    #check:checked ~ul{
+        position: relative;
+        left: 75%;
+       }
+    
+    .login{
+      font-size: medium;
+      padding: 5px 15px;
+      height: 113%;
+      width: 102%;
+      background-color: rgb(5, 34, 120);
+      color: white;
+      position: relative;
+      bottom: 15%;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      
+    
+    }
+    .logo{
+        width:30%;
+        position: relative;
+        bottom: 50px;
+        left: 230px;
+    }
+    /* header */
+    
+    /* main1 */
+    #main1{
+        height: 20vh;
+        background-image: linear-gradient(to right top, #ffffff, #ffffff, #ffffff, #ffffff, #ffffff);
+        position: sticky;
+        top:0%;
+        z-index: 2;
+        border: 20px solid;
+        border-image: repeating-linear-gradient(30deg, #00021a, #00080c, #15034a 20px) 60;
+    
+       
+        
+        }
+        .content1{
+            text-align: center;
+            font-size:larger;
+            font-weight: bolder;
+            color: rgb(11, 7, 7);
+            position: relative;
+            top: 8px;
+            
+        }
+        .content2{
+            display: flex;
+            justify-content: center;
+            color: rgb(0, 0, 0);
+        }
+        .cont3{
+            background-color: rgb(2, 2, 45);
+            border: 5px solid rgb(25, 11, 82);
+            border-radius: 10%;
+            width: 55px;
+            max-height: 80px;
+            box-shadow: 0 10px 10px rgba(14, 1, 1, 0.23);
+            display: flex;
+            flex-direction: column;
+             align-items: center;
+            margin-left: 99%;
+           position: relative;
+           bottom: 172px;
+           right: 10%;
+           height: 102px;
+        
+            
+        }
+        .userlogo1{
+            width:35px;
+            position: relative;
+            top:10px      
+        }
+        
+           .userlogo{
+            width:35px;
+            position: relative;
+            bottom: 20px;
+            left: 8px;
+              
+        }
+        /* search bar */
+        #searchnav{
+            width: 70%;
+            height: 30px;
+            max-width: 67%;
+            background: rgba(67, 67, 57, 0.1);
+            display: flex;
+            justify-content: center;
+            border-radius: 2%;
+            border: 2px solid rgb(0, 0, 0);
+            position: relative;
+            bottom: 48px;
+            right: 20px;
+            
+        }
+      
+    input[type="search"]::placeholder{
+        font-size: 90%;
+        color: rgb(0, 0, 0);
+        position: relative;
+        bottom: 7px;
+        left: 30px;
+     
+    } 
+    #search2{
+        background: transparent;
+        flex: 1;
+        border: none;
+        outline: none;
+        padding: 20px 5px;
+        color: rgb(0, 0, 0);
+    
+    }
+    
+    .fa-magnifying-glass{
+        font-size:150%;
+        color: rgb(0, 0, 0);
+    }
+     
+    .searchbtn{
+        background: transparent;
+       cursor: pointer;
+        border: none;
+        outline: none;
+        padding: 0px 20px;
+        color: white;
+    
+    } 
+    .locationselect {
+        width:22%;
+        height: 24px;
+        background-color: rgb(255, 255, 255);
+        font-size: 17px;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        text-align: center;
+        border-radius: 5%;
+        color: #000000;
+        border: 2px solid rgb(35, 156, 211);
+        position: relative;
+        left: 550px;
+        bottom: 50px;
+    
+    }
+    .locationicon {
+        width: 38px;
+        height: 38px;
+        position: relative;
+        left: 510px;
+        bottom: 12px;
+    }
+     /*search bar  */
+    
+    .userprofile{
+        font-size: 7px;
+        padding: 3px 3px;
+        background-color: rgb(5, 120, 47);
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        border: none;
+        border-radius: 3px;
+        position: relative;
+        top:20px   
+      
+      }
+      /* main1 */
+    
+      /* main2 */
+      .main2{
+        height: 620vh;
+       background-color:white;
+        overflow: hidden;
+        border: 20px solid;
+        border-image: repeating-linear-gradient(30deg, #00021a, #00080c, #15034a 20px) 60;
+       
+        
+        }
+        .parent{
+            margin: 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr  ;
+           grid-row-gap: 60px;
+           
+    
+    
+        }
+        .child{
+            background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+            height: 137px;
+            width: 32%;
+            color: white;
+            margin-left: 22%;
+            border-radius: 10%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+           
+        }
+        .visit{
+            font-size: 13px;
+            padding: 2px 7px;
+            height: 20px;
+            width: 60px;
+            background-color: rgb(241, 235, 249);
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+           
+          
+        }
+        .visit:hover{
+            background-color: rgb(50, 178, 50);
+            color: white;
+        }
+        .btn{
+            position: relative;
+            bottom: 20px;
+        }
+        
+        .group{
+            display:grid;
+            grid-row-gap: 15px;
+            
+        }
+      
+        .fa-star{
+            color: goldenrod;
+            font-size: 10px;
+        }
+        .ratings{
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            right: 2px;
+            bottom: 65px;
+        
+        }
+        .ratingno{
+            position: relative;
+            font-size:70%;
+            font-weight: bold;
+           right: 5px;
+            color: rgb(255, 255, 255);
+        }
+          .nameplayer{
+            position: relative;
+            bottom: 20px;
+            right: 2px;
+            font-size: 15px;
+           
+        }
+        .sportss{
+            width: 30%;
+            height: 27px;
+            background-color: rgb(255, 255, 255);
+            text-align: center;
+            font-size: 13px;
+            color: #000000;
+            border: 2px solid rgb(35, 156, 211);
+            border-radius: 5px;
+            position: relative;
+            left: 170px;
+            top: 30px;
+        }
+        .selectsportsword{
+            font-size: 18px;
+            position: relative;
+            left: 420px;
+            top: 25px;
+        }
+        .selectslocationword{
+            font-size: 10px;
+            position: relative;
+            left: 30px;
+            bottom: 130px;
+        }
+    
+        /* main2 */
+        /* footer */
+        .userlogo{
+            width: 35px;
+            position: relative;
+            bottom: 10px;
+            left: 10px;
+          
+        }
+        footer {
+        
+            height: 30vh;
+        
+            background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
+        
+            background-size: cover;
+            color: white;
+        
+        }
+        
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        
+        }
+        
+        .foot-heading {
+            color: rgb(219, 213, 213);
+            font-size: 10px;
+            font-weight: bold;
+        
+        }
+        
+        .column1 {
+            margin-top: 2%;
+        }
+        
+        p {
+            list-style-type: none;
+        
+        
+        }
+        
+        p a {
+            text-decoration: none;
+            font-size: 9px;
+            color: rgb(219, 213, 213);
+            line-height: 1.6;
+        }
+        
+        .fa-brands {
+            font-size: smaller;
+            padding: 1.5%;
+        }
+        
+        .fa-facebook {
+            color: #3b5998;
+        }
+        
+        .fa-twitter {
+            color: #00acee;
+        
+        }
+        .fa-instagram{
+            color: rgb(167, 8, 95);
+        }
+        
+        .fa-linkedin {
+            color: #0A66C2;
+        
+        }
+        
+        a {
+            text-decoration: none;
+          
+        }
+    /* footer */
+    
+}

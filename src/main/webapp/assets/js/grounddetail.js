@@ -1,12 +1,9 @@
-
-
-// console.log(groundSearch2); // get value of name
-  const urlParams = new URLSearchParams(window.location.search);
+ const urlParams = new URLSearchParams(window.location.search);
 const groundId = urlParams.get('groundId');
 
 
-const url = `/bookandplay-web/GetGroundDetail?groundId=${groundId}`;
-axios.get(url)
+const urllink = `/bookandplay-web/GetGroundDetail?groundId=${groundId}`;
+axios.get(urllink)
   .then(function (response) {
     // handle success
  const responseData = response.data.substring(response.data.indexOf('{'));
@@ -14,9 +11,9 @@ axios.get(url)
    
     
     // Move the code to access properties inside the .then() callback
-    console.log("Ground Name: " + show2.groundName);
+    console.log(response.data);
     console.log("Ground Location: " + show2.groundLocationLink);
-    console.log("Ground Images: " + show2.groundImages);
+    console.log("Ground Images: " + show2.groundOwnerId);
     console.log("Sports Available: " + show2.sportsAvailable);
     
 
@@ -702,6 +699,41 @@ div_book2.append(inputdate);
 br_tag10 = document.createElement("br");
 div_book2.append(br_tag10);
 
+
+
+
+// sportsselect
+span_sportsSelect = document.createElement("span");
+span_sportsSelect.setAttribute("class", "headingbook");
+span_sportsSelect.innerText = "SPORTS";
+div_book2.append(span_sportsSelect);
+
+select_sports = document.createElement("select");
+select_sports.setAttribute("class", "sportss");
+select_sports.setAttribute("required", "");
+div_book2.append(select_sports);
+
+
+option_sports = document.createElement("option");
+option_sports.innerText = "Select an Option";
+option_sports.setAttribute("value","")
+select_sports.append(option_sports);
+const sportsAvailable = show2.sportsAvailable;
+// loopit
+for (let i = 0; i < sportsAvailable.length; i++) {
+  // Create an option element for each sport
+  const option = document.createElement("option");
+
+  // Set the text of the option to the current sport
+  option.innerText = sportsAvailable[i];
+
+  // Append the option to the select element
+  select_sports.appendChild(option);
+}
+br_tag12 = document.createElement("br");
+div_book2.append(br_tag12);
+
+
 span_timingSelect = document.createElement("span");
 span_timingSelect.setAttribute("class", "headingbook");
 span_timingSelect.innerText = "Timing";
@@ -844,36 +876,6 @@ function updatetime() {
 br_tag11 = document.createElement("br");
 div_book2.append(br_tag11);
 
-// sportsselect
-span_sportsSelect = document.createElement("span");
-span_sportsSelect.setAttribute("class", "headingbook");
-span_sportsSelect.innerText = "SPORTS";
-div_book2.append(span_sportsSelect);
-
-select_sports = document.createElement("select");
-select_sports.setAttribute("class", "sportss");
-select_sports.setAttribute("required", "");
-div_book2.append(select_sports);
-
-
-option_sports = document.createElement("option");
-option_sports.innerText = "Select an Option";
-option_sports.setAttribute("value","")
-select_sports.append(option_sports);
-const sportsAvailable = show2.sportsAvailable;
-// loopit
-for (let i = 0; i < sportsAvailable.length; i++) {
-  // Create an option element for each sport
-  const option = document.createElement("option");
-
-  // Set the text of the option to the current sport
-  option.innerText = sportsAvailable[i];
-
-  // Append the option to the select element
-  select_sports.appendChild(option);
-}
-br_tag12 = document.createElement("br");
-div_book2.append(br_tag12);
 
 // durationselect
 span_durationSelect = document.createElement("span");
@@ -938,31 +940,6 @@ div_book2.append(br_tag15);
 br_tag16 = document.createElement("br");
 div_book2.append(br_tag16);
 
-// // sportsselect
-// span_sportsSelect = document.createElement("span");
-// span_sportsSelect.setAttribute("class", "headingbook");
-// span_sportsSelect.innerText = "Select Which Courts";
-// div_book2.append(span_sportsSelect);
-
-// select_sports = document.createElement("select");
-// select_sports.setAttribute("class", "courtss");
-// select_sports.setAttribute("required", "");
-// div_book2.append(select_sports);
-
-
-
-// option_court= document.createElement("option");
-// option_court.innerText = "Select an Option";
-// option_court.setAttribute("value","")
-// select_sports.append(option_court);
-
-// // loopit
-// for (let i = 1; i <= show2.groundCourt; i++) {
-//   option_courts = document.createElement("option");
-//   option_courts.innerText = ground_details[0].courtsoptions[`courts${i}`];
-//   option_courts.value = ground_details[0].courtsoptions[`courts${i}`];
-//   select_sports.append(option_courts);
-// }
 
 br_tag12 = document.createElement("br");
 div_book2.append(br_tag12);
@@ -971,11 +948,7 @@ anchorpayonline = document.createElement("a");
 anchorpayonline.setAttribute("href", "../../pages/payment/paymentpage.html");
 div_book2.append(anchorpayonline);
 
-// button_payonline=document.createElement("button")
-// button_payonline.setAttribute("class","pay")
-// button_payonline.setAttribute("type","button")
-// button_payonline.innerText="Pay online";
-// anchorpayonline.append(button_payonline)
+
 
 br_tag17 = document.createElement("br");
 div_book2.append(br_tag17);
@@ -1076,7 +1049,7 @@ const bookingBtn = document.getElementById("formbook_btn");
 const bookbtn = document.querySelector(".paycash");
 bookbtn.addEventListener("click", (e) => {
   e.preventDefault();
-  checkUser();
+  
 
   // alert("ok");
 
@@ -1129,6 +1102,142 @@ date.setAttribute("min", today);
 
 // for courts timing asorting
 select_sports.addEventListener("input", updatetime);
+
+
+// booking
+
+
+bookingBtn.addEventListener("submit", (e) => {
+  e.preventDefault();
+  getBookingInfo();
+  popbox.style.display = "none";
+});
+const selectTimings = document.querySelector(".timings");
+const ok = Array.from(selectTimings);
+console.log(ok);
+
+// const sellerdata = JSON.parse(localStorage.getItem("groundadmin_details"));
+// getting seller email
+
+
+// const sellerEmail = sellerdata.find(
+ //  (data) => show2.seller_id === data.seller_id
+// );
+// show2.sellerdetail = sellerEmail;
+// const selleremail = show2.sellerdetail.seller_email;
+// booking data
+
+function getBookingInfo() {
+  const bookDate = document.getElementById("date").value;
+  const selectTimings = document.querySelector(".timings").value;
+  const selectSports = document.querySelector(".sportss").value;
+  const selectDuration = document.querySelector(".durations").value;
+  const selectplayers = document.querySelector(".players").value;
+  const selectedCourts = document.querySelector(".courtss").value;
+  const groundPrice = document.querySelector(".pricelast").innerText;
+  const payment=document.querySelector(`input[name="pay"]:checked`)
+  // const date=new Date().toLocaleString();
+  alert(selectTimings);
+
+
+  let selectedTimingsArray; 
+
+if (selectDuration === "Select an Option") {
+  selectedTimingsArray = [selectTimings]; 
+} else {
+  const extraDuration = parseInt(selectDuration);
+
+  const selectTimingindex = Array.from(
+    document.querySelector(".timings").options
+  ).findIndex((option) => option.value === selectTimings);
+  console.log(selectTimingindex);
+
+  selectedTimingsArray = [];
+  for (let i = 0; i <= extraDuration; i++) {
+    selectedTimingsArray.push(
+      document.querySelector(".timings").options[selectTimingindex + i].value
+    );
+  }
+}
+
+  const url = "http://localhost:8080/bookandplay-web/GetUserSession";
+
+let userId;
+axios.get(url)
+         .then(function (response) {
+             // handle success
+            console.log(response.data);
+             const responseUserData = response.data.substring(response.data.indexOf('{'));
+             const userLogin = JSON.parse(responseUserData);
+ 
+
+userId=userLogin.userId;
+
+
+
+
+const created_at = new Date().getTime();
+
+const currentDate = new Date();
+const year = currentDate.getFullYear();
+const month = String(currentDate.getMonth() + 1).padStart(2, "0"); // Month is 0-based
+const day = String(currentDate.getDate()).padStart(2, "0");
+const formattedCurrentDate = `${year}-${month}-${day}`;
+
+const requestData =
+    "&bookDate=" + bookDate +
+    "&selectedTimings=" +  selectedTimingsArray.join("&selectedTimings=") +
+    "&selectSports=" + selectSports +
+    "&selectDuration=" + selectDuration +
+    "&selectplayers=" + selectplayers +
+    "&selectedCourts=" + selectedCourts +
+    "&groundPrice=" + groundPrice +
+    "&payment=" +payment.value+
+    "&created_at=" + created_at+
+"&groundId="+groundId+
+"&groundOwnerId="+show2.groundOwnerId+
+"&userId="+userLogin.userId+
+"&paymentDate=" + formattedCurrentDate;
+
+
+    
+    
+    
+    
+const url = "http://localhost:8080/bookandplay-web/AddGroundBooking?"; 
+
+axios.post(url, requestData)
+			  .then(function (response) {
+			    // handle success
+			    console.log(response.data);
+			    const serverMsg = response.data;
+			    
+			    if(serverMsg.trim() === 'success') {
+			    	console.log("success");
+			    }  
+			    else {
+			    	console.log("not success");
+			    }
+			  })
+			  .catch(function (error) {
+			    // handle error
+			    console.log(error);
+			  })
+
+
+
+	  })
+			
+			  .catch(function (error) {
+			    // handle error
+			    console.log(error);
+			  })
+
+
+}
+
+
+
 
    
   })

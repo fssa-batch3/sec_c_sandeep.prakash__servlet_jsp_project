@@ -1,0 +1,339 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+/* container */
+#container {
+    background-image: url(../../assets/images/joinplayerbackground.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.sign {
+    text-align: center;
+    color: white;
+
+}
+
+.forms h1,form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+
+}
+/* forms content */
+
+.forms {
+    position: relative;
+    top: 2%;
+    border: 2px solid rgb(180, 176, 176);
+    width: 35%;
+    left: 33%;
+    border-radius: 2%;
+    box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
+    height: 96%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.labelname {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#name1 {
+    width: 50%;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid black;
+
+}
+
+#age {
+    width: 50%;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid black;
+
+}
+#sportss {
+    width: 50%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+#gender{
+    width: 50%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+
+.select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+#timingsfrom,#timingsto{
+    width: 50%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+
+
+
+}
+#locationselect{
+    width: 50%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+
+}
+
+
+.checkboxsentence {
+    color: white;
+
+}
+
+.checkboxcolumn {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+input[type="name"]::placeholder {
+    padding-left: 5%;
+}
+
+input[type="number"]::placeholder {
+    padding-left: 5%;
+}
+/* forms content */
+
+/* button */
+.profile {
+    font-size: medium;
+    padding: 9px 38px;
+    color: rgb(20, 14, 14);
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 5px;
+    position: relative;
+    top: 30px;
+    left: 200px;
+    box-shadow: 0 3px 10px rgb(3, 10, 87);
+    background-color: rgb(16, 161, 16);
+    border-radius: 10px;
+}
+.profile:hover{
+    background-color: rgb(18, 230, 18);
+
+}
+/* button */
+/* container */
+@media screen and (max-width:450px) {
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    /* container */
+    #container {
+        background-image: url(../../assets/images/joinplayerbackground.jpg);
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
+    
+    }
+    
+    .sign {
+        text-align: center;
+        color: white;
+    
+    }
+    
+    .forms h1,form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+    
+    }
+    /* forms content */
+    
+    .forms {
+        position: relative;
+        top: 2%;
+        border: 2px solid rgb(180, 176, 176);
+        width: 85%;
+        left: 6%;
+        border-radius: 2%;
+        box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
+        height: 97%;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    .labelname {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    
+    #name1 {
+        width: 50%;
+        height: 35px;
+        border-radius: 5px;
+        border: none;
+        border: 1px solid black;
+    
+    }
+    
+    #age {
+        width: 50%;
+        height: 35px;
+        border-radius: 5px;
+        border: 1px solid black;
+    
+    }
+    .sportss {
+        width: 50%;
+        height: 35px;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 5px;
+    }
+    
+    
+    
+    .select {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+    }
+    
+    #timingsfrom,#timingsto{
+        width: 50%;
+        height: 35px;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 5px;
+    
+    
+    
+    }
+    .locationselect{
+        width: 50%;
+        height: 35px;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 5px;
+    
+    }
+    
+    
+    .checkboxsentence {
+        color: white;
+        font-size: 14px;
+    
+    }
+    
+    .checkboxcolumn {
+        display: flex;
+        justify-content: center;
+    
+    }
+    
+    
+    
+    input[type="name"]::placeholder {
+        padding-left: 5%;
+    }
+    
+    input[type="number"]::placeholder {
+        padding-left: 5%;
+    }
+    /* forms content */
+    
+    /* button */
+    .profile {
+        font-size: medium;
+        padding: 9px 38px;
+        color: rgb(20, 14, 14);
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        margin-bottom: 5px;
+        position: relative;
+        top: 30px;
+        left: 130px;
+        box-shadow: 0 3px 10px rgb(3, 10, 87);
+        background-color: rgb(16, 161, 16);
+        border-radius: 10px;
+    }
+    .profile:hover{
+        background-color: rgb(18, 230, 18);
+    
+    }
+    /* button */
+    /* container */
+    
+}
+@media all and (min-width:750px) and (max-width:1024px) {
+       .forms {
+        position: relative;
+        top: 2%;
+        border: 2px solid rgb(180, 176, 176);
+        width: 85%;
+        left: 6%;
+        border-radius: 2%;
+        box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
+        height: 97%;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+        .profile {
+        font-size: medium;
+        padding: 9px 38px;
+        color: rgb(20, 14, 14);
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        margin-bottom: 5px;
+        position: relative;
+        top: 30px;
+        left: 260px;
+        box-shadow: 0 3px 10px rgb(3, 10, 87);
+        background-color: rgb(16, 161, 16);
+        border-radius: 10px;
+    }
+}
+@media all and (min-width:1024px) and (max-width:1200px){
+            .profile {
+        font-size: medium;
+        padding: 9px 38px;
+        color: rgb(20, 14, 14);
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        margin-bottom: 5px;
+        position: relative;
+        top: 30px;
+        left: 390px;
+        box-shadow: 0 3px 10px rgb(3, 10, 87);
+        background-color: rgb(16, 161, 16);
+        border-radius: 10px;
+    }
+}
+     

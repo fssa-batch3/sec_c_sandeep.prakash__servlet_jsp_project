@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join player</title>
+    <link rel="icon" type="image/icon" href="../../assets/images/faviicon...png">
+    <link rel="stylesheet" href="../../assets/css/joinplayer.css">
+</head>
+<body>
+    <!-- container -->
+    <div id="container">
+        <!-- forms -->
+        <div class="forms">
+        <br>
+        <h1 class="sign">Join As A Player</h1>
+<br>
+        <form>
+        <label class="labelname"> Display Name:</label>
+<br>
+        <input type="name" placeholder="Your Name " id="name1" aria-label="name">
+<br> 
+        <label class="labelname">Age :</label>
+<br>
+        <input type="number" placeholder="Age " id="age" aria-label="age">
+<br> 
+
+        </form>
+            
+        <div class="select">
+            <p class="labelname">Gender</p>
+<br>
+            <input type="name" placeholder="Gender " id="gender" aria-label="gender">
+<br> 
+            <!-- <select id="gender"
+               
+                <option>Male</option>
+                <option>Female</option>
+                <option>Others</option>
+                       
+                </select><br> -->
+        <p class="labelname">Known Sports:</p>
+<br>
+        <select id="sportss">
+               
+        <option>Cricket</option>
+        <option>Football</option>
+        <option>Tennis</option>
+               
+        </select>
+<br>
+        <p class="labelname">Location</p>
+<br>
+        <select id="locationselect">
+            <option>Chennai</option>
+            <option>Coimbatore</option>
+            <option>Salem</option>
+            <option>Erode</option>
+            <option>Madurai</option>
+            <option>Delhi</option>
+            <option>Bangalore</option>
+            <option>Pune</option>
+            <option>Kolkata</option>
+
+    </select>
+<br>
+        <p class="labelname">Timing Available</p>
+<br>
+        <input type="time" id="timingsfrom" aria-label="timingsfrom" value="4:00">
+<br>
+        
+        <p>To</p>
+<br>
+        <input type="time" id="timingsto" aria-label="timingsto" value="6:00">
+        </div>
+        <br>
+        <div class="checkboxcolumn">
+        <input type="checkbox" id="checkbox" aria-label="checkbox" value="tick">
+        <span class="checkboxsentence">You accept to the terms and condition of joining as a player</span>
+<br>
+        </div>
+        <!-- button -->
+        <!-- <a href="../../pages/player/registeredplayer.html"><button class="profile">Join</button></a> -->
+        <button class="profile" type="button" onclick="getPlayerData()">Join</button>
+        <!-- button -->
+        <!-- <input type="email" id="email" aria-label="email"> -->
+        </div>
+        <!-- forms -->
+
+    </div>
+      <!-- container -->
+      <script src="../../assets/js/joinplayer.js"></script>
+
+      <script src="../../assets/js/is_logged.js"></script>
+      
+    <!-- //     function getPlayerData(){
+    //         const name1 =(document.getElementById("name1").value )
+       
+    //    const age = (document.getElementById("age").value )
+      
+    //    const  timingsfrom = (document.getElementById("timingsfrom").value )
+     
+    //    const timingsto =(document.getElementById("timingsto").value )
+    //     }
+//         const name1 =(document.getElementById("name1").value )
+       
+//        const age = (document.getElementById("age").value )
+      
+//        const  timingsfrom = (document.getElementById("timingsfrom").value )
+     
+//        const timingsto =(document.getElementById("timingsto").value )
+     
+//        console.log(name1)
+//    console.log(age)
+//    console.log(timingsfrom)
+//    console.log(timingsto) -->
+
+</body>
+</html>

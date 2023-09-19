@@ -1,0 +1,1976 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+
+/* header */
+header {
+    background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+    height: 15vh;
+    background-position: center;
+    background-size: cover;
+    font-family: 'Noto Serif Khojki', serif;
+
+}
+
+ul {
+    display: flex;
+    justify-content: end;
+    margin-right: 2%;
+    position: relative;
+    top: 35px;
+
+
+}
+.checkbtn{
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    float: right;
+    margin-right: 15px;
+    cursor: pointer;
+    display: none;
+
+}
+#check{
+    display: none;
+}
+ul li {
+    list-style-type: none;
+    padding: 2%;
+}
+
+ul li a {
+    text-decoration: none;
+    font-size: larger;
+    color: white;
+}
+
+ul li a:hover {
+    color: rgb(130, 217, 235);
+
+}
+
+
+.logo {
+    width: 14%;
+    position: relative;
+    bottom: 85px;
+    left: 66px;
+}
+
+
+
+.cont1 {
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bolder;
+    position: relative;
+    bottom: 170px;
+    color: white;
+}
+
+/* header */
+/* maincontainer */
+.maincontainer{
+    height: 77vh;
+}
+
+/* bar */
+.bar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+}
+
+.sidebar1 {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    margin: 10px 10px;
+    border-radius: 9%;
+    height: 50vh;
+
+}
+
+.sidebar2 {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    margin: 10px 10px;
+    border-radius: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+/* sidebar1 */
+.box1 {
+
+    background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+
+    border: 1px solid rgb(25, 11, 82);
+    border-radius: 10%;
+    width: 45%;
+    height: 350px;
+    box-shadow: 0 10px 10px rgba(14, 1, 1, 0.23);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2%;
+    position: relative;
+    top: 90px;
+
+}
+
+.profilepic {
+    width: 100px;
+    position: relative;
+    top: 30px;
+}
+.profile {
+    font-size: medium;
+    padding: 5px 10px;
+    color: rgb(20, 14, 14);
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 5px;
+    position: relative;
+    top: 30px;
+    box-shadow: 0 3px 10px rgb(3, 10, 87);
+
+}
+
+.sports {
+    position: relative;
+    right: 30%;
+
+}
+.cricketicon {
+    width: 30px;
+}
+.ratings {
+    display: flex;
+    position: relative;
+    left: 38%;
+    bottom: 7%;
+}
+
+.fa-star {
+    color: rgb(255, 183, 0);
+    font-size: 17px;
+    position: relative;
+    right: 10px;
+
+}
+textarea {
+    resize: none;
+   
+}
+/* dropdown statistics */
+.staticsreport {
+    color: black;
+    position: relative;
+    left: 17px;
+}
+
+.dropdownstatistics {
+    position: relative;
+    left: 420px;
+    bottom: 205px;
+  
+}
+
+.statisticsbtn {
+    padding: 10px 20px;
+    background-color: #07172c;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5%;
+ 
+
+}
+
+.dropdownlist {
+
+    color: black;
+    background-color: rgb(189, 195, 208);
+    width: 210px;
+    height: 170px;
+    position: absolute;
+    right: 570px;
+    display: none;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    border-radius: 5px;
+   
+}
+
+.dropdownlist p:hover {
+    background-color: rgb(240, 252, 255);
+    width: 160px;
+}
+
+.dropdownstatistics:hover .dropdownlist {
+    display: block;
+}
+/* dropdown statistics */
+
+/* dropdown friends */
+.friendslist {
+    color: black;
+    position: relative;
+    left: 17px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.friendsdropdown{
+    position: relative;
+    left: 590px;
+    bottom: 257px;
+   
+}
+.friendsbtn{
+        padding: 10px 20px;
+    background-color: #07172c;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5%;
+}
+
+.friendslistdropdown{
+
+    color: black;
+    background-color: rgb(189, 195, 208);
+    width: 210px;
+    height: 370px;
+    position: absolute;
+    right: 560px;
+    display: none;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    border-radius: 5px;
+}
+.friendslistdropdown p:hover {
+    background-color: rgb(240, 252, 255);
+    width: 190px;
+}
+
+.friendsdropdown:hover .friendslistdropdown{
+    display: block;
+}
+
+/* dropdown friends */
+
+/* sidebar1 */
+
+
+
+/* sidebar2 */
+
+
+.container {
+
+    position: relative;
+    right: 120px;
+    bottom: 70px;
+
+
+}
+
+form input {
+    width: 320px;
+    height: 27px;
+    border: 1px solid black;
+    padding-left: 7px;
+    outline: none;
+    border-radius: 0px;
+
+}
+
+
+
+.forms h1,form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+
+}
+
+.forms {
+    position: relative;
+  bottom: 10px;
+    border: 2px solid rgb(180, 176, 176);
+    width: 450px;
+    left: 35%;
+    border-radius: 2%;
+    box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
+    height: 990px;
+
+
+}
+
+#name1 {
+    width: 50%;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid black;
+
+}
+
+#age {
+    width: 50%;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid black;
+
+}
+#userEmail{
+    width: 50%;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+#phoneno1{
+    width: 50%;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+#password{
+    width: 50%;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+
+.labelname {
+    font-size: 20px;
+    font-weight: 500;
+}
+#sportss {
+    width: 50%;
+    height: 35px;
+
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+.timings {
+    width: 50%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+
+}
+#locationselect{
+    width: 50%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+
+}
+#timingsfrom,#timingsto{
+    width: 50%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+
+
+
+}
+/* button */
+
+.profile2 {
+    font-size: medium;
+    padding: 9px 38px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 5px;
+    position: relative;
+    background-color: rgba(12, 175, 23, 0.783);
+    left: 163px;
+    box-shadow: 0 3px 10px rgb(3, 10, 87);
+
+}
+/* button */
+/* sidebar2 */
+
+
+.iconplay {
+    width: 70px;
+    position: relative;
+    bottom: 630px;
+    left: 530px;
+   
+}
+.two-sides {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    grid-template-rows: 92vh;
+    grid-column-gap: 10px;
+    height: 110vh;
+}
+
+.ground-info-1 {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgb(0, 0, 0);
+    margin: 10px 10px;
+ 
+    height: 1vh;
+    display: flex;
+    flex-direction: column;
+  align-items: center;
+
+
+}
+
+.child {
+
+    width: 35%;
+    height: 350px;
+    border-radius: 4%;
+    box-shadow: 0 3px 10px rgb(3, 10, 87);
+    margin-left: 13%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+
+}
+
+.child:hover {
+   
+    border: 3px solid rgb(2, 3, 14);
+        
+}
+/* groundimage */
+.groimg {
+    width: 70%;
+    border: 2px solid transparent;
+    border-image: linear-gradient(90deg, rgb(11, 11, 11) 4%, rgb(14, 16, 16) 100%)60;
+    color: rgb(12, 10, 10);
+    margin-left: 59px;
+ 
+}
+/* groundname */
+
+.groundn {
+    color: rgb(6, 4, 4);
+    font-size: 15px;
+    font-weight: bolder;
+    text-align: center;
+
+}
+/* locationname */
+
+.locationn {
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    font-weight: bolder;
+    text-align: center;
+}
+/* sportsicon */
+.sportsicon {
+    width: 25px;
+}
+
+
+.symbol {
+    display: flex;
+    flex-direction: column;
+    flex-direction: row;
+    position: relative;
+    right: 33%;
+    bottom: 2%;
+    align-content: space-around;
+    align-items: flex-end;
+
+}
+
+/* book button */
+.book {
+    font-size: medium;
+    padding: 2px 10px;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(5, 120, 105);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    top: 30px;
+    border-radius: 10%;
+
+}
+
+
+
+.ratingno {
+    position: relative;
+    font-size: 130%;
+    font-weight: bold;
+    bottom: 3px;
+    color: rgb(0, 0, 0);
+}
+a{
+    text-decoration: none;
+}
+
+.bookhistory{
+    position: relative;
+    left: 75px;
+
+}
+.bookdate{
+    position: relative;
+    left: 75px;
+    font-weight: 600;
+}
+/* footer section */
+footer {
+    height: 30vh;
+    background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
+
+    background-size: cover;
+    color: white;
+
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.foot-heading {
+    color: rgb(219, 213, 213);
+    font-size: larger;
+    font-weight: bold;
+
+}
+
+.column1 {
+    margin-top: 2%;
+}
+
+p {
+    list-style-type: none;
+}
+
+p a {
+    text-decoration: none;
+    font-size: medium;
+    color: rgb(219, 213, 213);
+    line-height: 1.6;
+}
+
+.fa-brands {
+    font-size: x-large;
+    padding: 1.5%;
+}
+
+.fa-facebook {
+    color: #3b5998;
+}
+
+.fa-twitter {
+    color: #00acee;
+
+}
+.fa-instagram{
+    color: rgb(167, 8, 95);
+}
+
+.fa-linkedin {
+    color: #0A66C2;
+
+}
+.booking-history{
+    font-size: larger;
+    color: #00021a;
+    position: relative;
+    left: 60px;
+}
+.fa-arrow-down{
+    color: #00021a;
+    font-size: larger;
+    position: relative;
+    left: 10px;
+
+}
+
+/* footer section */
+@media screen and (max-width:450px){
+
+    * {
+        margin: 0px;
+        padding: 0px;
+    
+    }
+    body,html{
+        overflow-x: hidden;
+    }
+    
+    
+    /* header */
+    header {
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+        height: 15vh;
+        background-position: center;
+        background-size: cover;
+        font-family: 'Noto Serif Khojki', serif;
+    
+    }
+    
+    ul {
+        margin-right: 2%;
+        position: relative;
+        left: -100%;
+        width: 70px;
+        display: inline-block;
+        transition: all 0.5s;
+        z-index: 5;
+    
+    
+    }
+    .checkbtn{
+        font-size: 22px;
+        color: rgb(255, 255, 255);
+        float: right;
+        margin-right: 15px;
+        cursor: pointer;
+        display: block;
+    
+    
+    }
+    #check{
+        display: none;
+    }
+    ul li {
+        list-style-type: none;
+        padding: 2%;
+        background-color: #d0dae3;
+    }
+    
+    ul li a {
+        text-decoration: none;
+        font-size: 10px;
+      color: #00021a;
+    }
+    
+    ul li a:hover {
+        color: rgb(130, 217, 235);
+    
+    }
+    #check:checked ~ul{
+        position: relative;
+        left: 75%;
+       }
+    
+    .logo {
+        width: 27%;
+        position: relative;
+        bottom: 105px;
+        left: 166px;
+    }
+    
+    
+    
+    .cont1 {
+        text-align: center;
+        font-size: large;
+        font-weight: bolder;
+        position: relative;
+        bottom: 90px;
+        color: white;
+    }
+    
+    /* header */
+    /* maincontainer */
+    .maincontainer{
+        height: 90vh;
+    }
+    
+    /* bar */
+    .bar {
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-column-gap: 20px;
+    }
+    
+    .sidebar1 {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+        margin: 10px 10px;
+        border-radius: 9%;
+        height: 50vh;
+    
+    }
+    
+    .sidebar2 {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+        margin: 10px 10px;
+        border-radius: 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    /* sidebar1 */
+    .box1 {
+    
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+    
+        border: 1px solid rgb(25, 11, 82);
+        border-radius: 10%;
+        width: 55%;
+        height: 300px;
+        box-shadow: 0 10px 10px rgba(14, 1, 1, 0.23);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 17%;
+        position: relative;
+        top: 10px;
+    
+    }
+    
+    .profilepic {
+        width: 100px;
+        position: relative;
+        top: 30px;
+    }
+    .profile {
+        font-size: medium;
+        padding: 5px 10px;
+        color: rgb(20, 14, 14);
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        margin-bottom: 5px;
+        position: relative;
+        top: 30px;
+        box-shadow: 0 3px 10px rgb(3, 10, 87);
+    
+    }
+    
+    .sports {
+        position: relative;
+        right: 30%;
+    
+    }
+    .cricketicon {
+        width: 30px;
+    }
+    .ratings {
+        display: flex;
+        position: relative;
+        left: 38%;
+        bottom: 9%;
+    }
+    
+    .fa-star {
+        color: rgb(255, 183, 0);
+        font-size: 17px;
+        position: relative;
+        right: 10px;
+    
+    }
+    textarea {
+        resize: none;
+       
+    }
+    /* dropdown statistics */
+    .staticsreport {
+        color: black;
+        position: relative;
+        left: 17px;
+    }
+    
+    .dropdownstatistics {
+        position: relative;
+        left: 50px;
+        bottom: 25px;
+      
+    }
+    
+    .statisticsbtn {
+        padding: 10px 20px;
+        background-color: #07172c;
+        color: white;
+        cursor: pointer;
+        border: none;
+        border-radius: 5%;
+     
+    
+    }
+    
+    .dropdownlist {
+    
+        color: black;
+        background-color: rgb(189, 195, 208);
+        width: 210px;
+        height: 170px;
+        position: absolute;
+        right: 570px;
+        display: none;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: left;
+        border-radius: 5px;
+       
+    }
+    
+    .dropdownlist p:hover {
+        background-color: rgb(240, 252, 255);
+        width: 160px;
+    }
+    
+    .dropdownstatistics:hover .dropdownlist {
+        display: block;
+    }
+    /* dropdown statistics */
+    
+    /* dropdown friends */
+    .friendslist {
+        color: black;
+        position: relative;
+        left: 17px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .friendsdropdown{
+        position: relative;
+        left: 230px;
+        bottom: 77px;
+       
+    }
+    .friendsbtn{
+            padding: 10px 20px;
+        background-color: #07172c;
+        color: white;
+        cursor: pointer;
+        border: none;
+        border-radius: 5%;
+    }
+    
+    .friendslistdropdown{
+    
+        color: black;
+        background-color: rgb(189, 195, 208);
+        width: 210px;
+        height: 370px;
+        position: absolute;
+        right: 560px;
+        display: none;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: left;
+        border-radius: 5px;
+    }
+    .friendslistdropdown p:hover {
+        background-color: rgb(240, 252, 255);
+        width: 190px;
+    }
+    
+    .friendsdropdown:hover .friendslistdropdown{
+        display: block;
+    }
+    
+    /* dropdown friends */
+    
+    /* sidebar1 */
+    
+    
+    
+    /* sidebar2 */
+    
+    
+    .container {
+    
+        position: relative;
+        right: 120px;
+        top: 220px;
+    
+    
+    }
+    
+    form input {
+        width: 320px;
+        height: 27px;
+        border: 1px solid black;
+        padding-left: 7px;
+        outline: none;
+        border-radius: 0px;
+    
+    }
+    
+    
+    
+    .forms h1,form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: black;
+        font-size: 20px;
+    
+    }
+    
+    .forms {
+        position: relative;
+      bottom: 10px;
+        border: 2px solid rgb(180, 176, 176);
+        width: 300px;
+        left: 35%;
+        border-radius: 2%;
+        box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
+        height: 700px;
+    
+    
+    }
+    
+    #name1 {
+        width: 50%;
+        height: 35px;
+        border-radius: 5px;
+        border: none;
+        border: 1px solid black;
+    
+    }
+    
+    #age {
+        width: 50%;
+        height: 35px;
+        border-radius: 5px;
+        border: 1px solid black;
+    
+    }
+    .select {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: black;
+    }
+    
+    
+    .labelname {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .sportss {
+        width: 50%;
+        height: 35px;
+    
+        font-size: 20px;
+        text-align: center;
+        border-radius: 5px;
+    }
+    .timings {
+        width: 50%;
+        height: 35px;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 5px;
+    
+    }
+    .locationselect{
+        width: 50%;
+        height: 35px;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 5px;
+    
+    }
+    #timingsfrom,#timingsto{
+        width: 50%;
+        height: 35px;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 5px;
+    
+    
+    
+    }
+    /* button */
+    
+    .profile2 {
+        font-size: medium;
+        padding: 9px 38px;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        margin-bottom: 5px;
+        position: relative;
+        background-color: rgba(12, 175, 23, 0.783);
+        left: 90px;
+        box-shadow: 0 3px 10px rgb(3, 10, 87);
+    
+    }
+    /* button */
+    /* sidebar2 */
+    
+    
+    .iconplay {
+        width: 70px;
+        position: relative;
+        bottom: 630px;
+        left: 530px;
+
+       
+    }
+    .two-sides {
+        display: grid;
+        grid-template-columns: 5fr ;
+        grid-template-rows: 120vh;
+        grid-column-gap: 10px;
+        height: 130vh;
+        position: relative;
+        top:200px;
+    }
+    
+    .ground-info-1 {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: rgb(0, 0, 0);
+        margin: 10px 10px;
+
+     position: relative;
+     right: 50px;
+        height: 1vh;
+        display: flex;
+        flex-direction: column;
+      align-items: center;
+    
+    
+    }
+    
+    .child {
+    
+        width: 65%;
+        height: 350px;
+        border-radius: 4%;
+        box-shadow: 0 3px 10px rgb(3, 10, 87);
+        margin-left: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        background-color: white;
+        color: black;
+    
+    }
+    
+    .child:hover {
+       
+        border: 3px solid rgb(2, 3, 14);
+            
+    }
+    /* groundimage */
+    .groimg {
+        width: 70%;
+        border: 2px solid transparent;
+        border-image: linear-gradient(90deg, rgb(11, 11, 11) 4%, rgb(14, 16, 16) 100%)60;
+        color: rgb(12, 10, 10);
+        margin-left: 39px;
+     
+    }
+    /* groundname */
+    
+    .groundn {
+        color: rgb(6, 4, 4);
+        font-size: 15px;
+        font-weight: bolder;
+        text-align: center;
+    
+    }
+    /* locationname */
+    
+    .locationn {
+        color: rgb(0, 0, 0);
+        font-size: 15px;
+        font-weight: bolder;
+        text-align: center;
+    }
+    /* sportsicon */
+    .sportsicon {
+        width: 25px;
+    }
+    
+    
+    .symbol {
+        display: flex;
+        flex-direction: column;
+        flex-direction: row;
+        position: relative;
+        right: 33%;
+        bottom: 2%;
+        align-content: space-around;
+        align-items: flex-end;
+    
+    }
+    
+    /* book button */
+    .book {
+        font-size: 17px;
+        padding: 2px 2px;
+        height: 100%;
+        width: 100%;
+        background-color: rgb(5, 120, 105);
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        position: relative;
+        top: 30px;
+        border-radius: 10%;
+    
+    }
+    
+    
+    
+    .ratingno {
+        position: relative;
+        font-size: 130%;
+        font-weight: bold;
+        bottom: 3px;
+        color: rgb(0, 0, 0);
+    }
+    a{
+        text-decoration: none;
+    }
+    
+    .bookhistory{
+        position: relative;
+        left: 35px;
+        font-size: 20px;
+        
+    
+    }
+    .bookdate{
+        position: relative;
+        left: 35px;
+        font-weight: 600;
+    }
+    /* footer section */
+    footer {
+        height: 30vh;
+        background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
+    
+        background-size: cover;
+        color: white;
+    
+    }
+    
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    
+    }
+    
+    .foot-heading {
+        color: rgb(219, 213, 213);
+        font-size: large;
+        font-weight: bold;
+    
+    }
+    
+    .column1 {
+        margin-top: 2%;
+    }
+    
+    p {
+        list-style-type: none;
+    }
+    
+    p a {
+        text-decoration: none;
+        font-size: 9px;
+        color: rgb(219, 213, 213);
+        line-height: 1.6;
+    }
+    
+    .fa-brands {
+        font-size: smaller;
+        padding: 1.5%;
+    }
+    
+    .fa-facebook {
+        color: #3b5998;
+    }
+    
+    .fa-twitter {
+        color: #00acee;
+    
+    }
+    .fa-instagram{
+        color: rgb(167, 8, 95);
+    }
+    
+    .fa-linkedin {
+        color: #0A66C2;
+    
+    }
+    .booking-history{
+        font-size: larger;
+        color: #00021a;
+        position: relative;
+        left: 60px;
+        bottom: 480px;
+    }
+    .fa-arrow-down{
+        color: #00021a;
+        font-size: larger;
+        position: relative;
+        left: 10px;
+    
+    }
+    
+    /* footer section */
+   
+}
+@media screen and (min-width:320px) and (max-width:380px){
+    .sportsicon {
+        width: 17px;
+        position: relative;
+        bottom: 12px;
+    }
+    .ratingno {
+        position: relative;
+        font-size: 90%;
+        font-weight: bold;
+        bottom: 3px;
+        color: rgb(0, 0, 0);
+    }
+    .fa-star {
+        color: rgb(255, 183, 0);
+        font-size: 12px;
+        position: relative;
+        right: 10px;
+        
+    
+    }
+    .ratings{
+        position: relative;
+        bottom: 25px;
+    
+    }
+    .friendsdropdown{
+        position: relative;
+        left: 200px;
+        bottom: 77px;
+       
+    }
+}
+@media all and (min-width:750px) and (max-width:1024px) {
+    
+    * {
+        margin: 0px;
+        padding: 0px;
+    
+    }
+    body,html{
+        overflow-x: hidden;
+    }
+    
+    
+    /* header */
+    header {
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+        height: 15vh;
+        background-position: center;
+        background-size: cover;
+        font-family: 'Noto Serif Khojki', serif;
+    
+    }
+    
+    ul {
+        margin-right: 2%;
+        position: relative;
+        left: -100%;
+        width: 70px;
+        display: inline-block;
+        transition: all 0.5s;
+        z-index: 5;
+    
+    
+    }
+    .checkbtn{
+        font-size: 22px;
+        color: rgb(255, 255, 255);
+        float: right;
+        margin-right: 15px;
+        cursor: pointer;
+        display: block;
+    
+    
+    }
+    #check{
+        display: none;
+    }
+    ul li {
+        list-style-type: none;
+        padding: 2%;
+        background-color: #d0dae3;
+    }
+    
+    ul li a {
+        text-decoration: none;
+        font-size: 10px;
+      color: #00021a;
+    }
+    
+    ul li a:hover {
+        color: rgb(130, 217, 235);
+    
+    }
+    #check:checked ~ul{
+        position: relative;
+        left: 75%;
+       }
+    
+    .logo {
+        width: 27%;
+        position: relative;
+        bottom: 105px;
+        left: 256px;
+    }
+    
+    
+    
+    .cont1 {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bolder;
+        position: relative;
+        bottom: 110px;
+        color: white;
+    }
+    
+    /* header */
+    /* maincontainer */
+    .maincontainer{
+        height: 90vh;
+    }
+    
+    /* bar */
+    .bar {
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-column-gap: 20px;
+    }
+    
+    .sidebar1 {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+        margin: 10px 10px;
+        border-radius: 9%;
+        height: 50vh;
+    
+    }
+    
+    .sidebar2 {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: white;
+        margin: 10px 10px;
+        border-radius: 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    /* sidebar1 */
+    .box1 {
+    
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+    
+        border: 1px solid rgb(25, 11, 82);
+        border-radius: 10%;
+        width: 55%;
+        height: 330px;
+        box-shadow: 0 10px 10px rgba(14, 1, 1, 0.23);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 17%;
+        position: relative;
+        top: 10px;
+    
+    }
+    
+    .profilepic {
+        width: 100px;
+        position: relative;
+        top: 30px;
+    }
+    .profile {
+        font-size: medium;
+        padding: 5px 10px;
+        color: rgb(20, 14, 14);
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        margin-bottom: 5px;
+        position: relative;
+        top: 30px;
+        box-shadow: 0 3px 10px rgb(3, 10, 87);
+    
+    }
+    
+    .sports {
+        position: relative;
+        right: 30%;
+    
+    }
+    .cricketicon {
+        width: 30px;
+    }
+    .ratings {
+        display: flex;
+        position: relative;
+        left: 38%;
+        bottom: 9%;
+    }
+    
+    .fa-star {
+        color: rgb(255, 183, 0);
+        font-size: 17px;
+        position: relative;
+        right: 10px;
+    
+    }
+    textarea {
+        resize: none;
+       
+    }
+    /* dropdown statistics */
+    .staticsreport {
+        color: black;
+        position: relative;
+        left: 17px;
+    }
+    
+    .dropdownstatistics {
+        position: relative;
+        left: 150px;
+        bottom: 25px;
+      
+    }
+    
+    .statisticsbtn {
+        padding: 10px 20px;
+        background-color: #07172c;
+        color: white;
+        cursor: pointer;
+        border: none;
+        border-radius: 5%;
+     
+    
+    }
+    
+    .dropdownlist {
+    
+        color: black;
+        background-color: rgb(189, 195, 208);
+        width: 210px;
+        height: 170px;
+        position: absolute;
+        right: 570px;
+        display: none;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: left;
+        border-radius: 5px;
+       
+    }
+    
+    .dropdownlist p:hover {
+        background-color: rgb(240, 252, 255);
+        width: 160px;
+    }
+    
+    .dropdownstatistics:hover .dropdownlist {
+        display: block;
+    }
+    /* dropdown statistics */
+    
+    /* dropdown friends */
+    .friendslist {
+        color: black;
+        position: relative;
+        left: 17px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .friendsdropdown{
+        position: relative;
+        left: 390px;
+        bottom: 77px;
+       
+    }
+    .friendsbtn{
+            padding: 10px 20px;
+        background-color: #07172c;
+        color: white;
+        cursor: pointer;
+        border: none;
+        border-radius: 5%;
+    }
+    
+    .friendslistdropdown{
+    
+        color: black;
+        background-color: rgb(189, 195, 208);
+        width: 210px;
+        height: 370px;
+        position: absolute;
+        right: 560px;
+        display: none;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: left;
+        border-radius: 5px;
+    }
+    .friendslistdropdown p:hover {
+        background-color: rgb(240, 252, 255);
+        width: 190px;
+    }
+    
+    .friendsdropdown:hover .friendslistdropdown{
+        display: block;
+    }
+    
+    /* dropdown friends */
+    
+    /* sidebar1 */
+    
+    
+    
+    /* sidebar2 */
+    
+    
+    .container {
+    
+        position: relative;
+        right: 120px;
+        top: 220px;
+    
+    
+    }
+    
+    form input {
+        width: 320px;
+        height: 27px;
+        border: 1px solid black;
+        padding-left: 7px;
+        outline: none;
+        border-radius: 0px;
+    
+    }
+    
+    
+    
+    .forms h1,form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: black;
+        font-size: 20px;
+    
+    }
+    
+    .forms {
+        position: relative;
+      bottom: 10px;
+        border: 2px solid rgb(180, 176, 176);
+        width: 450px;
+        left: 20%;
+        border-radius: 2%;
+        box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
+        height: 700px;
+    
+    
+    }
+    
+    #name1 {
+        width: 50%;
+        height: 35px;
+        border-radius: 5px;
+        border: none;
+        border: 1px solid black;
+    
+    }
+    
+    #age {
+        width: 50%;
+        height: 35px;
+        border-radius: 5px;
+        border: 1px solid black;
+    
+    }
+    .select {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: black;
+    }
+    
+    
+    .labelname {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .sportss {
+        width: 50%;
+        height: 35px;
+    
+        font-size: 20px;
+        text-align: center;
+        border-radius: 5px;
+    }
+    .timings {
+        width: 50%;
+        height: 35px;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 5px;
+    
+    }
+    .locationselect{
+        width: 50%;
+        height: 35px;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 5px;
+    
+    }
+    #timingsfrom,#timingsto{
+        width: 50%;
+        height: 35px;
+        font-size: 20px;
+        text-align: center;
+        border-radius: 5px;
+    
+    
+    
+    }
+    /* button */
+    
+    .profile2 {
+        font-size: medium;
+        padding: 9px 38px;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        margin-bottom: 5px;
+        position: relative;
+        background-color: rgba(12, 175, 23, 0.783);
+        left: 170px;
+        box-shadow: 0 3px 10px rgb(3, 10, 87);
+    
+    }
+    /* button */
+    /* sidebar2 */
+    
+    
+    .iconplay {
+        width: 70px;
+        position: relative;
+        bottom: 630px;
+        left: 530px;
+
+       
+    }
+    .two-sides {
+        display: grid;
+        grid-template-columns: 5fr ;
+        grid-template-rows: 120vh;
+        grid-column-gap: 10px;
+        height: 160vh;
+        position: relative;
+        top:200px;
+    }
+    
+    .ground-info-1 {
+        background-color: rgba(255, 255, 255, 0.2);
+        color: rgb(0, 0, 0);
+        margin: 10px 10px;
+
+     position: relative;
+     right: 50px;
+        height: 1vh;
+        display: flex;
+        flex-direction: column;
+      align-items: center;
+    
+    
+    }
+    
+    .child {
+    
+        width: 65%;
+        height: 380px;
+        border-radius: 4%;
+        box-shadow: 0 3px 10px rgb(3, 10, 87);
+        margin-left: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        background-color: white;
+        color: black;
+    
+    }
+    
+    .child:hover {
+       
+        border: 3px solid rgb(2, 3, 14);
+            
+    }
+    /* groundimage */
+    .groimg {
+        width: 75%;
+        border: 2px solid transparent;
+        border-image: linear-gradient(90deg, rgb(11, 11, 11) 4%, rgb(14, 16, 16) 100%)60;
+        color: rgb(12, 10, 10);
+        margin-left: 60px;
+     
+    }
+    /* groundname */
+    
+    .groundn {
+        color: rgb(6, 4, 4);
+        font-size: 15px;
+        font-weight: bolder;
+        text-align: center;
+    
+    }
+    /* locationname */
+    
+    .locationn {
+        color: rgb(0, 0, 0);
+        font-size: 15px;
+        font-weight: bolder;
+        text-align: center;
+    }
+    /* sportsicon */
+    .sportsicon {
+        width: 25px;
+    }
+    
+    
+    .symbol {
+        display: flex;
+        flex-direction: column;
+        flex-direction: row;
+        position: relative;
+        right: 33%;
+        bottom: 2%;
+        align-content: space-around;
+        align-items: flex-end;
+    
+    }
+    
+    /* book button */
+    .book {
+        font-size: 17px;
+        padding: 2px 2px;
+        height: 100%;
+        width: 100%;
+        background-color: rgb(5, 120, 105);
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        position: relative;
+        top: 30px;
+        border-radius: 10%;
+    
+    }
+    
+    
+    
+    .ratingno {
+        position: relative;
+        font-size: 130%;
+        font-weight: bold;
+        bottom: 3px;
+        color: rgb(0, 0, 0);
+    }
+    a{
+        text-decoration: none;
+    }
+    
+    .bookhistory{
+        position: relative;
+        left: 35px;
+        font-size: 20px;
+        
+    
+    }
+    .bookdate{
+        position: relative;
+        left: 35px;
+        font-weight: 600;
+    }
+    /* footer section */
+    footer {
+        height: 30vh;
+        background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
+    
+        background-size: cover;
+        color: white;
+    
+    }
+    
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    
+    }
+    
+    .foot-heading {
+        color: rgb(219, 213, 213);
+        font-size: large;
+        font-weight: bold;
+    
+    }
+    
+    .column1 {
+        margin-top: 2%;
+    }
+    
+    p {
+        list-style-type: none;
+    }
+    
+    p a {
+        text-decoration: none;
+        font-size: 9px;
+        color: rgb(219, 213, 213);
+        line-height: 1.6;
+    }
+    
+    .fa-brands {
+        font-size: smaller;
+        padding: 1.5%;
+    }
+    
+    .fa-facebook {
+        color: #3b5998;
+    }
+    
+    .fa-twitter {
+        color: #00acee;
+    
+    }
+    .fa-instagram{
+        color: rgb(167, 8, 95);
+    }
+    
+    .fa-linkedin {
+        color: #0A66C2;
+    
+    }
+    .booking-history{
+        font-size: larger;
+        color: #00021a;
+        position: relative;
+        left: 60px;
+        bottom: 530px;
+    }
+    .fa-arrow-down{
+        color: #00021a;
+        font-size: larger;
+        position: relative;
+        left: 10px;
+    
+    }
+    
+    /* footer section */
+   
+}
+@media all and (min-width:1024px) and (max-width:1200px){
+
+    .box1 {
+    
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+    
+        border: 1px solid rgb(25, 11, 82);
+        border-radius: 10%;
+        width: 55%;
+        height: 380px;
+        box-shadow: 0 10px 10px rgba(14, 1, 1, 0.23);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-left: 17%;
+        position: relative;
+        top: 10px;
+    
+    }
+    .booking-history{
+        font-size: larger;
+        color: #00021a;
+        position: relative;
+        left: 60px;
+        bottom: 580px;
+    }
+    .dropdownstatistics {
+        position: relative;
+        left: 170px;
+        bottom: 25px;
+      
+    }
+
+    .friendsdropdown{
+        position: relative;
+        left: 560px;
+        bottom: 77px;
+       
+    }
+
+
+    .child {
+    
+        width: 55%;
+        height: 430px;
+        border-radius: 4%;
+        box-shadow: 0 3px 10px rgb(3, 10, 87);
+        margin-left: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+        background-color: white;
+        color: black;
+    
+    }
+}

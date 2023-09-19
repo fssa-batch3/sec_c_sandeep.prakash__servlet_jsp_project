@@ -1,0 +1,177 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+/* account created container */
+#container {
+    background-image: url(../../assets/images/signup.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+/* tick box */
+.tick {
+    position: relative;
+    top: 30%;
+    border: 2px solid rgb(180, 176, 176);
+    width: 30%;
+    left: 35%;
+    border-radius: 2%;
+    box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+    background-color: rgb(255, 255, 255);
+
+
+}
+
+.fa-check {
+    color: green;
+    font-size: 520%;
+}
+.head {
+    color: green;
+    font-size: xx-large;
+    text-align: center;
+}
+
+/* button */
+
+#joinasplayers {
+    padding: 0px 32px;
+    height: 45px;
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+    background-color: rgba(14, 163, 24, 0.783);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 3px 10px rgb(35, 34, 34);
+
+
+
+}
+#joinasplayers:hover{
+    background-color: rgb(15, 190, 15);
+
+}
+
+#bookground {
+    padding: 0px 42px;
+    height: 45px;
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+    background-color: rgba(14, 163, 24, 0.783);
+    color: white;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 3px 10px rgb(35, 34, 34);
+
+}
+#bookground:hover{
+    background-color: rgb(15, 190, 15);
+
+}
+/* button */
+
+
+
+/* tick box */
+/* account created container */
+@media screen and (max-width:900px) {
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    /* account created container */
+    #container {
+        background-image: url(../../assets/images/light.jpg);
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    /* tick box */
+    .tick {
+        position: relative;
+        top: 30%;
+        border: 2px solid rgb(180, 176, 176);
+        width: 75%;
+        left: 12%;
+        border-radius: 2%;
+        box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px 0px;
+        background-color: rgba(0, 0, 0, 0.3);
+    
+    
+    }
+    
+    .fa-check {
+        color: green;
+        font-size: 520%;
+    }
+    .head {
+        color: green;
+        font-size: xx-large;
+        text-align: center;
+    }
+    
+    /* button */
+    
+    #joinasplayers {
+        padding: 0px 32px;
+        height: 45px;
+        font-size: large;
+        font-weight: bolder;
+        cursor: pointer;
+        background-color: rgba(14, 163, 24, 0.783);
+        color: white;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 3px 10px rgb(35, 34, 34);
+    
+    
+    
+    }
+    #joinasplayers:hover{
+        background-color: rgb(15, 190, 15);
+    
+    }
+    
+    #bookground {
+        padding: 0px 42px;
+        height: 45px;
+        font-size: large;
+        font-weight: bolder;
+        cursor: pointer;
+        background-color: rgba(14, 163, 24, 0.783);
+        color: white;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 3px 10px rgb(35, 34, 34);
+    
+    }
+    #bookground:hover{
+        background-color: rgb(15, 190, 15);
+    
+    }
+    /* button */
+    
+    
+    
+    /* tick box */
+    /* account created container */
+
+}

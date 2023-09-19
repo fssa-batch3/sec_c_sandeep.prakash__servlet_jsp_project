@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Ground</title>
+    <link rel="icon" type="image/icon" href="../../assets/images/faviicon...png">
+    <link rel="stylesheet" href="../../assets/css/bookground.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Noto+Serif+Khojki:wght@500&family=Roboto&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- header -->
+    <header>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <ul>
+            <li>
+                <a href="../../index.html">Home</a>
+            </li>
+            <li>
+                <a  class="findplayers" href="../player/findplayers.html">Find Players</a>
+            </li>
+            <li class="contact">
+                <a href="../../pages/contactus/contact.html">Contact us</a>
+            </li>
+            <li>
+                <a href="../login/login.html">
+                    <button class="login">Login</button>
+                </a>
+            </li>
+        </ul>
+        <a href="../../index.html">
+            <img class="logo" src="../../assets/images/Logo.png" alt="Book and play">
+        </a>
+    </header>
+    <!-- header -->
+
+    <!-- main1 search-->
+    <div class="main1">
+        <h3 class="content1">Search Grounds Around you</h3>
+        <img class="locationicon" src="../../assets/images/locationicon.gif" alt="locationicon">
+        <select class="locationselect" id="selectlocation">
+            <option value="">Select by City</option>
+            <option value="all">All Areas</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Coimbatore">Coimbatore</option>
+            <option value="Salem">Salem</option>
+            <option value="Erode">Erode</option>
+            <option value="Madurai">Madurai</option>
+            <option value="Bangalore">Bangalore</option>
+
+        </select>
+        <div class="content2">
+            <form class="searchnav">
+                <input type="search" placeholder="Search for place,cities,turf,ground names....." id="search2">
+                <button class="searchbtn" type="submit" aria-label="search">
+                    <i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+    </div>
+    <!-- main1 search-->
+
+    <!-- main2 groundslist -->
+    <div class="main2">
+
+        <div class="parent">
+            <!-- <div class="child">
+         <br>
+         <a href="../../pages/bookinground/ground1.html">
+            <h3 class="groundn">DNS TURF</h3><br>
+            <img class="groimg" src="../../assets/images/ground1.jpg" alt="DNS TURF"><br>
+            <p class="locationn">Vyasarpadi</p>
+            <a href="../../pages/bookinground/ground1.html"><button class="book">Book Now</button></a></li>
+            <div class="symbol">
+            <img class="sportsicon" src="../../assets/images/cricketicon.png" alt="sportsicon">
+            <img class="sportsicon" src="../../assets/images/footballicon.png"alt="sportsicon">
+            <img class="sportsicon" src="../../assets/images/tennisicon.png" alt="sportsicon">
+            </div>
+            <div class="ratings">
+            <i class="fa-solid fa-star"></i>
+            <span class="ratingno">5.0</span>
+            </div>
+            <a href="../../pages/bookinground/ground1.html"><button class="book">Book Now</button></a>
+            </a>          
+       </div>
+            
+    <div class="child">
+     <br>
+                <a href="../../pages/bookinground/ground2.html">
+                <h3 class="groundn">Pitch and Play</h3> <br>
+                <img class="groimg" src="../../assets/images/ground2.JPG" alt="Pitch and Play"> <br>
+                <p class="locationn">Annasalai</p>
+                <div class="symbol">
+                <img class="sportsicon" src="../../assets/images/cricketicon.png" alt="sportsicon">
+                <img class="sportsicon" src="../../assets/images/footballicon.png"alt="sportsicon">
+                <img class="sportsicon" src="../../assets/images/tennisicon.png" alt="sportsicon">
+                </div>
+                <div class="ratings">
+                    <i class="fa-solid fa-star"></i>
+                    <span class="ratingno">5.0</span>
+                </div>
+                <a href="../../pages/bookinground/ground2.html"> <button class="book">Book Now</button></a>
+                </a>
+    </div>
+
+    <div class="child">
+                <br>
+                <a href="../../pages/bookinground/ground3.html">
+                <h3 class="groundn">Sports Sanity FC Marina</h3> <br>
+                <img class="groimg" src="../../assets/images/ground3.jpg" alt="Sports Sanity FC Marina"> <br>
+                <p class="locationn">Kilpauk</p>
+                <div class="symbol">
+                <img class="sportsicon" src="../../assets/images/cricketicon.png" alt="sportsicon">
+                <img class="sportsicon" src="../../assets/images/footballicon.png"alt="sportsicon">
+                <img class="sportsicon" src="../../assets/images/tennisicon.png" alt="sportsicon">
+                </div>
+                <div class="ratings">
+                <i class="fa-solid fa-star"></i>
+                <span class="ratingno">4.9</span>
+                </div>
+                <a href="../../pages/bookinground/ground3.html"> <button class="book">Book Now</button></a>
+                </a>
+    </div>
+            <div class="child">
+                <br>
+                <a href="../../pages/bookinground/ground4.html">
+                <h3 class="groundn">HotFut SPR City</h3> <br>
+                <img class="groimg" src="../../assets/images/ground4.jpg" alt="HotFut SPR City"> <br>
+                <p class="locationn">Perambur</p>
+                <div class="symbol">
+                <img class="sportsicon" src="../../assets/images/cricketicon.png" alt="sportsicon">
+                <img class="sportsicon" src="../../assets/images/footballicon.png"alt="sportsicon">
+                <img class="sportsicon" src="../../assets/images/tennisicon.png" alt="sportsicon">
+                </div>
+                <div class="ratings">
+                <i class="fa-solid fa-star"></i>
+                <span class="ratingno">4.6</span>
+                </div>
+                <a href="../../pages/bookinground/ground4.html"> <button class="book">Book Now</button></a>
+                </a>
+            </div>
+
+            <div class="child">
+            <br>
+            <a href="../../pages/bookinground/ground5.html">
+            <h3 class="groundn">Revolt theTurfWar</h3> <br>
+            <img class="groimg" src="../../assets/images/ground5.jpg" alt="Revolt theTurfWar"> <br>
+            <p class="locationn">Perambur</p>
+          <div class="symbol">
+            <img class="sportsicon" src="../../assets/images/cricketicon.png" alt="sportsicon">
+            <img class="sportsicon" src="../../assets/images/footballicon.png" alt="sportsicon">
+            <img class="sportsicon" src="../../assets/images/tennisicon.png" alt="sportsicon">
+
+            </div>
+            <div class="ratings">
+            <i class="fa-solid fa-star"></i>
+            <span class="ratingno">4.5</span>
+                </div>
+                <a href="../../pages/bookinground/ground5.html"> <button class="book">Book Now</button></a>
+                </a>
+            </div>
+
+            <div class="child">
+                <br>
+                <a href="../../pages/bookinground/ground6.html">
+                <h3 class="groundn">Seven Eleven's Turf</h3> <br>
+                <img class="groimg" src="../../assets/images/ground6.jpg" alt="Seven Eleven's Turf"> <br>
+                <p class="locationn">Kasi theatre</p>
+                <div class="symbol">
+                <img class="sportsicon" src="../../assets/images/cricketicon.png" alt="sportsicon">
+                <img class="sportsicon" src="../../assets/images/footballicon.png" alt="sportsicon">
+                <img class="sportsicon" src="../../assets/images/tennisicon.png" alt="sportsicon">
+                </div>
+                <div class="ratings">
+                <i class="fa-solid fa-star"></i>
+                 <span class="ratingno">4.4</span>
+                </div>
+                <a href="../../pages/bookinground/ground6.html"> <button class="book">Book Now</button></a>
+                </a>
+            </div>
+            <div class="child">
+                <br>
+                <a href="../../pages/bookinground/ground7.html">
+                <h3 class="groundn">Sky Arena</h3> <br>
+                <img class="groimg" src="../../assets/images/ground7.jpg" alt="Sky Arena"> <br>
+                <p class="locationn">Bengaluru Shivaji Nagar</p>
+                <div class="symbol">
+                <img class="sportsicon" src="../../assets/images/cricketicon.png" alt="sportsicon">
+                <img class="sportsicon" src="../../assets/images/footballicon.png" alt="sportsicon">
+                <img class="sportsicon" src="../../assets/images/tennisicon.png" alt="sportsicon">
+                </div>
+                <div class="ratings">
+                    <i class="fa-solid fa-star"></i>
+                    <span class="ratingno">4.4</span>
+                </div>
+                <a href="../../pages/bookinground/ground7.html"> <button class="book">Book Now</button></a>
+                </a>
+            </div>
+
+            <div class="child">
+                <br>
+                <a href="../../pages/bookinground/ground8.html">
+                <h3 class="groundn">Tiento Sports</h3> <br>
+                <img class="groimg" src="../../assets/images/ground8.jpg" alt="Tiento Sports"> <br>
+                <p class="locationn">Bengaluru Sudhama Nagar</p>
+                <div class="symbol">
+                <img class="sportsicon" src="../../assets/images/cricketicon.png" alt="sportsicon">
+                <img class="sportsicon" src="../../assets/images/footballicon.png"alt="sportsicon">
+                <img class="sportsicon" src="../../assets/images/tennisicon.png" alt="sportsicon">
+                </div>
+                <div class="ratings">
+                <i class="fa-solid fa-star"></i>
+                <span class="ratingno">4.2</span>
+                </div>
+                <a href="../../pages/bookinground/ground8.html"> <button class="book">Book Now</button></a>
+                </a>
+            </div>
+            <div class="child">
+                <br>
+                <a href="../../pages/bookinground/ground9.html">
+                <h3 class="groundn">Fusion The Turf</h3> <br>
+                <img class="groimg" src="../../assets/images/ground9.jpg" alt="Fusion The Turf"> <br>
+                <p class="locationn">Bengaluru Langford Gardens</p>
+                <div class="symbol">
+                <img class="sportsicon" src="../../assets/images/cricketicon.png" alt="sportsicon">
+                <img class="sportsicon" src="../../assets/images/footballicon.png" alt="sportsicon">
+                <img class="sportsicon" src="../../assets/images/tennisicon.png" alt="sportsicon">
+
+                </div>
+                <div class="ratings">
+                    <i class="fa-solid fa-star"></i>
+                    <span class="ratingno">4.2</span>
+                </div>
+                <a href="../../pages/bookinground/ground9.html"> <button class="book">Book Now</button></a>
+                </a>
+            </div>
+
+            <div class="child">
+                <br>
+                <a href="../../pages/bookinground/ground10.html">
+                <h3 class="groundn">Kovai Arena - Football Turf</h3> <br>
+                <img class="groimg" src="../../assets/images/ground10.jpg" alt="Kovai Arena - Football Turf"> <br>
+                <p class="locationn">Udayampalayam</p>
+                <div class="symbol">
+                <img class="sportsicon" src="../../assets/images/cricketicon.png" alt="sportsicon">
+                <img class="sportsicon" src="../../assets/images/footballicon.png" alt="sportsicon">
+                 <img class="sportsicon" src="../../assets/images/tennisicon.png" alt="sportsicon">
+
+                </div>
+                <div class="ratings">
+                    <i class="fa-solid fa-star"></i>
+                    <span class="ratingno">4.2</span>
+                </div>
+                </a>
+                <a href="../../pages/bookinground/ground10.html"> <button class="book">Book Now</button></a>
+            </div>
+
+            <div class="child">
+                <br>
+                <a href="../../pages/bookinground/ground11.html">
+                <h3 class="groundn">Sport Fit Arena</h3> <br>
+                <img class="groimg" src="../../assets/images/ground11.jpg" alt="Sport Fit Arena"> <br>
+                <p class="locationn">Elappully</p>
+                <div class="symbol">
+                <img class="sportsicon" src="../../assets/images/cricketicon.png" alt="sportsicon">
+                <img class="sportsicon" src="../../assets/images/footballicon.png" alt="sportsicon">
+                <img class="sportsicon" src="../../assets/images/tennisicon.png"     alt="sportsicon">
+
+                </div>
+                <div class="ratings">
+                    <i class="fa-solid fa-star"></i>
+                    <span class="ratingno">4.0</span>
+                </div>
+                <a href="../../pages/bookinground/ground11.html"> <button class="book">Book Now</button></a>
+                </a>
+            </div>
+
+            <div class="child">
+                <br>
+                <a href="../../pages/bookinground/ground12.html">
+                <h3 class="groundn">Turf Time</h3> <br>
+                <img class="groimg" src="../../assets/images/ground12.jpg" alt="Turf Time"> <br>
+                <p class="locationn">Salem</p>
+                <div class="symbol">
+                <img class="sportsicon" src="../../assets/images/cricketicon.png" alt="sportsicon">
+                <img class="sportsicon" src="../../assets/images/footballicon.png" alt="sportsicon">
+                <img class="sportsicon" src="../../assets/images/tennisicon.png"    alt="sportsicon">
+
+                </div>
+                <div class="ratings">
+                    <i class="fa-solid fa-star"></i>
+                    <span class="ratingno">4.0</span>
+                </div>
+                <a href="../../pages/bookinground/ground12.html"> <button class="book">Book Now</button></a>
+                </a>
+            </div>
+
+            <div class="child">
+                <br>
+                <a href="../../pages/bookinground/ground13.html">
+                <h3 class="groundn">Sivan sports turf</h3> <br>
+                <img class="groimg" src="../../assets/images/ground13.jpg" alt="Sivan sports turf"> <br>
+                <p class="locationn"> Madurai</p>
+                <a href="../../pages/bookinground/ground13.html"> <button class="book">Book Now</button></a></li>
+                <div class="symbol">
+                <img class="sportsicon" src="../../assets/images/cricketicon.png"alt="sportsicon">
+                <img class="sportsicon" src="../../assets/images/footballicon.png" alt="sportsicon">
+                <img class="sportsicon" src="../../assets/images/tennisicon.png" alt="sportsicon">
+
+                </div>
+                <div class="ratings">
+                    <i class="fa-solid fa-star"></i>
+                    <span class="ratingno">4.0</span>
+                </div>
+                <a href="../../pages/bookinground/ground13.html"> <button class="book">Book Now</button></a>
+                </a>
+            </div>
+
+            <div class="child">
+                <br>
+                <a href="../../pages/bookinground/ground14.html">
+                <h3 class="groundn">Sopa's Goal Turf - Sports club</h3> <br>
+                <img class="groimg" src="../../assets/images/ground14.jpg" alt="Sopa's Goal Turf - Sports club"> <br>
+                <p class="locationn">Iyer Bungalow, Madurai</p>
+                <a href="../../pages/bookinground/ground14.html"> <button class="book">Book Now</button></a></li>
+                <div class="symbol">
+                <img class="sportsicon" src="../../assets/images/cricketicon.png" alt="sportsicon">
+                <img class="sportsicon" src="../../assets/images/footballicon.png" alt="sportsicon">
+                <img class="sportsicon" src="../../assets/images/tennisicon.png" alt="sportsicon">
+
+                </div>
+                <div class="ratings">
+                    <i class="fa-solid fa-star"></i>
+                    <span class="ratingno">4.0</span>
+                </div>
+                <a href="../../pages/bookinground/ground14.html"> <button class="book">Book Now</button></a>
+                </a>
+            </div>
+
+            <div class="child">
+                <br>
+                <a href="../../pages/bookinground/ground15.html">
+                <h3 class="groundn">Turf Play 365</h3> <br>
+                <img class="groimg" src="../../assets/images/ground15.jpg" alt="Turf Play 365"> <br>
+                <p class="locationn">Perungudi Road</p>
+                <a href="../../pages/bookinground/ground15.html"> <button class="book">Book Now</button></a></li>
+                <div class="symbol">
+                <img class="sportsicon" src="../../assets/images/cricketicon.png" alt="sportsicon">
+                 <img class="sportsicon" src="../../assets/images/footballicon.png" alt="sportsicon">
+                 <img class="sportsicon" src="../../assets/images/tennisicon.png" alt="sportsicon">
+
+                </div>
+                <div class="ratings">
+                 <i class="fa-solid fa-star"></i>
+                 <span class="ratingno">4.0</span>
+                </div>
+                <a href="../../pages/bookinground/ground15.html"> <button class="book">Book Now</button></a>
+                </a>
+            </div>    -->
+        </div>
+
+    </div>
+    <!-- main3  groundslist -->
+    <!-- footer -->
+    <footer>
+        <div id="footer1">
+            <div class="row">
+                <div class="column1">
+                    <h4 class="foot-heading">Company</h4>
+                    <br>
+
+                    <p>
+                        <a href="#">About us</a>
+                    </p>
+                    <p>
+                        <a href="#">Privacy Policy</a>
+                    </p>
+                    <p>
+                        <a href="#">Our Service</a>
+                    </p>
+                    <p>
+                        <a href="#">Our Clients</a>
+                    </p>
+                </div>
+
+                <div class="column1">
+                    <h4 class="foot-heading">Get Help</h4>
+                    <br>
+                    <p>
+                        <a href="#">FAQ</a>
+                    </p>
+                    <p>
+                        <a href="#">Contact</a>
+                    </p>
+                </div>
+
+                <div class="column1">
+                    <h4 class="foot-heading">Connect us on</h4>
+                    <br>
+                    <a href="#" aria-label="facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="#" aria-label="twitter">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#" aria-label="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" aria-label="linkedin">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer -->
+    <script src="../../assets/js/bookground.js"> </script>
+
+    <script src="../../assets/js/is_logged.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#container {
+    background-image: url(../../assets/images/onlinepayback.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+/* tick symbol box */
+.tick {
+    position: relative;
+    top: 30%;
+    border: 2px solid rgb(180, 176, 176);
+    width: 30%;
+    left: 35%;
+    border-radius: 2%;
+    box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+
+
+}
+/* icon */
+
+.fa-check {
+    color: green;
+    font-size: 520%;
+}
+/* words */
+.h0 {
+    color: rgb(239, 249, 239);
+    font-size: xx-large;
+    text-align: center;
+}
+.code{
+    color: rgb(239, 249, 239);
+    font-size: large;
+    text-align: center;
+}
+.goback{
+    font-size: medium;
+    padding: 2px 17px;
+    height: 102%;
+    width: 100%;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(10, 9, 46);
+    letter-spacing: 1px;
+
+}
+@media screen and (max-width:900px){
+    
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#container {
+    background-image: url(../../assets/images/onlinepayback.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+/* tick symbol box */
+.tick {
+    position: relative;
+    top: 30%;
+    border: 2px solid rgb(180, 176, 176);
+    width: 80%;
+    left: 10%;
+    border-radius: 2%;
+    box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
+    height: 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+
+
+}
+/* icon */
+
+.fa-check {
+    color: green;
+    font-size: 520%;
+}
+/* words */
+.h0 {
+    color: rgb(239, 249, 239);
+    font-size: xx-large;
+    text-align: center;
+}
+.code{
+    color: rgb(239, 249, 239);
+    font-size: large;
+    text-align: center;
+}
+.goback{
+    font-size: medium;
+    padding: 2px 17px;
+    height: 102%;
+    width: 100%;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(10, 9, 46);
+    letter-spacing: 1px;
+
+}
+
+}

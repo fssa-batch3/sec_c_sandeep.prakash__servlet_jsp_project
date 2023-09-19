@@ -1,0 +1,944 @@
+* {
+    margin: 0px;
+    padding: 0px;
+   
+}
+
+body{
+
+
+    overflow-y: hidden;
+  
+}
+/* form container */
+#container {
+    background-image: url(../../assets/images/signup.jpg);
+    /* background-color: hsl(0, 0%, 100%, 0.8); */
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+  
+  
+}
+
+.forms h1,form {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 8%;
+    margin-top: 2%;
+}
+
+.forms {
+
+    position: relative;
+    top: 10%;
+    border: 2px solid rgb(0, 0, 0);
+    width: 30%;
+    margin-left: 500px;
+    /* left: 35%; */
+    border-radius: 2%;
+    box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
+    height: 85%;
+    background-color: rgb(255, 255, 255);
+}
+
+
+/* form container */
+
+
+/* forms signin */
+h1.signuphead {
+    color: rgb(0, 0, 0);
+    position: relative;
+    left: 20%;
+
+}
+
+#name1,#name2 {
+    width: 80%;
+    height: 45px;
+    border-radius: 5px;
+    /* border: none;
+    outline-color: gray; */
+}
+#email {
+    width: 80%;
+    height: 45px;
+    border-radius: 5px;
+    /* border: none;
+    outline-color: gray; */
+}
+
+
+#user_phoneno{
+    width: 80%;
+    height: 45px;
+    border-radius: 5px;
+  
+    /* border: none;
+    outline-color: gray; */
+}
+#user_phoneno::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+#password {
+    width: 80%;
+    height: 45px;
+    border-radius: 5px;
+    /* border: none;
+    outline-color: gray; */
+
+}
+
+input[type="name"]::placeholder {
+    padding-left: 5%;
+
+
+}
+
+input[type="password"]::placeholder {
+    padding-left: 5%;
+
+}
+
+input[type="email"]::placeholder {
+    padding-left: 5%;
+
+
+}
+
+input[type="text"]::placeholder {
+    padding-left: 5%;
+
+}
+/* register button */
+
+#newlogin {
+    padding: 0px 50px;
+    width: 13%;
+    height: 45px;
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+    background-color: rgb(38, 196, 117);
+    color: white;
+    position: relative;
+    left: 42%;
+    bottom: 130px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 3px 10px rgb(35, 34, 34);
+
+
+}
+#newlogin:hover{
+    background-color: rgba(15, 190, 15, 0.763);
+
+}
+/* register button */
+
+
+/* label color */
+
+label {
+    color: rgb(0, 0, 0);
+
+}
+/* .boxform.success input {
+    border-color: rgb(30, 248, 30);
+}
+.boxform.error input{
+    border-color: rgb(188, 41, 0);
+} */
+/* input:valid,
+select:valid{
+    border: 2px solid green;
+}
+input:invalid,
+select:invalid{
+    border: 2px solid red;
+} */
+.joinplayer{
+    font-size: larger;
+  position: relative;
+  left: 150px;
+  outline: none;
+   
+}
+#checkjoinplayer{
+    position: relative;
+    right: 20px;
+    outline: 0px solid rgb(255, 255, 255);
+}
+.sportsavailable{
+    display: flex;
+
+}
+#sportsavail1,#sportsavail2,#sportsavail3{
+    outline: none;
+  position: relative;
+bottom: 17px;
+left: 27px;
+font-size: larger;
+top: 20px;
+
+    
+}
+.sportname{
+    position: relative;
+    left: 0px;
+    top: 36px;
+}
+
+
+
+
+
+input:invalid{
+    /* background-color:  green; */
+    /* border-color: rgb(13, 255, 13); */
+    background-color: rgb(255, 255, 255);
+    border:1px solid rgb(248, 127, 127);
+    outline: 1px solid rgb(246, 102, 102);
+    border-radius: 5px;
+    animation: shake 0.2s 2;
+}
+ @keyframes shake {
+    25%{
+        translate: 1px 0;
+    }
+    50%{
+        translate: -1px 0;
+    }
+    75%{
+        translate: 1px 0;
+    }
+ }
+input:valid,select:valid{
+    /* border-color: rgb(128, 0, 0); */
+    background-color: rgb(255, 255, 255);
+    border: none;
+    outline: 2px solid rgb(118, 247, 109);
+    border-radius: 5px;
+  
+}
+/* label color */
+
+
+
+
+
+/* join player */
+
+
+
+.labelname {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: #000000;
+    position: relative;
+    top: 3px;
+
+
+}
+
+#name {
+    width: 50%;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid black;
+position: relative;
+left: 95px;
+
+}
+
+#age {
+    width: 50%;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid black;
+    position: relative;
+left: 105px;
+top: 20px;
+
+}
+
+
+#age::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+#sportss {
+    width: 50%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+#gender{
+    width: 50%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+
+    top: 20px;
+}
+
+
+
+.select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+
+
+
+.nj-timepick {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 5000;
+    transition: right 0.7s ease;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+#startTime{
+    position: relative;
+    top: 60px;
+    width: 50%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#endTime{
+    width: 50%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    top: 42px;
+}
+
+.labelnameloc{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    top: 43px;
+    color: black;
+
+
+}
+
+.labelnamespor{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    top: 30px;
+    color: black;
+
+
+}
+#locationselect{
+    width: 50%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    top: 43px;
+
+}
+
+
+.checkboxsentence {
+    color: white;
+
+}
+
+.checkboxcolumn {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+input[type="name"]::placeholder {
+    padding-left: 5%;
+}
+
+input[type="number"]::placeholder {
+    padding-left: 5%;
+}
+input[type="tel"]::placeholder {
+    padding-left: 5%;
+}
+/* forms content */
+
+/* button */
+.profile {
+    font-size: medium;
+    padding: 9px 38px;
+    color: rgb(20, 14, 14);
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 5px;
+    position: relative;
+    top: 30px;
+    left: 200px;
+    box-shadow: 0 3px 10px rgb(3, 10, 87);
+    background-color: rgb(16, 161, 16);
+    border-radius: 10px;
+}
+.profile:hover{
+    background-color: rgb(18, 230, 18);
+
+}
+
+
+.joinplayercontainer{
+
+
+    position: relative;
+    bottom: 650px;
+    border: 2px solid rgb(0, 0, 0);
+    width: 28%;
+    /* left: 72%; */
+    border-radius: 2%;
+    box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
+    height: 720px;
+    background-color: rgb(255, 255, 255);
+    display:none ;
+
+  
+
+}
+.labelnametime{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    top: 50px;
+    color: black;
+
+}
+
+.labelnameage{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    top: 30px;
+    color: black;
+}
+.labelnamegen{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    top: 30px;
+    color: black;
+}
+.toword{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: black;
+    position: relative;
+    top: 48px;
+}
+
+/* forms signin */
+@media screen and (max-width:450px) {
+    * {
+        margin: 0px;
+        padding: 0px;
+        
+    }
+    body{
+        overflow-y: hidden;
+    }
+    /* form container */
+    #container {
+        background-image: url(../../assets/images/signup.jpg);
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
+  
+    }
+    
+    .forms h1,form {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        left: 8%;
+        margin-top: 2%;
+        
+    }
+    
+    .forms {
+        position: relative;
+        top: 13%;
+        border: 2px solid rgb(0, 0, 0);
+        width: 80%;
+        right:120%;
+        border-radius: 2%;
+        box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
+        height: 78%;
+        background-color: rgb(255, 255, 255);
+        
+    }
+    /* form container */
+    
+    
+    /* forms signin */
+    h1.signuphead {
+        color: rgb(0, 0, 0);
+        position: relative;
+        left: 6%;
+    
+    }
+    #name1,#name2 {
+        width: 80%;
+        height: 45px;
+        border-radius: 5px;
+        /* border: none;
+        outline-color: gray; */
+    }
+    #email {
+        width: 80%;
+        height: 45px;
+        border-radius: 5px;
+        border: none;
+    
+    }
+    
+    
+
+    #user_phoneno{
+        width: 80%;
+        height: 45px;
+        border-radius: 5px;
+      
+        /* border: none;
+        outline-color: gray; */
+    }
+    #user_phoneno::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+    }
+    #password {
+        width: 80%;
+        height: 45px;
+        border-radius: 5px;
+        /* border: none;
+        outline-color: gray; */
+    
+    }
+    
+    input[type="name"]::placeholder {
+        padding-left: 5%;
+    
+    
+    }
+    
+    input[type="password"]::placeholder {
+        padding-left: 5%;
+    
+    }
+    
+    input[type="email"]::placeholder {
+        padding-left: 5%;
+    
+    
+    }
+    
+    input[type="text"]::placeholder {
+        padding-left: 5%;
+    
+    }
+    /* register button */
+    
+    #newlogin {
+        padding: 0px 0px;
+        width: 43%;
+        height: 45px;
+        font-size: large;
+        font-weight: bolder;
+        cursor: pointer;
+        background-color: rgb(38, 196, 117);
+        color: white;
+        position: relative;
+        left: 29%;
+        bottom: 130px;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 3px 10px rgb(35, 34, 34);
+    
+    
+    }
+    #newlogin:hover{
+        background-color: rgba(15, 190, 15, 0.763);
+    
+    }
+    /* register button */
+    
+ 
+    /* label color */
+    
+    label {
+        color: rgb(0, 0, 0);
+    
+    }
+    /* label color */
+    
+    
+    /* forms signin */
+
+ /* join player */
+ 
+.joinplayer{
+    font-size: larger;
+  position: relative;
+  left: 80px;
+  outline: none;
+   
+}
+#checkjoinplayer{
+    position: relative;
+    right: 20px;
+    outline: 0px solid rgb(255, 255, 255);
+}
+.sportsavailable{
+    display: flex;
+
+}
+#sportsavail1,#sportsavail2,#sportsavail3{
+    outline: none;
+  position: relative;
+bottom: 17px;
+left: 27px;
+font-size: larger;
+top: 20px;
+
+    
+}
+.sportname{
+    position: relative;
+    left: 0px;
+    top: 36px;
+}
+
+
+
+
+
+input:invalid{
+    /* background-color:  green; */
+    /* border-color: rgb(13, 255, 13); */
+    background-color: rgb(255, 255, 255);
+    border:1px solid rgb(248, 127, 127);
+    outline: 1px solid rgb(246, 102, 102);
+    border-radius: 5px;
+    animation: shake 0.2s 2;
+}
+ @keyframes shake {
+    25%{
+        translate: 1px 0;
+    }
+    50%{
+        translate: -1px 0;
+    }
+    75%{
+        translate: 1px 0;
+    }
+ }
+input:valid,select:valid{
+    /* border-color: rgb(128, 0, 0); */
+    background-color: rgb(255, 255, 255);
+    border: none;
+    outline: 2px solid rgb(118, 247, 109);
+    border-radius: 5px;
+  
+}
+/* label color */
+
+
+
+
+
+/* join player */
+
+
+
+.labelname {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: #000000;
+    position: relative;
+    top: 3px;
+
+
+}
+
+#name {
+    width: 50%;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid black;
+position: relative;
+left: 95px;
+
+}
+
+#age {
+    width: 50%;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid black;
+    position: relative;
+left: 105px;
+top: 20px;
+
+}
+
+
+#age::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+#sportss {
+    width: 50%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+#gender{
+    width: 50%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+
+    top: 20px;
+}
+
+
+
+.select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+
+
+
+#timingsfrom{
+    position: relative;
+    top: 60px;
+    width: 50%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#timingsto{
+    width: 50%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    top: 42px;
+}
+
+.labelnameloc{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    top: 43px;
+    color: black;
+
+
+}
+
+.labelnamespor{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    top: 30px;
+    color: black;
+
+
+}
+#locationselect{
+    width: 50%;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    top: 43px;
+
+}
+
+
+.checkboxsentence {
+    color: white;
+
+}
+
+.checkboxcolumn {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+input[type="name"]::placeholder {
+    padding-left: 5%;
+}
+
+input[type="number"]::placeholder {
+    padding-left: 5%;
+}
+input[type="tel"]::placeholder {
+    padding-left: 5%;
+}
+/* forms content */
+
+/* button */
+.profile {
+    font-size: medium;
+    padding: 9px 38px;
+    color: rgb(20, 14, 14);
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    margin-bottom: 5px;
+    position: relative;
+    top: 30px;
+    left: 200px;
+    box-shadow: 0 3px 10px rgb(3, 10, 87);
+    background-color: rgb(16, 161, 16);
+    border-radius: 10px;
+}
+.profile:hover{
+    background-color: rgb(18, 230, 18);
+
+}
+
+
+.joinplayercontainer{
+
+
+    position: relative;
+    bottom: 650px;
+    border: 2px solid rgb(0, 0, 0);
+    width: 28%;
+    /* left: 72%; */
+    border-radius: 2%;
+    box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
+    height: 720px;
+    background-color: rgb(255, 255, 255);
+    display:none ;
+
+  
+
+}
+.labelnametime{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    top: 50px;
+    color: black;
+
+}
+
+.labelnameage{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    top: 30px;
+    color: black;
+}
+.labelnamegen{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    position: relative;
+    top: 30px;
+    color: black;
+}
+.toword{
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: black;
+    position: relative;
+    top: 48px;
+}
+
+
+   
+}
+@media all and (min-width:750px) and (max-width:1024px) {
+    #newlogin {
+        padding: 0px 50px;
+        height: 45px;
+        font-size: large;
+        font-weight: bolder;
+        cursor: pointer;
+        background-color: rgb(7, 86, 46);
+        color: white;
+        position: relative;
+        left: 25%;
+        border-radius: 10px;
+        border: none;
+        box-shadow: 0 3px 10px rgb(35, 34, 34);
+    
+    
+    }
+    .forms {
+        position: relative;
+        top: 13%;
+        border: 2px solid rgb(180, 176, 176);
+        width: 80%;
+        left: 10%;
+        border-radius: 2%;
+        box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
+        height: 78%;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
+
+     

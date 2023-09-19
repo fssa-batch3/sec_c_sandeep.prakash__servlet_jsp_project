@@ -104,12 +104,10 @@ System.out.println(endTimeStr+"mavaniii");
 		}
 		boolean status=true;
 		if( Boolean.parseBoolean(userPlayerStatus)==false) {
-			status=false;
-		}
-		
-		else {
 			status=true;
 		}
+		
+		
 		
 		System.out.println("call2");
 

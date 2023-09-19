@@ -1,0 +1,2135 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Noto Serif Khojki', serif;
+    /* font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif; */
+}
+ /* {
+    /* overflow-x: hidden; */
+    
+/* }  */
+
+body{
+    overflow-x: hidden;
+}
+/* header */
+header {
+    height: 10vh;
+    background-position: center;
+    background-size: cover;
+    position: sticky;
+    top: 0%;
+    z-index: 2;
+    background-color: rgba(32,56,120,255);
+ 
+    /* background-image: linear-gradient(to right top, #ffffff, #ffffff, #ffffff, #ffffff, #f5f5f5);
+    background-image: linear-gradient(to right top, #449342, #3f9b8b, #023c18, #2EAF7D, #3FD0C9); */
+    /* background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);  */
+  
+}
+.checkbtn{
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    float: right;
+    margin-right: 15px;
+    cursor: pointer;
+    display: none;
+
+}
+#check{
+    display: none;
+}
+ul {
+    display: flex;
+    justify-content: end;
+    margin-right: 2%;
+    position: relative;
+    bottom: 5px;
+}
+
+ul li {
+    list-style-type: none;
+    padding: 2%;
+
+}
+
+ul li a {
+    text-decoration: none;
+    font-size: larger;
+    color: rgb(255, 255, 255);
+}
+
+ul li a:hover {
+    color: rgb(130, 217, 235);
+
+}
+/* 
+.myaccount{
+    font-size:12px;
+    padding: 0px 2px;
+    height: 87%;
+    width: 70%;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(10, 9, 46);
+    letter-spacing: 1px;
+
+}
+.myaccount:hover{
+    background-color: #61bdff;
+} */
+
+
+.login {
+    font-size: medium;
+    padding: 2px 17px;
+    height: 102%;
+    width: 100%;
+    position: relative;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(10, 9, 46);
+    letter-spacing: 1px;
+
+}
+.login:hover{
+    background-color: #61bdff;
+}
+
+.logo {
+    width: 14%;
+    position: relative;
+    bottom: 85px;
+    left: 46px;
+}
+
+
+/* header */
+
+/* main1 About webpage */
+
+#main1 {
+    height: 86vh;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to right top, #e1edf0, #d5e5ec, #2c8cec, #d0dae3, #5026e7);
+/* 
+    background-image: linear-gradient(to right top, #e1edf0, #29d090, #468b31, #3fdc27, #26e733); */
+/* overflow-y: hidden; */
+
+}
+
+.word1 {
+    font-size: 350%;
+    color: rgb(8, 8, 8);
+    margin-left: 3.5%;
+    /* animation: change 7s infinite; */
+
+}
+
+/* @keyframes change {
+    from {
+        color: black;
+    }
+
+    to {
+        color: white;
+    }
+} */
+
+.player1 {
+    width: 45%;
+    border-radius: 10%;
+    margin-right: 3%;
+}
+.maindiv1 {
+    height:89vh;
+    background-color: rgba(241, 251, 255, 255);
+
+}
+.rightgreen {
+    position: relative;
+    left: 55%;
+    /* top:80px; */
+    bottom: 79px;
+}
+
+.leftgreen {
+    position: relative;
+    /* top:80px; */
+    bottom: 79px;
+}
+
+.allsports {
+    position: relative;
+    left: 60px;
+    width: 370px;
+    top: 50px;
+}
+
+.cricketplayer {
+    width: 420px;
+    position: relative;
+    left: 120px;
+    top: 50px;
+}
+
+.connect {
+    position: relative;
+    left: 120px;
+}
+
+.word1 {
+    position: relative;
+    left: 97px;
+    top: 200px;
+    line-height: 2;
+    font-size: 36px;
+}
+
+.center {
+    display: flex;
+}
+
+.leaf {
+    width: 50px;
+}
+
+.lightgreen {
+    position: relative;
+    right: 250px;
+    width: 190px;
+
+
+}
+
+.perbox1 {
+    width: 120px;
+    position: relative;
+    left: 550px;
+    height: 90px;
+    background-color: #deedfb;
+    border-radius: 64px 48px 16px 96px;
+    top: 120px;
+}
+
+.perbox2 {
+    width: 120px;
+    position: relative;
+    left: 630px;
+    height: 90px;
+    background-color: #deedfb;
+    border-radius: 64px 48px 16px 96px;
+    top: 120px;
+}
+
+.perbox3 {
+    width: 120px;
+    position: relative;
+    left: 360px;
+    top: 276px;
+    height: 90px;
+    background-color: #deedfb;
+    border-radius: 64px 48px 16px 96px;
+
+}
+
+.perbox4 {
+    width: 120px;
+    position: relative;
+    left: 420px;
+    height: 90px;
+    background-color: #deedfb;
+    border-radius: 64px 48px 16px 96px;
+    top: 276px;
+}
+
+.box {
+    display: flex;
+}
+
+
+.profilerounds3 {
+    width: 80px;
+    position: relative;
+    left: 20px;
+}
+
+.profilerounds {
+    width: 80px;
+    position: relative;
+    left: 20px;
+}
+
+/* main1 About webpage*/
+
+/* main2 what we do */
+/* #main2 {
+    height: 70vh;
+    background-color: white;
+}
+
+.mainchild {
+    margin: 0px 43px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 160px;
+    padding-top: 50px;
+
+} */
+/* 
+.box {
+    width: 102%;
+    height: 130%;
+    margin-top: 3%;
+    border-radius: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b); 
+    /* /* background-image: linear-gradient(to right top, #449342, #C1F6ED, #02353C, #2EAF7D, #3FD0C9); */
+
+
+/* } */ 
+
+/* .cricketicon {
+    width: 35px;
+}
+
+.box-content{
+    color: rgb(243, 234, 234);
+    font-size: 130%;
+    position: relative;
+    left: 3%;
+    line-height: 2;
+    word-spacing: 1px;
+
+
+}
+
+
+
+.groundicon {
+    color: rgb(0, 0, 0);
+    width: 42%;
+    position: relative;
+    bottom: 10%;
+
+}
+
+.usericon {
+    color: rgb(0, 0, 0);
+    width: 32%;
+    position: relative;
+    bottom: 14%;
+
+}
+
+.box-heading1 {
+    font-size: 190%;
+    font-weight: 500;
+    position: relative;
+    bottom: 13%;
+    color: rgb(255, 255, 255);
+}
+
+.box-heading2 {
+    font-size: 190%;
+    font-weight: 500;
+    position: relative;
+    bottom: 21%;
+    color: rgb(255, 255, 255);
+}
+
+.box-heading3 {
+    font-size: 190%;
+    font-weight: 500;
+    position: relative;
+    bottom: 21%;
+    color: rgb(255, 255, 255);
+} */
+
+
+.maindiv2 {
+    background-color: rgba(241, 251, 255, 255);
+    margin-top: 20px;
+    padding: 20px 80px;
+    height: 700px;
+    border-radius: 10px;
+    width: 1200px;
+     position: relative;
+    left: 50px;
+}
+
+.tagline {
+    font-size: xx-large;
+    color: #072e75;
+    font-weight: bolder;
+    text-align: center;
+  
+}
+
+
+
+.tagbox {
+    background-color: rgba(32,56,120,255);
+    border-radius: 10px;
+    word-wrap: break-word; 
+    max-width: fit-content;
+    height: 380px;
+   
+
+    /* height: 00px; */
+    /* padding: 20px 20px; */
+    
+
+}
+
+.cricketicon {
+    width: 37px;
+    position: relative;
+    top: 87px;
+    left: 120px;
+}
+
+.box-content {
+    color: white;
+    font-size: 17px;
+    position: relative;
+    left: 3%;
+    line-height: 2;
+    word-spacing: 1px;
+    top: 65px;
+    padding: 20px;
+   
+
+
+}
+
+
+
+.groundicon {
+    color: rgb(0, 0, 0);
+    width: 25%;
+    position: relative;
+    top: 10px;
+    left: 130px;
+
+}
+
+.usericon {
+    color: rgb(0, 0, 0);
+    width: 25%;
+    position: relative;
+    top: 10px;
+    left: 120px;
+}
+
+.box-heading1 {
+    font-size: 26px;
+    font-weight: 500;
+    position: relative;
+    top: 60px;
+    color: rgb(255, 255, 255);
+}
+
+.tagmainbox {
+
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 50px;
+    height: 350px;
+    padding: 70px;
+
+
+
+}
+
+.design1 {
+    width: 150px;
+    position: relative;
+    right: 70px;
+}
+.maindiv3 {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 20px;
+
+    background-color: rgba(241, 251, 255, 255);
+    margin-top: 20px;
+    padding: 20px 80px;
+    height: 500px;
+    border-radius: 10px;
+    width: 1200px;
+    position: relative;
+    left: 50px;
+
+}
+
+.contentcolumn {
+
+    background-color: rgba(32,56,120,255);
+    width: 500px;
+    height: 230px;
+    font-size: 17px;
+    color: #ffffff;
+    border-radius: 20px;
+    position: relative;
+    left: 60px;
+    text-align: center;
+    padding: 10px 30px;
+    top: 150px;
+
+}
+.boldstate{
+    font-size: x-large;
+}
+
+.photocolumn {
+    position: relative;
+    left: 90px;
+    top: 80px;
+}
+
+
+
+.maindiv4 {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-rows: 20px;
+    background-color: rgba(241, 251, 255, 255);
+    margin-top: 20px;
+    padding: 20px 80px;
+    height: 420px;
+    border-radius: 10px;
+    width: 1200px;
+    position: relative;
+    left: 50px;
+}
+
+.headchat {
+    font-size: 35px;
+    color: #072e75;
+    font-weight: 500;
+
+}
+
+.textcolumn {
+    padding: 80px;
+}
+
+.smallcontent {
+    color: #858f9d;
+    position: relative;
+    top: 10px;
+}
+
+
+
+
+  /* review section */
+  .reviewdiv {
+    background-color: rgba(241, 251, 255, 255);
+      margin-top: 20px;
+      padding: 20px 80px;
+      height: 500px;
+      border-radius: 10px;
+      width: 1200px;
+      position: relative;
+      left: 50px;
+
+
+  }
+  .review{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 50px;
+    height: 380px;
+    padding: 10px;
+    
+
+  }
+
+  .person {
+      border-radius: 10px;
+      background-color: rgba(32,56,120,255);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px 45px;
+      color: #ffffff;
+      
+
+
+  }
+
+  .personimg {
+      border-radius: 50%;
+      height: 25px;
+      width: 25px;
+      scale: 1.9;
+      position: relative;
+      bottom: 0px;
+
+  }
+
+  .person p {
+      font-size: 16px;
+  }
+
+  .reviewword {
+      font-size: 10px;
+      position: relative;
+      top: 10px;
+      line-height: 2;
+      
+  }
+
+
+  .star {
+      display: flex;
+      justify-content: space-evenly;
+      position: relative;
+     
+  }
+
+  .fa-star {
+      color: rgb(255, 183, 0);
+      font-size: 15px;
+  }
+
+  .fa-star-half-stroke {
+      color: rgb(255, 183, 0);
+      font-size:15px;
+  }
+
+/* main2 */
+
+/* main3 */
+.main3 {
+    height: 55vh;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    z-index: -2;
+}
+
+.sportsheading {
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+    left: 410px;
+    color: rgb(0, 0, 0);
+}
+
+/* animation */
+.roationimage {
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.rotation-content {
+    width: 220px;
+    height: 300px;
+    margin-right: 470px;
+    margin-top: 90px;
+    perspective: 1050px;
+    transform-style: preserve-3d;
+    transform: rotateX(-10deg)rotateZ(-7deg);
+}
+
+.image-rotation{
+    width: 100%;
+    position: absolute;
+    transform-style: preserve-3d;
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+.roationimage:nth-child(1) {
+    transform: rotateY(60deg) translateZ(350px);
+}
+
+.roationimage:nth-child(2) {
+    transform: rotateY(120deg) translateZ(350px);
+}
+
+.roationimage:nth-child(3) {
+    transform: rotateY(180deg) translateZ(350px);
+}
+
+.roationimage:nth-child(4) {
+    transform: rotateY(240deg) translateZ(350px);
+}
+
+.roationimage:nth-child(5) {
+    transform: rotateY(300deg) translateZ(350px);
+}
+
+.roationimage:nth-child(6) {
+    transform: rotateY(360deg) translateZ(350px);
+}
+
+/* animation */
+
+/* review section */
+/* #review {
+    height: 60vh;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+
+}
+
+.person {
+    width: 23%;
+    height: 80%;
+    margin-top: 3%;
+    border-radius: 2%;
+    box-shadow: 0 10px 10px rgba(15, 12, 12, 0.66);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15px;
+    background-image: linear-gradient(to right top, #e1edf0, #d5e5ec, #2c8cec, #d0dae3, #5026e7);
+
+}
+
+.personimg {
+    border-radius: 50%;
+    height: 42px;
+    width: 42px;
+    scale: 1.9;
+
+}
+
+
+.star {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.fa-star {
+    color: rgb(255, 183, 0);
+}
+
+.fa-star-half-stroke {
+    color: rgb(255, 183, 0);
+} */
+
+/* review sectioin*/
+
+/* footer section */
+footer {
+    height: 30vh;
+    background-color: rgba(32,56,120,255);
+
+    background-size: cover;
+    color: white;
+    margin-top: 20px;
+
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.foot-heading {
+    color: rgb(219, 213, 213);
+    font-size: larger;
+    font-weight: bold;
+
+}
+
+.column1 {
+    margin-top: 2%;
+}
+
+p {
+    list-style-type: none;
+}
+
+p a {
+    text-decoration: none;
+    font-size: medium;
+    color: rgb(219, 213, 213);
+    line-height: 1.6;
+}
+
+.fa-brands {
+    font-size: x-large;
+    padding: 1.5%;
+}
+
+.fa-facebook {
+    color: #3b5998;
+}
+
+.fa-twitter {
+    color: #00acee;
+
+}
+.fa-instagram{
+    color: rgb(167, 8, 95);
+}
+
+.fa-linkedin {
+    color: #0A66C2;
+
+}
+
+a {
+    text-decoration: none;
+}
+.adminlogin{
+    color: #000000;
+    font-size: large;
+}
+
+/* footer section */
+
+
+/* Responsive mediaqueries */
+
+@media screen and (max-width:450px) {
+    * {
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Noto Serif Khojki', serif;
+    
+    }
+    body,html{
+        overflow-x: hidden;
+    }
+    /* header */
+    header {
+        height: 7vh;
+        background-position: center;
+        background-size: cover;
+        position: sticky;
+        top: 0%;
+        z-index: 2;
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+    
+    }
+    .checkbtn{
+        font-size: 22px;
+        color: rgb(255, 255, 255);
+        float: right;
+        margin-right: 15px;
+        cursor: pointer;
+        display: block;
+    
+    }
+    #check{
+        display: none;
+    }
+    
+    ul {
+        margin-right: 2%;
+        position: relative;
+        left: -100%;
+        width: 120px;
+        display: block;
+        transition: all 1s;
+        z-index: 10;
+    }
+    
+    ul li {
+        list-style-type: none;
+        padding: 2%;
+        background-color: #d0dae3;
+       position: relative;
+       top: 50px;
+       text-align: center;
+     
+      
+
+    
+    }
+    
+    ul li a {
+        text-decoration: none;
+        font-size: 10px;
+        color: #00021a;
+    }
+    
+    ul li a:hover {
+        color: rgb(130, 217, 235);
+    
+    }
+    #check:checked ~ul{
+   position: relative;
+   left: 60%;
+    }
+
+
+    .login {
+        font-size:12px;
+        padding: 0px 2px;
+        height: 87%;
+        width: 70%;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgb(10, 9, 46);
+        letter-spacing: 1px;
+    
+    }
+    .login:hover{
+        background-color: #61bdff;
+    }
+    
+    .logo {
+        width: 25%;
+        position: relative;
+        bottom: 170px;
+        left: 16px;
+        
+    }
+    
+    /* header */
+    
+    /* main1 About webpage */
+    
+    #main1 {
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        background-image: linear-gradient(to right top, #e1edf0, #d5e5ec, #2c8cec, #d0dae3, #5026e7);
+  
+    
+    }
+    
+    .word1 {
+        font-size: 80%;
+        color: rgb(8, 8, 8);
+        margin-left: 3.5%;
+        animation: change 7s infinite;
+    
+    }
+    
+    @keyframes change {
+        from {
+            color: black;
+        }
+    
+        to {
+            color: white;
+        }
+    }
+    
+    .player1 {
+        width: 50%;
+        border-radius: 10%;
+        margin-right: 3%;
+    }
+    
+    /* main1 About webpage*/
+    
+    /* main2 what we do */
+    #main2 {
+        height: 70vh;
+        background-color: white;
+    }
+    
+    .mainchild {
+        margin: 0px 43px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 15px;
+        padding-top: 50px;
+    
+    }
+    
+    .box {
+        width: 112%;
+        height: 150%;
+        margin-top: 3%;
+        border-radius: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: rgb(255, 255, 255);
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+    
+    
+    }
+    
+    .cricketicon {
+        width: 13px;
+        position: relative;
+        top: 17px;
+    }
+    
+    .box-content{
+        color: rgb(243, 234, 234);
+        font-size: 6px;
+        position: relative;
+        top:7px;
+        left: 3%;
+        line-height: 2;
+        word-spacing: 1px;
+    
+    
+    }
+    
+    
+    
+    .groundicon {
+        color: rgb(0, 0, 0);
+        width: 33%;
+        position: relative;
+        bottom: 10px;
+    
+    }
+    
+    .usericon {
+        color: rgb(0, 0, 0);
+        width: 30%;
+        position: relative;
+        bottom: 24px;
+    
+    }
+    
+    .box-heading1 {
+        font-size: 6px;
+        font-weight: 500;
+        position: relative;
+        bottom: 10px;
+        color: rgb(255, 255, 255);
+    }
+    
+    .box-heading2 {
+        font-size: 6px;
+        font-weight: 500;
+        position: relative;
+        bottom: 26px;
+        color: rgb(255, 255, 255);
+    }
+    
+    .box-heading3 {
+        font-size: 6px;
+        font-weight: 500;
+        position: relative;
+        bottom: 26px;
+        color: rgb(255, 255, 255);
+    }
+    
+    
+    /* main2 */
+    
+    /* main3 */
+    .main3 {
+        height: 5vh;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: white;
+        z-index: -2;
+    }
+    
+    .sportsheading {
+        font-size: 17px;
+        text-align: center;
+        position: relative;
+        left: 420px;
+        color: rgb(0, 0, 0);
+        bottom: 300px;
+        white-space: nowrap;
+    }
+    
+    /* animation */
+    .roationimage {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        border-radius: 50%;
+    }
+    
+    .rotation-content {
+        width: 20px;
+        height: 30px;
+        margin-left: 350px;
+        margin-bottom: 320px;
+        perspective: 1050px;
+        transform-style: preserve-3d;
+        transform: rotateX(-10deg)rotateZ(-7deg);
+    }
+    
+    .image-rotation{
+        width: 20%;
+        position: absolute;
+        transform-style: preserve-3d;
+        animation: rotate 10s linear infinite;
+        bottom: 320px;
+        right: 30px;
+    }
+    
+    @keyframes rotate {
+    
+        to {
+            transform: rotateY(360deg);
+        }
+    }
+    
+    .roationimage:nth-child(1) {
+        transform: rotateY(60deg) translateZ(230px);
+    }
+    
+    .roationimage:nth-child(2) {
+        transform: rotateY(120deg) translateZ(230px);
+    }
+    
+    .roationimage:nth-child(3) {
+        transform: rotateY(180deg) translateZ(230px);
+    }
+    
+    .roationimage:nth-child(4) {
+        transform: rotateY(240deg) translateZ(230px);
+    }
+    
+    .roationimage:nth-child(5) {
+        transform: rotateY(300deg) translateZ(230px);
+    }
+    
+    .roationimage:nth-child(6) {
+        transform: rotateY(360deg) translateZ(230px);
+    }
+    
+    /* animation */
+    
+    /* review section */
+    #review {
+        height: 20vh;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: white;
+        position: relative;
+        bottom: 20px;
+        
+    
+    }
+    
+    .person {
+        width: 23%;
+        height: 80%;
+        margin-top: 3%;
+        border-radius: 2%;
+        box-shadow: 0 10px 10px rgba(15, 12, 12, 0.66);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 15px;
+        background-image: linear-gradient(to right top, #e1edf0, #d5e5ec, #2c8cec, #d0dae3, #5026e7);
+    
+    }
+    
+    .personimg {
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        scale: 1.9;
+        position: relative;
+        bottom: 20px;
+    
+    }
+    .person p{
+        font-size: 5px;
+    }
+    .reviewword{
+        font-size: 3px;
+        position: relative;
+        bottom: 42px;
+    }
+    
+    
+    .star {
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        bottom: 70px;
+    }
+    
+    .fa-star {
+        color: rgb(255, 183, 0);
+        font-size: 5px;
+    }
+    
+    .fa-star-half-stroke {
+        color: rgb(255, 183, 0);
+        font-size: 5px;
+    }
+    
+    /* review sectioin*/
+    
+    /* footer section */
+    footer {
+        height: 30vh;
+        background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
+    
+        background-size: cover;
+        color: white;
+    
+    }
+    
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    
+    }
+    
+    .foot-heading {
+        color: rgb(219, 213, 213);
+        font-size: 10px;
+        font-weight: bold;
+    
+    }
+    
+    .column1 {
+        margin-top: 2%;
+    }
+    
+    p {
+        list-style-type: none;
+    }
+    
+    p a {
+        text-decoration: none;
+        font-size: 9px;
+        color: rgb(219, 213, 213);
+        line-height: 1.6;
+    }
+    
+    .fa-brands {
+        font-size: smaller;
+        padding: 1.5%;
+    }
+    
+    .fa-facebook {
+        color: #3b5998;
+    }
+    
+    .fa-twitter {
+        color: #00acee;
+    
+    }
+    .fa-instagram{
+        color: rgb(167, 8, 95);
+    }
+    
+    .fa-linkedin {
+        color: #0A66C2;
+    
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+}
+
+@media all and (min-width:750px) and (max-width:1024px) {
+    * {
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Noto Serif Khojki', serif;
+    
+    }
+    body,html{
+        overflow-x: hidden;
+    }
+    /* header */
+    header {
+        height: 7vh;
+        background-position: center;
+        background-size: cover;
+        position: sticky;
+        top: 0%;
+        z-index: 2;
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+    
+    }
+    .checkbtn{
+        font-size: 22px;
+        color: rgb(255, 255, 255);
+        float: right;
+        margin-right: 15px;
+        cursor: pointer;
+        display: block;
+    
+    }
+    #check{
+        display: none;
+    }
+    
+    ul {
+        margin-right: 2%;
+        position: relative;
+        left: -100%;
+        display: block;
+        transition: all 0.5s;
+        z-index: 10;
+    }
+    
+    ul li {
+        list-style-type: none;
+        padding: 2%;
+        background-color: #d0dae3;
+       position: relative;
+       top: 50px;
+       text-align: center;
+     
+      
+
+    
+    }
+    
+    ul li a {
+        text-decoration: none;
+        font-size: 10px;
+        color: #00021a;
+    }
+    
+    ul li a:hover {
+        color: rgb(130, 217, 235);
+    
+    }
+    #check:checked ~ul{
+    left: 0;
+    }
+    .login {
+        font-size: small;
+        padding: 2px 15px;
+        height: 87%;
+        width: 20%;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgb(10, 9, 46);
+        letter-spacing: 1px;
+    
+    }
+    .login:hover{
+        background-color: #61bdff;
+    }
+    
+    .logo {
+        width: 22%;
+        position: relative;
+        bottom: 310px;
+        left: 16px;
+        
+    }
+    
+    /* header */
+    
+    /* main1 About webpage */
+    
+    #main1 {
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        background-image: linear-gradient(to right top, #e1edf0, #d5e5ec, #2c8cec, #d0dae3, #5026e7);
+  
+    
+    }
+    
+    .word1 {
+        font-size: 170%;
+        color: rgb(8, 8, 8);
+        margin-left: 3.5%;
+        animation: change 7s infinite;
+    
+    }
+    
+    @keyframes change {
+        from {
+            color: black;
+        }
+    
+        to {
+            color: white;
+        }
+    }
+    
+    .player1 {
+        width: 50%;
+        border-radius: 10%;
+        margin-right: 3%;
+    }
+    
+    /* main1 About webpage*/
+    
+    /* main2 what we do */
+    #main2 {
+        height: 110vh;
+        background-color: white;
+    }
+    
+    .mainchild {
+        margin: 0px 43px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 33px;
+        padding-top: 50px;
+    
+    }
+    
+    .box {
+        width: 112%;
+        height: 150%;
+        margin-top: 3%;
+        border-radius: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: rgb(255, 255, 255);
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+    
+    
+    }
+    
+    .cricketicon {
+        width: 22px;
+        position: relative;
+        top: 17px;
+    }
+    
+    .box-content{
+        color: rgb(243, 234, 234);
+        font-size: 13px;
+        position: relative;
+        top:7px;
+        left: 3%;
+        line-height: 2;
+        word-spacing: 1px;
+    
+    
+    }
+    
+    
+    
+    .groundicon {
+        color: rgb(0, 0, 0);
+        width: 33%;
+        position: relative;
+        bottom: 10px;
+    
+    }
+    
+    .usericon {
+        color: rgb(0, 0, 0);
+        width: 30%;
+        position: relative;
+        bottom: 24px;
+    
+    }
+    
+    .box-heading1 {
+        font-size: 13px;
+        font-weight: 500;
+        position: relative;
+        bottom: 10px;
+        color: rgb(255, 255, 255);
+    }
+    
+    .box-heading2 {
+        font-size: 13px;
+        font-weight: 500;
+        position: relative;
+        bottom: 26px;
+        color: rgb(255, 255, 255);
+    }
+    
+    .box-heading3 {
+        font-size: 13px;
+        font-weight: 500;
+        position: relative;
+        bottom: 26px;
+        color: rgb(255, 255, 255);
+    }
+    
+    
+    /* main2 */
+    
+    /* main3 */
+    .main3 {
+        height: 15vh;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: white;
+        z-index: -2;
+    }
+    
+    .sportsheading {
+        font-size: 23px;
+        text-align: center;
+        position: relative;
+        left: 420px;
+        color: rgb(0, 0, 0);
+        bottom: 300px;
+        white-space: nowrap;
+    }
+    
+    /* animation */
+    .roationimage {
+        width: 130px;
+        height: 130px;
+        position: absolute;
+        border-radius: 50%;
+    }
+    
+    .rotation-content {
+        width: 20px;
+        height: 30px;
+        margin-left: 350px;
+        margin-bottom: 320px;
+        perspective: 1050px;
+        transform-style: preserve-3d;
+        transform: rotateX(-10deg)rotateZ(-7deg);
+    }
+    
+    .image-rotation{
+        width: 20%;
+        position: absolute;
+        transform-style: preserve-3d;
+        animation: rotate 10s linear infinite;
+        bottom: 320px;
+        right: 30px;
+    }
+    
+    @keyframes rotate {
+    
+        to {
+            transform: rotateY(360deg);
+        }
+    }
+    
+    .roationimage:nth-child(1) {
+        transform: rotateY(60deg) translateZ(230px);
+    }
+    
+    .roationimage:nth-child(2) {
+        transform: rotateY(120deg) translateZ(230px);
+    }
+    
+    .roationimage:nth-child(3) {
+        transform: rotateY(180deg) translateZ(230px);
+    }
+    
+    .roationimage:nth-child(4) {
+        transform: rotateY(240deg) translateZ(230px);
+    }
+    
+    .roationimage:nth-child(5) {
+        transform: rotateY(300deg) translateZ(230px);
+    }
+    
+    .roationimage:nth-child(6) {
+        transform: rotateY(360deg) translateZ(230px);
+    }
+    
+    /* animation */
+    
+    /* review section */
+    #review {
+        height: 45vh;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: white;
+        position: relative;
+        bottom: 20px;
+        
+    
+    }
+    
+    .person {
+        width: 25%;
+        height: 80%;
+        margin-top: 3%;
+        border-radius: 2%;
+        box-shadow: 0 10px 10px rgba(15, 12, 12, 0.66);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 15px;
+        background-image: linear-gradient(to right top, #e1edf0, #d5e5ec, #2c8cec, #d0dae3, #5026e7);
+    
+    }
+    
+    .personimg {
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        scale: 1.9;
+        position: relative;
+        bottom: 20px;
+    
+    }
+    .person p{
+        font-size: 12px;
+    }
+    .reviewword{
+        font-size: 25px;
+        position: relative;
+        bottom: 42px;
+    }
+    
+    
+    .star {
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        bottom: 70px;
+    }
+    
+    .fa-star {
+        color: rgb(255, 183, 0);
+        font-size: 10px;
+    }
+    
+    .fa-star-half-stroke {
+        color: rgb(255, 183, 0);
+        font-size: 10px;
+    }
+    
+    /* review sectioin*/
+    
+    /* footer section */
+    footer {
+        height: 30vh;
+        background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
+    
+        background-size: cover;
+        color: white;
+    
+    }
+    
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    
+    }
+    
+    .foot-heading {
+        color: rgb(219, 213, 213);
+        font-size: 10px;
+        font-weight: bold;
+    
+    }
+    
+    .column1 {
+        margin-top: 2%;
+    }
+    
+    p {
+        list-style-type: none;
+    }
+    
+    p a {
+        text-decoration: none;
+        font-size: 9px;
+        color: rgb(219, 213, 213);
+        line-height: 1.6;
+    }
+    
+    .fa-brands {
+        font-size: smaller;
+        padding: 1.5%;
+    }
+    
+    .fa-facebook {
+        color: #3b5998;
+    }
+    
+    .fa-twitter {
+        color: #00acee;
+    
+    }
+    .fa-instagram{
+        color: rgb(167, 8, 95);
+    }
+    
+    .fa-linkedin {
+        color: #0A66C2;
+    
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+}
+
+@media all and (min-width:1024px) and (max-width:1200px) {
+    * {
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Noto Serif Khojki', serif;
+    
+    }
+    body,html{
+        overflow-x: hidden;
+    }
+    /* header */
+    header {
+        height: 7vh;
+        background-position: center;
+        background-size: cover;
+        position: sticky;
+        top: 0%;
+        z-index: 2;
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+    
+    }
+    .checkbtn{
+        font-size: 22px;
+        color: rgb(255, 255, 255);
+        float: right;
+        margin-right: 15px;
+        cursor: pointer;
+        /* display: block; */
+    
+    }
+    #check{
+        display: none;
+    }
+    
+    ul {
+        margin-right: 2%;
+        position: relative;
+        left: -100%;
+        display: block;
+        transition: all 0.5s;
+        z-index: 10;
+    }
+    
+    ul li {
+        list-style-type: none;
+        padding: 2%;
+        background-color: #d0dae3;
+       position: relative;
+       top: 50px;
+       text-align: center;
+     
+      
+
+    
+    }
+    
+    ul li a {
+        text-decoration: none;
+        font-size: 10px;
+        color: #00021a;
+    }
+    
+    ul li a:hover {
+        color: rgb(130, 217, 235);
+    
+    }
+    #check:checked ~ul{
+    left: 0;
+    }
+    .login {
+        font-size: small;
+        padding: 2px 15px;
+        height: 87%;
+        width: 20%;
+        background-color: #ffffff;
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 3px 10px rgb(10, 9, 46);
+        letter-spacing: 1px;
+    
+    }
+    .login:hover{
+        background-color: #61bdff;
+    }
+    
+    .logo {
+        width: 20%;
+        position: relative;
+        bottom: 365px;
+        left: 16px;
+        
+    }
+    
+    /* header */
+    
+    /* main1 About webpage */
+    
+    #main1 {
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        background-image: linear-gradient(to right top, #e1edf0, #d5e5ec, #2c8cec, #d0dae3, #5026e7);
+  
+    
+    }
+    
+    .word1 {
+        font-size: 170%;
+        color: rgb(8, 8, 8);
+        margin-left: 3.5%;
+        animation: change 7s infinite;
+    
+    }
+    
+    @keyframes change {
+        from {
+            color: black;
+        }
+    
+        to {
+            color: white;
+        }
+    }
+    
+    .player1 {
+        width: 50%;
+        border-radius: 10%;
+        margin-right: 3%;
+    }
+    
+    /* main1 About webpage*/
+    
+    /* main2 what we do */
+    #main2 {
+        height: 110vh;
+        background-color: white;
+    }
+    
+    .mainchild {
+        margin: 0px 43px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 33px;
+        padding-top: 50px;
+    
+    }
+    
+    .box {
+        width: 102%;
+        height: 150%;
+        margin-top: 3%;
+        border-radius: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: rgb(255, 255, 255);
+        background-image: linear-gradient(to right top, #00021a, #00080c, #041d36, #07172c, #04020b);
+    
+    
+    }
+    
+    .cricketicon {
+        width: 22px;
+        position: relative;
+        top: 17px;
+    }
+    
+    .box-content{
+        color: rgb(243, 234, 234);
+        font-size: 13px;
+        position: relative;
+        top:7px;
+        left: 3%;
+        line-height: 2;
+        word-spacing: 1px;
+    
+    
+    }
+    
+    
+    
+    .groundicon {
+        color: rgb(0, 0, 0);
+        width: 33%;
+        position: relative;
+        bottom: 10px;
+    
+    }
+    
+    .usericon {
+        color: rgb(0, 0, 0);
+        width: 30%;
+        position: relative;
+        bottom: 24px;
+    
+    }
+    
+    .box-heading1 {
+        font-size: 13px;
+        font-weight: 500;
+        position: relative;
+        bottom: 10px;
+        color: rgb(255, 255, 255);
+    }
+    
+    .box-heading2 {
+        font-size: 13px;
+        font-weight: 500;
+        position: relative;
+        bottom: 26px;
+        color: rgb(255, 255, 255);
+    }
+    
+    .box-heading3 {
+        font-size: 13px;
+        font-weight: 500;
+        position: relative;
+        bottom: 26px;
+        color: rgb(255, 255, 255);
+    }
+    
+    
+    /* main2 */
+    
+    /* main3 */
+    .main3 {
+        height: 15vh;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: white;
+        z-index: -2;
+    }
+    
+    .sportsheading {
+        font-size: 23px;
+        text-align: center;
+        position: relative;
+        left: 420px;
+        color: rgb(0, 0, 0);
+        bottom: 300px;
+        white-space: nowrap;
+    }
+    
+    /* animation */
+    .roationimage {
+        width: 130px;
+        height: 130px;
+        position: absolute;
+        border-radius: 50%;
+    }
+    
+    .rotation-content {
+        width: 20px;
+        height: 30px;
+        margin-left: 350px;
+        margin-bottom: 320px;
+        perspective: 1050px;
+        transform-style: preserve-3d;
+        transform: rotateX(-10deg)rotateZ(-7deg);
+    }
+    
+    .image-rotation{
+        width: 20%;
+        position: absolute;
+        transform-style: preserve-3d;
+        animation: rotate 10s linear infinite;
+        bottom: 320px;
+        right: 30px;
+    }
+    
+    @keyframes rotate {
+    
+        to {
+            transform: rotateY(360deg);
+        }
+    }
+    
+    .roationimage:nth-child(1) {
+        transform: rotateY(60deg) translateZ(230px);
+    }
+    
+    .roationimage:nth-child(2) {
+        transform: rotateY(120deg) translateZ(230px);
+    }
+    
+    .roationimage:nth-child(3) {
+        transform: rotateY(180deg) translateZ(230px);
+    }
+    
+    .roationimage:nth-child(4) {
+        transform: rotateY(240deg) translateZ(230px);
+    }
+    
+    .roationimage:nth-child(5) {
+        transform: rotateY(300deg) translateZ(230px);
+    }
+    
+    .roationimage:nth-child(6) {
+        transform: rotateY(360deg) translateZ(230px);
+    }
+    
+    /* animation */
+    
+    /* review section */
+    #review {
+        height: 45vh;
+        display: flex;
+        justify-content: space-evenly;
+        background-color: white;
+        position: relative;
+        bottom: 20px;
+        
+    
+    }
+    
+    .person {
+        width: 25%;
+        height: 80%;
+        margin-top: 3%;
+        border-radius: 2%;
+        box-shadow: 0 10px 10px rgba(15, 12, 12, 0.66);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 15px;
+        background-image: linear-gradient(to right top, #e1edf0, #d5e5ec, #2c8cec, #d0dae3, #5026e7);
+    
+    }
+    
+    .personimg {
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        scale: 1.9;
+        position: relative;
+        bottom: 20px;
+    
+    }
+    .person p{
+        font-size: 12px;
+    }
+    .reviewword{
+        font-size: 25px;
+        position: relative;
+        bottom: 42px;
+    }
+    
+    
+    .star {
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        bottom: 70px;
+    }
+    
+    .fa-star {
+        color: rgb(255, 183, 0);
+        font-size: 10px;
+    }
+    
+    .fa-star-half-stroke {
+        color: rgb(255, 183, 0);
+        font-size: 10px;
+    }
+    
+    /* review sectioin*/
+    
+    /* footer section */
+    footer {
+        height: 30vh;
+        background: linear-gradient(90deg, rgb(10, 9, 20) 4%, rgb(16, 18, 19) 100%);
+    
+        background-size: cover;
+        color: white;
+    
+    }
+    
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    
+    }
+    
+    .foot-heading {
+        color: rgb(219, 213, 213);
+        font-size: 10px;
+        font-weight: bold;
+    
+    }
+    
+    .column1 {
+        margin-top: 2%;
+    }
+    
+    p {
+        list-style-type: none;
+    }
+    
+    p a {
+        text-decoration: none;
+        font-size: 9px;
+        color: rgb(219, 213, 213);
+        line-height: 1.6;
+    }
+    
+    .fa-brands {
+        font-size: smaller;
+        padding: 1.5%;
+    }
+    
+    .fa-facebook {
+        color: #3b5998;
+    }
+    
+    .fa-twitter {
+        color: #00acee;
+    
+    }
+    .fa-instagram{
+        color: rgb(167, 8, 95);
+    }
+    
+    .fa-linkedin {
+        color: #0A66C2;
+    
+    }
+    
+    a {
+        text-decoration: none;
+    }
+     
+}
+   
+
+

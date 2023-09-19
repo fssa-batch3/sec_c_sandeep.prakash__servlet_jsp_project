@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+<link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Noto+Serif+Khojki:wght@500&family=Roboto&display=swap"
+    rel="stylesheet">
+    <link rel="icon" type="image/icon" href="../../assets/images/faviicon...png">
+    <link rel="stylesheet" href="../../assets/css/formadmin.css">
+
+</head>
+<body>
+    <div class="formcontainer">
+           
+<form id="formbtn">
+    <div class="box1">
+    <div class="groundname">
+        <label class="labelname"> Ground Name:</label>
+        <input type="name" placeholder="Ground Name " id="groname" aria-label="name">
+<br> 
+    </div>
+
+    <label class="labelname"> Ground place:</label>
+    <input type="name" placeholder="Ground Location" id="grolname" aria-label="name">
+<br>
+    </div>
+
+    <div class="groundlocationbox">
+
+        <label class="labelname"> Ground Address:</label>
+        <input type="name" placeholder="Ground Location" id="groaddress" aria-label="name">
+<br>
+        <label class="labelname"> Ground Location Link:</label>
+        <input type="url" placeholder="Ground Location" id="grolink" aria-label="name">
+<br>  
+    
+    </div>
+    
+    <div class="groundimageupload">
+        <label class="labelname"> Upload your Ground images:</label>
+<br>
+        <input type="url" placeholder="Upload " id="grimg1" aria-label="groundimg">
+<br> 
+        <input type="url" placeholder="Upload " id="grimg2" aria-label="groundimg">
+<br>
+        <input type="url" placeholder="Upload " id="grimg3" aria-label="groundimg">
+<br>  
+    
+    </div>
+    
+        <!-- <div class="groundimgshow">
+            
+        </div> -->
+        <div class="sportsavailable">
+            <label class="labelname"> Sports Available:</label>
+<br>
+            <input type="checkbox" id="sportsavail1" aria-label="sportsavail" value="Cricket">
+            <label class="">Cricket</label>
+<br>
+            <input type="checkbox" id="sportsavail2" aria-label="sportsavail" value="Football">
+            <label class="">Football</label>
+<br>
+            <input type="checkbox" id="sportsavail3" aria-label="sportsavail" value="Tennis">
+            <label class="">Tennis</label>
+<br>
+    
+            <label class="">Add more sports</label>
+<br>
+            <input type="name" id="sportsavail" aria-label="sportsavail">
+<br>
+    
+        </div>
+        <div class="groundtiming">
+            <label class="">Timings </label>
+<br>
+            <input type="time" id="timingsfrom" aria-label="sportsavail" pattern="(0[1-9]|1[0-2]):[0-5][0-9] (am|pm)">
+            <input type="time" id="timingsto" aria-label="sportsavail">
+    
+        </div>
+    
+    <div class="groundrules">
+        <label class="">Add Your Ground rules </label>
+<br>
+        <textarea id="rules" rows="8" cols="30"></textarea>
+<br>
+    
+    </div>
+    <div class="groundprice">
+        
+        <label class="">Enter your price</label>
+<br>
+        <input type="number" id="amount" aria-label="sportsavail">
+<br>
+    
+    </div>
+    <div class="values">
+        <p>Distict</p>
+        <input type="name" id="sportsvalue" aria-label="sportsavail">
+<br>
+    </div>
+    
+    <button type="submit" id="submitbtn">Submit</button>
+    
+    </form>
+    <div class="buttonsbox">
+        <button type="submit" id="updatebtn">Update</button>
+    
+        <button type="submit" id="deletebtn">Disable</button>
+
+    </div>
+
+    </div>
+ 
+    <script src="../../assets/js/formadmin.js"></script>
+</body>
+</html>

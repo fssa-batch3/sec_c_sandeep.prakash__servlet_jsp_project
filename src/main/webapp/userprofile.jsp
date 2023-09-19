@@ -55,10 +55,10 @@
                             <span>Messages</span>
                         </div>
                     </a>
-                    <div class="bookinghistory">
+               <a href="<%=request.getContextPath()%>/mybooking.jsp">       <div class="bookinghistory">
                         <i class="bx bx-history"></i>
                         <span>Your Booking</span>
-                    </div>
+                    </div></a>
 
                     <!-- <div class="analytics">
                         <i class="bx bxs-analyse"></i>
@@ -68,14 +68,14 @@
                 <div class="hr">
 
                 </div>
-                <a href="../../pages/player/friendlist.html">
+                <a href="/bookandplay-web/friendlist.jsp">
                     <div class="friendslist">
                         <i class="bx bxs-group"></i>
                         <span>Friends List</span>
                     </div>
                 </a>
 
-                <a href="../../pages/player/friendrequest.html">
+                <a href="/bookandplay-web/friendrequest.jsp">
                     <div class="friendsrequest">
                         <i class="bx bx-group bx-tada"></i>
                         <span>Friends Request</span>
@@ -90,7 +90,7 @@
                     </i>
                     <span>Log out</span>
                 </button></a>
-                <a href="../../index.html">
+                <a href="/bookandplay-web/index.jsp">
                     <div class="homepage">
                         <i class="fa-solid fa-house-user"></i>
                         <span>Go to Home page</span>

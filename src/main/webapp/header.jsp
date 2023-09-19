@@ -12,10 +12,10 @@
 <a href="/bookandplay-web/GetAllGroundList">Book Grounds</a>
 </li>
       <li >
-<a class="findplayers" href="./pages/player/findplayers.html">Find Players</a>
+<a class="findplayers" href="/bookandplay-web/findplayers.jsp">Find Players</a>
 </li>
       <li class="contact ">
-<a href="./pages/contactus/contact.html">Contact us</a>
+<a href="/bookandplay-web//contact.jsp">Contact us</a>
 </li>
       <li>
 <a href="/bookandplay-web/userlogin.jsp">

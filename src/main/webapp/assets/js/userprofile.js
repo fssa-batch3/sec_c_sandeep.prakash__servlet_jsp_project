@@ -36,6 +36,7 @@ const labelsports = document.querySelector(".labelnames");
 const labeltime = document.querySelector(".labelnametime");
 const labeltimeto = document.querySelector(".timep");
 const labelage = document.querySelector(".labelnamea");
+const playerjoin=document.querySelector(".joinplayer");
 const join_as_player = document.getElementById("checkjoinplayer1");
 const join_player_word = document.querySelector(".joinasplayer");
 const joinform = document.getElementById("formbox");
@@ -51,6 +52,7 @@ let ok = "../../assets/images/avatorprofile.jpg"
 
 let check=document.querySelectorAll(`input[name="sport"]`);
 const editbutn1 = document.querySelector(".profile2");
+  let p_jointext;
 
 
 
@@ -126,6 +128,7 @@ function convertTo12HourFormat(timeString) {
 
 user_genders.style.display = "none"
 agelabel.style.display = "none"
+
             user_age.style.display = "none"
             user_location.style.display = "none"
             user_timingsfrom.style.display = "none"
@@ -150,7 +153,7 @@ agelabel.style.display = "none"
 
 
 
-            let p_jointext = document.createElement("p");
+            p_jointext = document.createElement("p");
             p_jointext.setAttribute("class", "pjointext");
             p_jointext.innerText = "If you want to join as a player click the join player box\n once you click it you will join as a player";
             joinform.append(p_jointext);
@@ -303,6 +306,7 @@ joinPlayer.style.bottom="950px"
  sportname3.required = true;
  user_genders.required = true;
  textarea.required = true;
+ editbutn1.innerHTML = "Save"
  
   
   
@@ -427,6 +431,9 @@ const requestData =
         tennis.setAttribute("disabled", "");
         textarea.setAttribute("disabled", "");
         user_genders.setAttribute("disabled", "");
+        playerjoin.style.display = "none";
+        p_jointext.style.display = "none";
+        
         
 
 }

@@ -1,0 +1,75 @@
+* {
+    margin: 0px;
+    padding: 0px;
+
+
+}
+
+
+textarea{
+   resize: none; 
+}
+.formcontainer{
+    position: relative;
+    padding-left: 470px;
+    top: 70px;
+    font-size: 23px;
+}
+#groname{
+    width: 390px;
+    height: 30px;
+}
+.labelname{
+    position: relative;
+    right: 90px;
+}
+
+
+.box1{
+  
+  
+}
+.groundlocationbox{
+  
+
+
+}
+.groundimageupload{
+  
+
+
+}
+.sportsavailable{
+  
+
+}
+.groundtiming{
+  
+
+}
+.groundrules{
+  
+
+}
+.groundprice{
+  
+
+
+}
+.values{
+  
+
+}
+#submitbtn{
+   
+
+}
+/* #amount{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+} */
+
+#amount::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+}

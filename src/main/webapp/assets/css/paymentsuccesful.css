@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#container {
+    background-image: url(../../assets/images/onlinepayback.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.tick {
+    position: relative;
+    top: 30%;
+    border: 2px solid rgb(180, 176, 176);
+    width: 30%;
+    left: 35%;
+    border-radius: 2%;
+    box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+
+
+}
+
+.fa-check {
+    color: green;
+    font-size: 520%;
+}
+
+.h0 {
+    color: green;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.code {
+    color: white;
+}
+@media screen and (max-width:900px){
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#container {
+    background-image: url(../../assets/images/onlinepayback.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.tick {
+    position: relative;
+    top: 30%;
+    border: 2px solid rgb(180, 176, 176);
+    width: 80%;
+    left: 35%;
+    border-radius: 2%;
+    box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+
+
+}
+
+.fa-check {
+    color: green;
+    font-size: 520%;
+}
+
+.h0 {
+    color: green;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.code {
+    color: white;
+}
+
+}

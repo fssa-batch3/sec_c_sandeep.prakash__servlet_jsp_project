@@ -1,0 +1,291 @@
+
+/* fill */
+
+body{
+    overflow-x: hidden;
+    background-color: rgba(241, 251, 255, 255);
+}
+.formcontainer{
+   
+    position: relative;
+    background-color: rgba(241, 251, 255, 255);
+    width: 1200px;
+    top: 50%;
+    left: 122px; 
+    /* transform: translate(-50%,-50%); */
+    padding: 30px 43px;
+    border-radius: 5%;
+    /* background-color: white; */
+    border: 1px solid black;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+.closebtn{
+    position: relative;
+    left: 960px;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+
+
+}
+
+
+textarea{
+    resize: none; 
+    width: 300px;
+    height: 200px;
+ }
+input{
+    width: 200px;
+}
+.box1{
+    /* display: flex; */
+    position: relative;
+    right: 250px;
+top: 70px;
+   
+  
+  
+}
+#grolname{
+    width: 350px;
+    height: 50px;
+    position: relative;
+    left: 230px;
+top: 90px;
+   
+
+}
+
+#grimg1,#grimg2,#grimg3{
+    width: 350px;
+    height: 50px;
+}
+#groname{
+    width: 350px;
+    height: 50px;
+    position: relative;
+    bottom: 10px;
+    left: 260px;
+}
+.labelgroname{
+    position: relative;
+    bottom: 10px;
+left: 230px;
+}
+
+.labelnamep{
+    position: relative;
+    left: 220px;
+top: 90px;
+
+}
+#grolink{
+    position: relative;
+    left: 250px;
+top: 60px;
+width: 350px;
+height: 50px;
+   
+
+}
+.labelnamell{
+    position: relative;
+    left: 250px;
+top: 60px;
+
+}
+.groundlocationbox{
+    /* display: flex; */
+    position: relative;
+    left: 380px;
+    
+  
+
+
+}
+.groundimageupload{
+    width: 200px;
+    position: relative;
+    left: 20px;
+    top: 70px;
+  
+
+
+}
+.sportsavailable{
+    position: relative;
+    left: 290px;
+    top: 130px;
+  
+
+}
+.dis{
+    position: relative;
+    left: 862px;
+    top: 120px;
+}
+#sportsvalue{
+    width: 220px;
+    height: 50px;
+    text-align: center;
+    position: relative;
+    left: 832px;
+    top: 120px;
+    /* position: relative;
+    bottom: 900ox; */
+
+}
+#sportsavail1,#sportsavail2,#sportsavail3{
+    position: relative;
+    right: 270px;
+    top: 50px;
+   width: 20px;
+   height: 50px;
+  
+
+}
+.groundcourt{
+    position: relative;
+    left: 790px;
+    bottom: 180px;
+}
+.groundprice1{
+    position: relative;
+    bottom: 70px;
+}
+#sportscourts{
+    width: 120px;
+    height: 30px;
+    text-align: center;
+    position: relative;
+}
+.groundprice2{
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+}
+#increaseamount{
+    width: 120px;
+    height: 30px;
+}
+.sname{
+    position: relative;
+    right: 225px;
+    top: 30px;
+}
+.labelnames{
+    position: relative;
+    right: 290px;
+    top: 25px;
+}
+.groundtiming{
+    position: relative;
+    left:397px;
+    width: 270px;
+    /* bottom:50px; */
+    text-align: center;
+    /* bottom: 130px; */
+  
+  
+
+}
+.groundrules{
+    position: relative;
+    /* width: 100px; */
+    left: 870px;
+    bottom: 160px;
+
+  
+
+}
+#startTime,#endTime{
+    width: 220px;
+    height: 30px;
+}
+/* .groundprice{
+  
+
+
+} */
+.values{
+ position: relative;
+ top: 20px;
+ /* left: 120px; */
+  
+
+}
+#submitbtn{
+    position: relative;
+    top: 10px;
+    display: none;
+   
+   
+
+}
+#updatebtn{
+    position: relative;
+    left: 360px;
+    padding: 10px;
+    top: 20px;
+
+}
+#editbtn{
+    position: relative;
+    left: 360px;
+    padding: 10px 20px;
+    top: 20px;
+
+}
+#deletebtn{
+    position: relative;
+    left: 360px;
+    padding: 10px;
+    top: 20px;
+ 
+}
+#amount{
+    width: 120px;
+    height: 30px;
+}
+
+#amount::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+}
+
+#increaseamount::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+  }
+.labelname{
+    position: relative;
+    left: 280px;
+    bottom: 55px;
+}
+#groaddress{
+    position: relative;
+    left: 280px;
+    bottom: 50px;
+    width: 350px;
+    height: 50px;
+}
+
+.backbtn{
+    background-color: rgb(255, 255, 255);
+    width: 90px;
+    padding: 3px 10px;
+    position: relative;
+    top: 30px;
+    left: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="icon" type="image/icon" href="../../assets/images/faviicon...png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="../../assets/css/signup.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <!-- signup container -->
+    <div id="container">
+        <!-- signup form -->
+        <div class="forms">
+            <h1 class="signuphead">Create New Account</h1>
+            <br>
+            <form id="signupform">
+
+                <label>First Name:</label>
+                <br>
+                <div class="boxform">
+                    <input type="name" placeholder="Your Name " id="name1" aria-label="name" name="name"
+                        pattern="^[a-zA-Z]{3,20}$"
+                        title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters."
+                        required>
+                    <br>
+
+                </div>
+                <br>
+                <label>Last Name:</label>
+                <br>
+                <div class="boxform">
+                    <input type="name" placeholder="Your Name " id="name2" aria-label="name" name="name"
+                        pattern="^[a-zA-Z]{3,20}$"
+                        title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters."
+                        required>
+                    <br>
+
+                </div>
+                <br>
+                <label>Email:</label>
+                <br>
+                <div class="boxform">
+                    <input type="email" placeholder="Email address " id="email" aria-label="email" name="email-id"
+                        pattern="^[a-zA-Z0-9][a-zA-Z0-9._%+-]*@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+                    <br>
+
+                </div>
+                <br>
+                <label>Phone Number:</label>
+                <br>
+                <div class="boxform">
+                    <input type="tel" placeholder="Phone Number" id="user_phoneno" aria-label="phone number"
+                        name="mobile-number" pattern="[0-9]{10}" title="PLease enter 10 digit number" required>
+                    <br>
+
+                </div>
+                <br>
+                <label>Password:</label>
+                <br>
+                <div class="boxform">
+                    <input type="password" placeholder="Password" id="password" aria-label="Password" name="password"
+                        pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n\s])(?=.*[A-Z])(?=.*[a-z]).*$"
+                        title="Your password must be at least 8 characters long, contain at least one digit or special character, one uppercase letter, and one lowercase letter, and must not contain dots or newline characters and white space character"
+                        required>
+                    <span class="eyesym">
+                        <i class="fa-regular fa-eye-slash"></i>
+                    </span>
+                    <br>
+
+                </div>
+                <br>
+                <!-- <p class="alert">By Entering the information you are expected receive <br>email or sms OTP when you are sign again</p><br> -->
+                <!-- <a href="../../pages/login/accountcreated.html" ><input type="button" value="Register" id="newlogin"></a> -->
+                <!-- <button  id="newlogin" type="button" onclick="getUserData()" >Register</button><br> -->
+                <div class="joinplayer">
+                    <input type="checkbox" id="checkjoinplayer">
+                    <label>Join as a player</label>
+                </div>
+        </div>
+
+        <div class="joinplayercontainer">
+            <!-- <p class="labelname"> Display Name:</p><br>
+        <input type="name" placeholder="Your Name " id="name" aria-label="name" ><br>  -->
+            <p class="labelnameage">Age :</p>
+            <br>
+            <input type="number" placeholder="Age " id="age" aria-label="age" min="8" max="90"
+                pattern="^(1[8-9]|[2-9][0-9])$" title="The age should contain 1 to 120">
+            <br>
+
+            <div class="select">
+                <p class="labelnamegen">Gender</p>
+                <br>
+                <input type="name" placeholder="Gender " id="gender" aria-label="gender" pattern="^[a-zA-Z]{3,20}$"
+                    title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters.">
+                <br>
+
+                <p class="labelnamespor">Known Sports:</p>
+                <br>
+
+                <div class="sportsavailable">
+
+                    <input type="checkbox" id="sportsavail1" aria-label="sportsavail" value="Cricket">
+                    <label class="sportname">Cricket</label>
+                    <br>
+                    <input type="checkbox" id="sportsavail2" aria-label="sportsavail" value="Football">
+                    <label class="sportname">Football</label>
+                    <br>
+                    <input type="checkbox" id="sportsavail3" aria-label="sportsavail" value="Tennis">
+                    <label class="sportname">Tennis</label>
+                    <br>
+
+                </div>
+                <!-- <select id="sportss" required>
+               
+        <option value="Cricket">Cricket</option>
+        <option value="Football">Football </option>
+        <option value="Tennis">Tennis</option>
+               
+        </select><br> -->
+                <p class="labelnameloc">Location</p>
+                <br>
+                <select id="locationselect">
+                    <option value="">Select location</option>
+                    <option>Chennai</option>
+                    <option>Coimbatore</option>
+                    <option>Salem</option>
+                    <option>Erode</option>
+                    <option>Madurai</option>
+                    <option>Delhi</option>
+                    <option>Bangalore</option>
+                    <option>Pune</option>
+                    <option>Kolkata</option>
+
+                </select>
+                <br>
+                <p class="labelnametime">Timing Available</p>
+                <br>
+                <!-- <input type="time" id="timingsfrom" aria-label="timingsfrom" value="4:00"> -->
+                <input type="text" id="startTime" placeholder="12:00">
+                <br>
+
+                <p class="toword">To</p>
+                <br>
+                <!-- <input type="time" id="timingsto" aria-label="timingsto" value="6:00"> -->
+                <input type="text" id="endTime"  placeholder="12:00">
+            </div>
+            <br>
+
+            <!-- <button class="profile" type="button" onclick="getPlayerData()">Join</button> -->
+
+        </div>
+
+    </div>
+    <button type="submit" id="newlogin">Register</button>
+    <br>
+    </form>
+
+    </div>
+    <!-- signup form -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="../../assets/js/signup.js"></script>
+
+</body>
+</html>

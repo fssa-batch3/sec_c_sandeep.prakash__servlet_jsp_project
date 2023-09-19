@@ -1,0 +1,277 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+/* form container */
+#container {
+    background-image: url(../../assets/images/signup.jpg);
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.forms h1,form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 7%;
+
+}
+
+.forms {
+    position: relative;
+    top: 29%;
+    border: 2px solid rgb(180, 176, 176);
+    width: 30%;
+    left: 35%;
+    border-radius: 2%;
+    box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
+    height: 53%;
+    background-color: rgb(255, 255, 255);
+
+}
+
+/* form container */
+
+/* sign in */
+#email {
+    width: 80%;
+    height: 45px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(241, 251, 255, 255);
+    outline: 2px solid;
+
+}
+
+input[type="email"]::placeholder {
+    padding-left: 5%;
+    color: rgb(0, 0, 0);
+
+
+}
+
+input[type="password"]::placeholder {
+    padding-left: 5%;
+    color: rgb(0, 0, 0);
+
+}
+
+
+#password {
+    width: 80%;
+    height: 45px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(241, 251, 255, 255);
+    outline: 2px solid;
+
+}
+
+#login {
+    width: 63%;
+    height: 45px;
+    font-size: larger;
+    font-weight: bolder;
+    cursor: pointer;
+ background-color: rgba(14, 163, 24, 0.783);
+    color: rgb(255, 255, 255);
+    padding: 10px 90px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border: none;
+
+}
+#login:hover{
+    background-color: rgb(15, 190, 15);
+
+}
+
+.sign {
+    color: rgb(0, 0, 0);
+
+}
+ /* signin */
+
+/* forgetpassword */
+
+/* .fp {
+    color: rgb(255, 255, 255);
+    font-size: large;
+    text-decoration: none;
+} */
+/* forgetpassword */
+
+/* new signup */
+
+.newsign {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: large;
+}
+
+#newlogin {
+    padding: 0px 50px;
+    height: 45px;
+    font-size: larger;
+    font-weight: bolder;
+    cursor: pointer;
+    background-color: rgba(14, 163, 24, 0.783);
+    color: white;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border: none;
+
+
+}
+#newlogin:hover{
+    background-color: rgb(15, 190, 15);
+
+}
+/* new signup */
+@media screen and (max-width:450px) {
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    /* form container */
+    #container {
+        background-image: url(../../assets/images/signup.jpg);
+        height: 100vh;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    .forms h1,form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 7%;
+    
+    }
+    
+    .forms {
+        position: relative;
+        top: 29%;
+        border: 2px solid rgb(180, 176, 176);
+        width: 70%;
+        left: 13%;
+        border-radius: 2%;
+        box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
+        height: 53%;
+        background-color: rgb(255, 255, 255);
+    
+    }
+    
+    /* form container */
+    
+    /* sign in */
+    #email {
+        width: 80%;
+        height: 45px;
+        border-radius: 5px;
+        border: none;
+        background-color: rgba(241, 251, 255, 255);
+    outline: 2px solid;
+    }
+    
+    input[type="email"]::placeholder {
+        padding-left: 5%;
+    
+        color: rgb(0, 0, 0);
+    }
+    
+    input[type="password"]::placeholder {
+        padding-left: 5%;
+        color: rgb(0, 0, 0);
+    }
+    
+    
+    #password {
+        width: 80%;
+        height: 45px;
+        border-radius: 5px;
+        border: none;
+        background-color: rgba(241, 251, 255, 255);
+    outline: 2px solid;
+    }
+    
+    #login {
+        width: 63%;
+        height: 45px;
+        font-size: 17px;
+        font-weight: bolder;
+        cursor: pointer;
+     background-color: rgba(14, 163, 24, 0.783);
+        color: white;
+        padding: 6px 60px;
+        border-radius: 10px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        border: none;
+    
+    }
+    #login:hover{
+        background-color: rgb(15, 190, 15);
+    
+    }
+    
+    .sign {
+        color: rgb(0, 0, 0);
+    
+    }
+     /* signin */
+    
+    /* forgetpassword */
+    
+    /* .fp {
+        color: white;
+        font-size: large;
+        text-decoration: none;
+    } */
+    /* forgetpassword */
+    
+    /* new signup */
+    
+    .newsign {
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        font-size: 17px;
+    }
+    
+    #newlogin {
+        padding: 0px 10px;
+        height: 45px;
+        font-size:17px;
+        font-weight: bolder;
+        cursor: pointer;
+        background-color: rgba(14, 163, 24, 0.783);
+        color: white;
+        border-radius: 10px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        border: none;
+    
+    
+    }
+    #newlogin:hover{
+        background-color: rgb(15, 190, 15);
+    
+    }
+    /* new signup */
+   
+}
+@media all and (min-width:750px) and (max-width:1024px) {
+     
+ 
+    .forms {
+        position: relative;
+        top: 29%;
+        border: 2px solid rgb(180, 176, 176);
+        width: 60%;
+        left: 17%;
+        border-radius: 2%;
+        box-shadow: 0 10px 10px rgba(215, 211, 211, 0.230);
+        height: 60%;
+        background-color: rgb(255, 255, 255);
+    
+    }
+}

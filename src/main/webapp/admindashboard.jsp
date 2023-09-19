@@ -19,11 +19,8 @@
 </head>
 <body>
 
-	<%
-GroundOwner loginAdmin = (GroundOwner) session.getAttribute("adminuser");
-      
-	%>
-	
+
+
  <div class="mainpoage">
         <div class="sidebar">
             <div class="sidebar1">
@@ -52,7 +49,7 @@ GroundOwner loginAdmin = (GroundOwner) session.getAttribute("adminuser");
                         <i class="bx bxs-grid-alt"></i>
                         <span>Dash Board</span>
                     </div> -->
-                    <a href="../../pages/admin/groundBooking.html">
+                      <a href="<%=request.getContextPath()%>/groundBooking.jsp">
                         <div class="message">
                             <i class="fa-solid fa-message"></i>
                             <span>Bookings</span>
@@ -102,22 +99,22 @@ GroundOwner loginAdmin = (GroundOwner) session.getAttribute("adminuser");
                             <br>
                             <input type="name" id="name1" pattern="^[a-zA-Z]{3,20}$"
                                 title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters."
-                                required disabled  value="<%=loginAdmin.getName()%>">
+                                required disabled >
                             <br>
 
                             <label class="labelname">Ground Name :</label>
                             <br>
                             <input type="name" id="name2" pattern="^[a-zA-Z ]{3,50}$"
                                 title="the input field  should contains only alphabetic characters (both upper and lower case) and has a length between 3 and 20 characters."
-                                required disabled  value="<%=loginAdmin.getOrganisationName()%>">
+                                required disabled  >
                             <br>
                             <label class="labelname">Email:</label>
                             <br>
-                            <input type="email" id="userEmail"   value="<%=loginAdmin.getEmail()%>" aria-label="email" disabled>
+                            <input type="email" id="userEmail"  aria-label="email" disabled>
                             <br>
                             <label class="labelname">Phone Number:</label>
                             <br>
-                            <input type="tel" id="phoneno1"  value="<%=loginAdmin.getPhoneNumber()%>"aria-label="phone number" pattern="[0-9]{10}"
+                            <input type="tel" id="phoneno1" aria-label="phone number" pattern="[0-9]{10}"
                                 title="PLease enter 10 digit number" required disabled>
                             <br>
                            
@@ -135,7 +132,7 @@ GroundOwner loginAdmin = (GroundOwner) session.getAttribute("adminuser");
 
         </div>
     </div>
- 
-
+      	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+   	<script type="text/javascript" src="/bookandplay-web/assets/js/admindashboard.js"></script>
 </body>
 </html>

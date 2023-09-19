@@ -8,7 +8,7 @@
 <meta charset="ISO-8859-1">
 <title>Book and Play</title>
   <link rel="stylesheet" type="text/css"
-	href="/bookandplay-web/assets/css/index.css">
+	href="<%=request.getContextPath()%>/assets/css/index.css">
 		    <link rel="icon" type="image/icon" href="https://iili.io/J9lLgxR.png">
 </head>
 <body>
@@ -217,6 +217,10 @@ Book Your Grounds From Your Place <br>
   	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
    <script>
+
+  
+	   
+
      const url = "http://localhost:8080/bookandplay-web/GetUserSession";
 
     
@@ -226,7 +230,7 @@ Book Your Grounds From Your Place <br>
              
              const responseUserData = response.data.substring(response.data.indexOf('{'));
              const userLogin = JSON.parse(responseUserData);
-             if (userLogin) {
+          
                  // You can now access the "userLogin" session attribute in userLogin variable
                  console.log(userLogin);
                  
@@ -255,18 +259,15 @@ Book Your Grounds From Your Place <br>
              // checking the user is player
                  const findplayersbtn = document.querySelector(".findplayers")
                  findplayersbtn.addEventListener("click", (e) => {
-                   if (userLogin==null ) {
-                 alert("Please login to find players ")
-                 e.preventDefault();
-               }
+           
 
-               else if( userLogin.playerStatus === false){
+                if( userLogin.playerStatus === false){
                  alert("Please join as a player to find players. To join as a player please tick the box on your profile page ");
                  e.preventDefault();
                }
 
                    else {
-                     window.location.href = "./pages/player/findplayers.html";
+                     window.location.href = "/bookandplay-web/findplayers.jsp";
                    }
                    // if(loginUser==false){
                    //   console.log("ofmofkf");
@@ -277,13 +278,17 @@ Book Your Grounds From Your Place <br>
                  })
                  
                  
-             } else {
-                 console.log("Session attribute not found or user not logged in.");
-             }
+            
          })
          .catch(function (error) {
              // handle error
-             console.log(error+"sandyyyyyyy");
+             console.log(error);
+             const findplayersbtn = document.querySelector(".findplayers")
+             findplayersbtn.addEventListener("click", (e) => {
+           
+             alert("Please login to find players ")
+             e.preventDefault();
+           })
          });
   </script> 
    
