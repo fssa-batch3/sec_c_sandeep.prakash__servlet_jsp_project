@@ -37,7 +37,7 @@ public class GetGroundBookingDetailsAdmin extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
 		
 		  String userId = request.getParameter("adminId");
 			GroundBookingService gbs=new GroundBookingService();
@@ -47,10 +47,7 @@ public class GetGroundBookingDetailsAdmin extends HttpServlet {
 				System.out.println("called admin booking data");
 				bookings=gbs.getBookingDetailsBySellerId(Integer.parseInt(userId));
 				JSONArray bookingsData = new JSONArray(bookings);
-				PrintWriter out = response.getWriter();
-				out.println(bookingsData.toString());
-				out.flush();
-				out.close();
+				response.getWriter().write(bookingsData.toString());
 				
 			} catch (NumberFormatException | DAOException | SQLException e) {
 				// TODO Auto-generated catch block

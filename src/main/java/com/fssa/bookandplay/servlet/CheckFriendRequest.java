@@ -35,9 +35,8 @@ public class CheckFriendRequest extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
 		
-		 PrintWriter out = response.getWriter();
+		
 	        
 	        int senderId = Integer.parseInt(request.getParameter("senderId"));
 	        int receiverId = Integer.parseInt(request.getParameter("receiverId"));
@@ -54,9 +53,7 @@ public class CheckFriendRequest extends HttpServlet {
 	        JSONObject jsonResponse = new JSONObject();
 	        jsonResponse.put("exists", friendRequestExists);
 
-	        out.print(jsonResponse.toString());
-	        out.flush();
-
+	        response.getWriter().write(jsonResponse.toString());
 	}
 
 	/**

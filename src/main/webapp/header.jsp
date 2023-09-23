@@ -9,7 +9,7 @@
 <a href="/bookandplay-web/index.jsp">Home</a> 
 </li>
       <li>
-<a href="/bookandplay-web/GetAllGroundList">Book Grounds</a>
+<a href="/bookandplay-web/ground.jsp">Book Grounds</a>
 </li>
       <li >
 <a class="findplayers" href="/bookandplay-web/findplayers.jsp">Find Players</a>

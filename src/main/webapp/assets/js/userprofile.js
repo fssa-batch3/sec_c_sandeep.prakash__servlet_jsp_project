@@ -88,9 +88,11 @@ const endTimepicker = flatpickr("#endTime", timePicker);
 axios.get(url)
          .then(function (response) {
              // handle success
-            console.log(response.data);
-             const responseUserData = response.data.substring(response.data.indexOf('{'));
-             const userLogin = JSON.parse(responseUserData);
+         // handle success
+             console.log(response.data);
+             //const responseUserData = response.data.substring(response.data.indexOf('{'));
+             //const userLogin = JSON.parse(responseUserData);
+             const userLogin =  response.data;
  
 
 id.value=userLogin.userId;

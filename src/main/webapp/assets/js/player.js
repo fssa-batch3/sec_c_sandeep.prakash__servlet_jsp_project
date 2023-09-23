@@ -43,24 +43,14 @@ let filterPlayer = [];
 			  .then(function (response) {
 				console.log(response.data)  
 				
-const startIndex = response.data.indexOf("[");
-    if (startIndex !== -1) {
-      const jsonString = response.data.slice(startIndex);
-      
-      try {
+
         // Parse the extracted JSON string into a JavaScript array
-        filterPlayer = JSON.parse(jsonString);
+        filterPlayer = response.data;
         
         playerData(filterPlayer);
      
-      } catch (error) {
-        console.error("Error parsing JSON:", error);
-      }
-    } else {
-      console.error("JSON data not found in the response.");
-    }	    
+        
     
-      // console.log(filterPlayer)
 			  })
 			  .catch(function (error) {
 			    // handle error

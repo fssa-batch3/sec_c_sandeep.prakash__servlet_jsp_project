@@ -38,8 +38,6 @@ public class GetGroundOwnerData extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-		
 		HttpSession session = request.getSession(false); 
 		GroundOwner login = (GroundOwner)session.getAttribute("adminuser");
 		int groundOwnerId=login.getGroundOwnerId();
@@ -49,11 +47,11 @@ public class GetGroundOwnerData extends HttpServlet {
 			//request.setAttribute("GroundOwnerDetails", groundOwner);
 			JSONObject userJson = new JSONObject (groundOwner);
 			 if (userJson != null) {
-			    	PrintWriter out = response.getWriter();
-		    		out.println(userJson.toString());
+				 response.getWriter().write(userJson.toString());
+		    		//out.println(userJson.toString());
 			        System.out.println("logged in sandeep"+userJson.toString());
 
-			        out.flush();
+			        //out.flush();
 			    }
 		} catch (DAOException | SQLException e) {
 			// TODO Auto-generated catch block

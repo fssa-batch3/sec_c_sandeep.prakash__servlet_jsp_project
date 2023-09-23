@@ -25,8 +25,6 @@
 </head>
 <body>
 
-
-
 	<%
 Ground selectedGround = (Ground) request.getAttribute("adminGround");
       
@@ -42,7 +40,7 @@ Ground selectedGround = (Ground) request.getAttribute("adminGround");
 
         <form id="formbtn" action="groundupdatation" method="post">
             <div class="box1">
-              <input type="hidden" name="groundId" value="<%=selectedGround.getgroundId()%>">
+              <input type="hidden" name="groundId" value="<%=selectedGround.getGroundId()%>">
                 <div class="groundname">
                     <label class="labelgroname"> Ground Name:</label>
                     <input type="name" placeholder="Ground Name " id="groname" name="groundname1" aria-label="name"
@@ -76,20 +74,22 @@ Ground selectedGround = (Ground) request.getAttribute("adminGround");
                 <p class="dis">Distict</p>
          <select id="sportsvalue" name="groundselecteddistrict" required disabled>
        <%
-        String selectedDistrict = selectedGround.getDistrict();
-        String[] districtOptions = {"Chennai", "Coimbatore", "Salem", "Erode", "Madurai", "Bangalore"};
+       
 
-        for (String option : districtOptions) {
-            out.print("<option value=\"" + option + "\"");
-            if (option.equals(selectedDistrict)) {
-                out.print(" selected");
-            }
-            out.println(">" + option + "</option>");
-        }
-        %>
+               String selectedDistrict = selectedGround.getDistrict();
+               String[] districtOptions = {"Chennai", "Coimbatore", "Salem", "Erode", "Madurai", "Bangalore"};
+
+               for (String option : districtOptions) {
+                   out.print("<option value=\"" + option + "\"");
+                   if (option.equals(selectedDistrict)) {
+                       out.print(" selected");
+                   }
+                   out.println(">" + option + "</option>");
+               }
+       %>
     </select>
             </div>
-            <div class="groundimageupload">
+              <div class="groundimageupload">
                 <label class="labelnamei"> Upload your Ground images:</label>
                 <br>
                 <input type="url" placeholder="Upload " name="groundimg1" id="grimg1" aria-label="groundimg" value="<%=selectedGround.getGroundImages().get(0)%>" required disabled>
@@ -106,9 +106,9 @@ Ground selectedGround = (Ground) request.getAttribute("adminGround");
                 </div> -->
                  
 <%
-List<String> selectedSports = selectedGround.getSportsAvailable();
-%>
-
+                 
+                 List<String> selectedSports = selectedGround.getSportsAvailable();
+                 %>
 <div class="sportsavailable">
     <label class="labelnames"> Sports Available:</label>
     <br>
@@ -122,14 +122,14 @@ List<String> selectedSports = selectedGround.getSportsAvailable();
     <label class="sname">Tennis</label>
     <br>
 </div>
-            <div class="groundtiming">
+  <div class="groundtiming">
                 <label class="">Timings </label>
                 <br>
                 <!-- <p>From</p>
                     <input type="time" id="timingsfrom" aria-label="sportsavail" pattern="(0[1-9]|1[0-2]):[0-5][0-9] (am|pm)" required>
                     <p>To</p>
                     <input type="time" id="timingsto" aria-label="sportsavail"required > -->
-               <span>Start Time: </span>  <input type="text" id="startTime" name="groundstartTime1" required placeholder="12:00" value="<%=selectedGround.getStartTime()%>" disabled><br>
+          <span>Start Time: </span>  <input type="text" id="startTime" name="groundstartTime1" required placeholder="12:00" value="<%=selectedGround.getStartTime()%>" disabled><br>
                <span> End Time: </span> <input type="text" id="endTime" name="groundendTime1" required placeholder="12:00" value="<%=selectedGround.getEndTime()%>"  disabled>
 
             </div>
@@ -170,17 +170,17 @@ List<String> selectedSports = selectedGround.getSportsAvailable();
                 <br>
                 <select id="sportscourts" name="groundselectedCourts" required disabled value="<%=selectedGround.getCourtsAvailable()%>">
             <%
-        int selectedCourts = selectedGround.getCourtsAvailable();
-        int maxCourts = 6; // The maximum number of courts
-        
-        for (int i = 1; i <= maxCourts; i++) {
-            out.print("<option value=\"" + i + "\"");
-            if (i == selectedCourts) {
-                out.print(" selected");
-            }
-            out.println(">" + i + "</option>");
-        }
-        %>
+                    int selectedCourts = selectedGround.getCourtsAvailable();
+                    int maxCourts = 6; // The maximum number of courts
+                    
+                    for (int i = 1; i <= maxCourts; i++) {
+                        out.print("<option value=\"" + i + "\"");
+                        if (i == selectedCourts) {
+                            out.print(" selected");
+                        }
+                        out.println(">" + i + "</option>");
+                    }
+            %>
 
                 </select>
             </div>
@@ -196,7 +196,8 @@ List<String> selectedSports = selectedGround.getSportsAvailable();
         </form>
         
        <form id="formbtn2" action="grounddisable" method="post">
-        <input type="hidden" name="groundIddis" value="<%=selectedGround.getgroundId()%>">
+        <input type="hidden" name="groundIddis" value="<%=selectedGround.getGroundId()%>">
+
         <button type="submit" id="deletebtn"  >Disable</button>
        </form>
         

@@ -62,6 +62,8 @@ checkjoinPlayer.addEventListener("click", (e) => {
     sportLocation.required = true;
     timingsfrom0.required = true;
     timingsto0.required = true;
+const sportsCheckboxes = document.querySelectorAll('input[name="sportsKnown"]');
+
 
   }
 });

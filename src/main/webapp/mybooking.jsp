@@ -23,36 +23,9 @@
 <body>
 
     <!-- header -->
-    <header>
-        <input type="checkbox" id="check" >
-        <label for="check" class="checkbtn">
-          <i class="fa-solid fa-bars"></i>
-</label>
-        
-         <ul>
-         <li>
-<a href="../../index.html">Home</a> 
-</li>
-         <li>
-<a href="../../pages/bookinground/bookground.html">Book Grounds</a>
-</li>
-         <li class="findplayers">
-<a href="../../pages/player/findplayers.html">Find Players</a>
-</li>
-         <li class="contact ">
-<a href="../../pages/contactus/contact.html">Contact us</a>
-</li>
-         <li>
-<a href="./pages/login/login.html">
- <button class="login">Login</button>
-</a>
-</li>
-        </ul>
-
-        <a href="../../index.html">
-<img class="logo" src="<%=request.getContextPath()%>/assets/images/Logo.png" alt="Book and play">
-</a>
-    </header>
+   <!-- header -->
+	<jsp:include page="header.jsp"></jsp:include>
+  <!-- header -->    </header>
     <!-- header -->
 
     <!-- main1 search-->
@@ -191,6 +164,84 @@
     <!-- footer -->
     <script src=" https://smtpjs.com/v3/smtp.js"></script>
          	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+         	
+         	
+         	  <script>
+
+  
+	   
+
+     const url1 = "http://localhost:8080/bookandplay-web/GetUserSession";
+
+    
+     axios.get(url1)
+         .then(function (response) {
+             // handle success
+             console.log(response.data);
+             //const responseUserData = response.data.substring(response.data.indexOf('{'));
+             //const userLogin = JSON.parse(responseUserData);
+             const userLogin =  response.data;
+                 // You can now access the "userLogin" session attribute in userLogin variable
+                 console.log(userLogin);
+                 
+                 
+                 const loginbtn = document.querySelector(".login")
+
+                 if (userLogin == null) {
+             // nothing
+                 }
+                 else if (userLogin !== null) {
+                 loginbtn.style.display = "none"
+                 const myprofile = document.createElement("button");
+                 myprofile.setAttribute("class", "login");
+                 myprofile.innerText = "My Account"
+                 myprofile.style.width = "150px";
+                 myprofile.style.left = "50px"
+                 myprofile.addEventListener("click", () => {
+                   window.location.href = "/bookandplay-web/userprofile.jsp"
+                 });
+                 document.querySelector(".contact").append(myprofile)
+               }
+               else {
+                 loginbtn.style.display = "block"
+
+               }
+             // checking the user is player
+                 const findplayersbtn = document.querySelector(".findplayers")
+                 findplayersbtn.addEventListener("click", (e) => {
+           
+
+                if( userLogin.playerStatus === false){
+                 alert("Please join as a player to find players. To join as a player please tick the box on your profile page ");
+                 e.preventDefault();
+               }
+
+                   else {
+                     window.location.href = "/bookandplay-web/findplayers.jsp";
+                   }
+                   // if(loginUser==false){
+                   //   console.log("ofmofkf");
+                   //   alert("Please join as a player to find players ")
+                   //   e.preventDefault();
+                   // }
+
+                 })
+                 
+                 
+            
+         })
+         .catch(function (error) {
+             // handle error
+             console.log(error);
+             const findplayersbtn = document.querySelector(".findplayers")
+             findplayersbtn.addEventListener("click", (e) => {
+           
+             alert("Please login to find players ")
+             e.preventDefault();
+           })
+         });
+  </script> 
+         	
    
     <script type="text/javascript" src="/bookandplay-web/assets/js/mybooking.js"> </script>
 

@@ -8,8 +8,12 @@
      .then(function (response) {
          // handle success
          console.log(response.data);
-         const responseUserData = response.data.substring(response.data.indexOf('{'));
-         const userLogin = JSON.parse(responseUserData);
+         //const responseUserData = response.data.substring(response.data.indexOf('{'));
+             //const userLogin = JSON.parse(responseUserData);
+             const userLogin =  response.data;
+                 // You can now access the "userLogin" session attribute in userLogin variable
+                 console.log(userLogin);
+                 
 
    let userId  = userLogin.userId; 
 
@@ -71,8 +75,8 @@ axios.get(urllink)
  .then(function (response) {
    // handle success
    
-    const responseData = response.data.substring(response.data.indexOf('{'));
-   const show2 = JSON.parse(responseData);
+   // const responseData = response.data.substring(response.data.indexOf('{'));
+   const show2 = response.data;
     console.log(show2);
  
 
@@ -508,9 +512,8 @@ axios.post(url, requestData)
    
    axios.get(`http://localhost:8080/bookandplay-web/CheckFriendRequest?senderId=${userId}&receiverId=${playerId1}`)
   .then(function (response) {
-
-   const responseData = response.data.substring(response.data.indexOf('{'));
-    const jsonResponse = JSON.parse(responseData);
+	  console.log(response.data);
+    const jsonResponse = response.data;
    const friendRequestExists = jsonResponse.exists;
     if (friendRequestExists) {
       console.log("A friend request already exists from the sender to the receiver.");
@@ -531,8 +534,8 @@ axios.post(url, requestData)
   .then(function (response) {
 	  console.log("okok");
 
-   const responseData = response.data.substring(response.data.indexOf('{'));
-    const jsonResponse = JSON.parse(responseData);
+  // const responseData = response.data.substring(response.data.indexOf('{'));
+    const jsonResponse =response.data;
    const friendRequestExists = jsonResponse.exists;
    
     if (friendRequestExists) {

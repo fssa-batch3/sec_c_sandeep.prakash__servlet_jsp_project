@@ -36,7 +36,6 @@ public class GetGroundDetail extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());    
 		GroundService gs=new GroundService();
 		Ground selectedGround =null;
 		try {
@@ -51,10 +50,9 @@ public class GetGroundDetail extends HttpServlet {
 //    		dispatcher.forward(request, response);
     	//	response.sendRedirect("/grounddetail.jsp");
             JSONObject grounddetailJson = new JSONObject(selectedGround);
-    		PrintWriter out = response.getWriter();
-    		out.println(grounddetailJson.toString());
+            response.getWriter().write(grounddetailJson.toString());
     		System.out.println("sandeep"+grounddetailJson.toString());
-    		out.flush();
+    		
             System.out.println("Selected Ground: " + selectedGround); 
             
         }

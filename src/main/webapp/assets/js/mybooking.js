@@ -1,58 +1,6 @@
 
 let acceptedBooking;
-/*
-if(requestBooking==null){
 
-}
-else{
-
- acceptedBooking = requestBooking.filter(
-  (data) =>
-    data.booking_status == "accepted" && data.request_user_id == loginuserid
-);
-console.log(acceptedBooking);
-}
-
-if(acceptedBooking==null || acceptedBooking.length==0){
-  let maincon=document.querySelector(".main2");
-  
-  let ptag=document.createElement("h4")
-  ptag.setAttribute("class","h5tag");
-  ptag.innerHTML=`Hi You dont have any  currrent booking`
-  maincon.append(ptag)
-
-  document.body.style.overflow="hidden"
-  let btn=document.createElement("button")
-  btn.setAttribute("class","btnok");
-  btn.innerText="OK"
-  ptag.append(btn)
-  btn.addEventListener("click",()=>{
-    window.location.href="../../pages/player/newprofile.html"
-  })
-
-}
-else{
-
-for (const booking of acceptedBooking) {
-  const { ground_id } = booking;
-  const groundDetail = groundOwnerProduct.find(
-    (ground) => ground_id === ground.ground_id
-  );
-  booking.groundDetail = groundDetail;
-
-  const { request_user_id } = booking;
-  const userDetails = user_record.find(
-    (users) => request_user_id === users.user_id
-  );
-  booking.userDetail = userDetails;
-
-}
-
-console.log(JSON.stringify(acceptedBooking, null, 2));
-}
-*/
-
-// sports image
 const showimage = [
   {
        sportsiconcric: "/bookandplay-web/assets/images/cricketicon.png",
@@ -68,8 +16,12 @@ const showimage = [
      .then(function (response) {
          // handle success
          console.log(response.data);
-         const responseUserData = response.data.substring(response.data.indexOf('{'));
-         const userLogin = JSON.parse(responseUserData);
+         //const responseUserData = response.data.substring(response.data.indexOf('{'));
+             //const userLogin = JSON.parse(responseUserData);
+             const userLogin =  response.data;
+                 // You can now access the "userLogin" session attribute in userLogin variable
+                 console.log(userLogin);
+                 
 
    let userId  = userLogin.userId; 
    
@@ -77,29 +29,15 @@ const showimage = [
    
    axios.get(`http://localhost:8080/bookandplay-web/GetGroundBookingDetailsUser?userId=${userId}`)
   .then(function (response) {
-	  //console.log(response.data)  
+	 console.log(response.data)  
 let filterData = [];
    			
-const startIndex = response.data.indexOf("[");
-    if (startIndex !== -1) {
-      const jsonString = response.data.slice(startIndex);
+
       
-      
-      try {
-        // Parse the extracted JSON string into a JavaScript array
+        filterData =  response.data;
         
-      
-        filterData = JSON.parse(jsonString);
+    
         
-        console.log(JSON.parse(jsonString));
-          //playerData(filterData);
-     
-      } catch (error) {
-        console.error("Error parsing JSON:", error);
-      }
-    } else {
-      console.error("JSON data not found in the response.");
-    }	    
     
  
 
@@ -346,56 +284,6 @@ else{
   document.querySelector("div.parent").append(divBox);
 
 
-// cancel
-
-
-
-
-// Replace "parentElement" with the closest common parent of the "accept" buttons
-const parentElement2 = document.querySelector(".parent");
-
-parentElement2.addEventListener("click", function(event) {
-  if (event.target.classList.contains("cancelbtn")) {
-const bookingId = event.target.value;
-    const groundMainArea = event.target.parentElement.getAttribute("value"); // Retrieve the value attribute
-    
-    
-     console.log("Booking ID:", bookingId);
-    console.log("Ground Main Area:", groundMainArea);
-     const requestData =
- "&bookingId="+ bookingId;
-  // console.log(reqIndex);
-
-
-    if (confirm("Are you sure you want to cancel the booking?")) {
-
-       
-const url = "http://localhost:8080/bookandplay-web/CancelGroundBookingUser?"; 
-
-axios.post(url, requestData)
-			  .then(function (response) {
-			    // handle success
-			    console.log(response.data);
-			    const serverMsg = response.data;
-			    
-			    if(serverMsg.trim() === 'success') {
-			    	console.log("success");
-			    }  
-			    else {
-			    	console.log("not success");
-			    }
-			  })
-			  .catch(function (error) {
-			    // handle error
-			    console.log(error);
-			  })
-    } else {
-    }
-  
-  }
-});
-
-
 
 
 
@@ -407,6 +295,51 @@ axios.post(url, requestData)
 
 
 
+
+// cancel
+
+
+
+const parentElements = document.querySelectorAll(".parent");
+
+parentElements.forEach(parentElement => {
+  parentElement.addEventListener("click", function(event) {
+    if (event.target.classList.contains("cancelbtn")) {
+      const bookingId = event.target.value;
+      const groundMainArea = event.target.parentElement.getAttribute("value");
+
+      console.log("Booking ID:", bookingId);
+      console.log("Ground Main Area:", groundMainArea);
+
+      const requestData = "&bookingId=" + bookingId;
+
+      if (confirm("Are you sure you want to cancel the booking?")) {
+        const url = "http://localhost:8080/bookandplay-web/CancelGroundBookingUser?";
+
+        axios
+          .post(url, requestData)
+          .then(function(response) {
+            console.log(response.data);
+            const serverMsg = response.data;
+
+            if (serverMsg.trim() === "success") {
+              console.log("success");
+              
+              // Remove the canceled booking div from the DOM
+              parentElement.remove();
+            } else {
+              console.log("not success");
+            }
+          })
+          .catch(function(error) {
+            console.log(error);
+          });
+      } else {
+        // User canceled the action
+      }
+    }
+  });
+});
 
 
  })

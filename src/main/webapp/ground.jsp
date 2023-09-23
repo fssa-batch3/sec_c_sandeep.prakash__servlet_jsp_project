@@ -45,62 +45,18 @@
     </div>
 	<div class="main2">
 
-
-	<div class="parent">
-		<%
-		List<Ground> groundList = (List<Ground>) request.getAttribute("GroundDetails");
-
-		if (groundList != null) {
-			for (Ground ground : groundList) {
-		%>
-		<div class="child">
-			<br>
-			<h3 class="groundn"><%=ground.getGroundName() %></h3>
-	<img src=<%= ground.getGroundImages().get(0) %> alt="groundimage" class="groimg">
-
-
-			<p class="locationn"><%=ground.getGroundMainArea()%></p>
-		<div class="symbol">
-            <% for (String sport : ground.getSportsAvailable()) { %>
-                <% if (sport.equals("cricket")) { %>
-                    <img src=https://iili.io/HynDb4f.png alt="cricket_icon" class="sportsicon">
-                <% } else if (sport.equals("football")) { %>
-                    <img src="https://iili.io/HynDp24.png" alt="football_icon" class="sportsicon">
-                <% } else if (sport.equals("tennis")) { %>
-                    <img src="https://iili.io/HynDDEG.png" alt="tennis_icon" class="sportsicon">
-                <% } %>
-            <% } %>
-        </div>
-			<div class="ratings">
-				<i class="fa-solid fa-star"></i> <span class="ratingno">5.0</span>
-			</div>
-			<a href="/bookandplay-web/grounddetail.jsp?groundId=<%= ground.getgroundId() %>">
+ <div class="parent">
+ 
+ 
+ </div>
 	
-				<button class="book">Book Now</button>
-			</a>
-		</div>
-
-		<%
-		}
-
-		}
-
-		else {
-		%>
-		<h1>Empty</h1>
-		<%
-		}
-		%>
-
-
-	</div>
 	</div>
 	
 	
 	<jsp:include page="footer.jsp"></jsp:include>
   
   	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
+  <script type="text/javascript" src="/bookandplay-web/assets/js/bookground.js"> </script>
  <script>
 
   
@@ -113,11 +69,10 @@
          .then(function (response) {
              // handle success
              
-             const responseUserData = response.data.substring(response.data.indexOf('{'));
-             const userLogin = JSON.parse(responseUserData);
-          
-                 // You can now access the "userLogin" session attribute in userLogin variable
-                 console.log(userLogin);
+             console.log(response.data);
+             //const responseUserData = response.data.substring(response.data.indexOf('{'));
+             //const userLogin = JSON.parse(responseUserData);
+             const userLogin =  response.data;
                  
                  
                  const loginbtn = document.querySelector(".login")
@@ -145,12 +100,16 @@
                  const findplayersbtn = document.querySelector(".findplayers")
                  findplayersbtn.addEventListener("click", (e) => {
            
+                	 if(userLogin==null){
+                    	   alert("Please join as a player to find players. To join as a player please tick the box on your profile page ");
+                           e.preventDefault();
+                    	}
+                    
 
-                if( userLogin.playerStatus === false){
-                 alert("Please join as a player to find players. To join as a player please tick the box on your profile page ");
-                 e.preventDefault();
-               }
-
+                  	 else if( userLogin.playerStatus === false){
+                   alert("Please join as a player to find players. To join as a player please tick the box on your profile page ");
+                   e.preventDefault();
+                 }
                    else {
                      window.location.href = "/bookandplay-web/findplayers.jsp";
                    }

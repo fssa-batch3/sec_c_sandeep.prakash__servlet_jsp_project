@@ -66,9 +66,10 @@ public class UpdateUser extends HttpServlet {
 		String startTimeStr = request.getParameter("ustartTime1");
 		String endTimeStr = request.getParameter("uendTime1");
 		String aboutplayer=request.getParameter("uabout1");
+		
 		String[] selectedSports = request.getParameterValues("sportsKnown1");
 		System.out.println(Arrays.toString(selectedSports)+"datas");
-		
+		System.out.println(aboutplayer+"sand");
 System.out.println(startTimeStr+"mavan");
 System.out.println(endTimeStr+"mavaniii");
 
@@ -102,10 +103,8 @@ System.out.println(endTimeStr+"mavaniii");
 				e.printStackTrace();
 			}
 		}
-		boolean status=true;
-		if( Boolean.parseBoolean(userPlayerStatus)==false) {
-			status=true;
-		}
+		boolean status=Boolean.parseBoolean(userPlayerStatus);
+	
 		
 		
 		
@@ -122,7 +121,7 @@ System.out.println(endTimeStr+"mavaniii");
 					.playerStatusBuild(status)
 					.ageBuild(Integer.parseInt(userAge))
 					.genderBuild(userGender).knownSportsBuild(Arrays.asList(selectedSports)).locationBuild(userLocation)
-					.timingAvailFromBuild(localTime).timingAvailToBuild(localTime2).aboutBuilder("HelloWorld")
+					.timingAvailFromBuild(localTime).timingAvailToBuild(localTime2).aboutBuilder(aboutplayer)
 					.imageBuilder("https://example.com/image1.jpg").build();
 
 			try {

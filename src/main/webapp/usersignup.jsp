@@ -20,8 +20,41 @@
 
  <!-- signup container -->
     <div id="container">
+      
+        <%
+        String successmessage=(String)request.getAttribute("Successmessage");
+        String errormessage=(String)request.getAttribute("ErrorMessage");
+        
+        %>
+        
+        <%
+        
+        if(successmessage!=null){
+        
+        %>
+            
+        <h1><%=successmessage %></h1>
+           <%
+        
+        }%>
+         <%
+        
+        
+           if(errormessage!=null){
+        
+        %>
+            
+        <h1><%=errormessage %></h1>
+           <%
+        
+        }
+         
+        %>
+        
         <!-- signup form -->
         <div class="forms">
+      
+    
             <h1 class="signuphead">Create New Account</h1>
             <br>
             <form id="signupform"  method="post"  action="UserSignUp">

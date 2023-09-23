@@ -36,7 +36,7 @@ public class GetPlayerDetails extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
 		
 		UserService userService=new UserService();
         String selectedPlayerId = request.getParameter("playerId");
@@ -45,12 +45,11 @@ public class GetPlayerDetails extends HttpServlet {
 				
 			    JSONObject userJson = new JSONObject (userdata);
 			    if (userJson != null) {
-			    	PrintWriter out = response.getWriter();
-		    		out.println(userJson.toString());
+			    	response.getWriter().write(userJson.toString());
 			        System.out.println("logged in sandeep get the palyer"+userJson.toString());
 			     //   request.getRequestDispatcher("/index.jsp").forward(request, response);
 			       // response.sendRedirect("/bookandplay-web/index.jsp");
-			        out.flush();
+			     
 			    }
 		
 				

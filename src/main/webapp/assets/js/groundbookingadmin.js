@@ -4,9 +4,10 @@ const url = "http://localhost:8080/bookandplay-web/GetGroundOwnerData";
  axios.get(url)
      .then(function (response) {
          // handle success
-         console.log(response.data);
-         const responseUserData = response.data.substring(response.data.indexOf('{'));
-         const userLogin = JSON.parse(responseUserData);
+          console.log(response.data);
+          //   const responseUserData = response.data.substring(response.data.indexOf('{'));
+             const userLogin = response.data;
+ 
 
    let adminId  = userLogin.groundOwnerId; 
    
@@ -19,29 +20,13 @@ const url = "http://localhost:8080/bookandplay-web/GetGroundOwnerData";
    
    axios.get(`http://localhost:8080/bookandplay-web/GetGroundBookingDetailsAdmin?adminId=${adminId}`)
   .then(function (response) {
-	  //console.log(response.data)  
+	 console.log(response.data)  
 let filterData = [];
    			
-const startIndex = response.data.indexOf("[");
-    if (startIndex !== -1) {
-      const jsonString = response.data.slice(startIndex);
+
       
-      
-      try {
-        // Parse the extracted JSON string into a JavaScript array
-        
-      
-        filterData = JSON.parse(jsonString);
-        
-        console.log(JSON.parse(jsonString));
-          //playerData(filterData);
-     
-      } catch (error) {
-        console.error("Error parsing JSON:", error);
-      }
-    } else {
-      console.error("JSON data not found in the response.");
-    }	    
+        filterData = response.data;
+       
     
  
 
@@ -162,56 +147,52 @@ for (let i = 0; i < filterData.length; i++) {
 
   document.querySelector(".parent").append(childdiv);
   
-  
-  
-  
-  
-// Replace "parentElement" with the closest common parent of the "accept" buttons
-const parentElement2 = document.querySelector(".parent");
-
-parentElement2.addEventListener("click", function(event) {
-  if (event.target.classList.contains("declinebtn")) {
-const bookingId = event.target.value;
-
-    
-     console.log("Booking ID:", bookingId);
- 
-     const requestData =
- "&bookingId="+ bookingId;
-  // console.log(reqIndex);
-
-
-    if (confirm("Are you sure you want to cancel the booking?")) {
-
-       
-const url = "http://localhost:8080/bookandplay-web/CancelGroundBookingAdmin?"; 
-
-axios.post(url, requestData)
-			  .then(function (response) {
-			    // handle success
-			    console.log(response.data);
-			    const serverMsg = response.data;
-			    
-			    if(serverMsg.trim() === 'success') {
-			    	console.log("success");
-			    }  
-			    else {
-			    	console.log("not success");
-			    }
-			  })
-			  .catch(function (error) {
-			    // handle error
-			    console.log(error);
-			  })
-    } else {
-    }
-  
   }
-});
 
   
   
   
+
+const parentElements = document.querySelectorAll(".parent");
+
+parentElements.forEach(parentElement => {
+  parentElement.addEventListener("click", function(event) {
+    if (event.target.classList.contains("declinebtn")) {
+      const bookingId = event.target.value;
+      const groundMainArea = event.target.parentElement.getAttribute("value");
+
+      console.log("Booking ID:", bookingId);
+      console.log("Ground Main Area:", groundMainArea);
+
+      const requestData = "&bookingId=" + bookingId;
+
+      if (confirm("Are you sure you want to cancel the booking?")) {
+        const url = "http://localhost:8080/bookandplay-web/CancelGroundBookingAdmin?";
+
+        axios
+          .post(url, requestData)
+          .then(function(response) {
+            console.log(response.data);
+            const serverMsg = response.data;
+
+            if (serverMsg.trim() === "success") {
+              console.log("success");
+              
+              // Remove the canceled booking div from the DOM
+              parentElement.remove();
+            } else {
+              console.log("not success");
+            }
+          })
+          .catch(function(error) {
+            console.log(error);
+          });
+      } else {
+        // User canceled the action
+      }
+    }
+  });
+});
   
   
   
@@ -234,7 +215,8 @@ axios.post(url, requestData)
   
   
   
-}
+  
+  
 
  
 

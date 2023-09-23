@@ -227,10 +227,10 @@ Book Your Grounds From Your Place <br>
      axios.get(url)
          .then(function (response) {
              // handle success
-             
-             const responseUserData = response.data.substring(response.data.indexOf('{'));
-             const userLogin = JSON.parse(responseUserData);
-          
+             console.log(response.data);
+             //const responseUserData = response.data.substring(response.data.indexOf('{'));
+             //const userLogin = JSON.parse(responseUserData);
+             const userLogin =  response.data;
                  // You can now access the "userLogin" session attribute in userLogin variable
                  console.log(userLogin);
                  
@@ -259,12 +259,17 @@ Book Your Grounds From Your Place <br>
              // checking the user is player
                  const findplayersbtn = document.querySelector(".findplayers")
                  findplayersbtn.addEventListener("click", (e) => {
-           
+                	 if(userLogin==null){
+                  	   alert("Please join as a player to find players. To join as a player please tick the box on your profile page ");
+                         e.preventDefault();
+                  	}
+                  
 
-                if( userLogin.playerStatus === false){
+                	 else if( userLogin.playerStatus === false){
                  alert("Please join as a player to find players. To join as a player please tick the box on your profile page ");
                  e.preventDefault();
                }
+                
 
                    else {
                      window.location.href = "/bookandplay-web/findplayers.jsp";

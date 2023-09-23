@@ -74,8 +74,8 @@ console.log(filterPlayer);
      .then(function (response) {
          // handle success
          console.log(response.data);
-         const responseUserData = response.data.substring(response.data.indexOf('{'));
-         const userLogin = JSON.parse(responseUserData);
+        //  const responseUserData = response.data.substring(response.data.indexOf('{'));
+         const userLogin = response.data;
 
    let userId  = userLogin.userId; 
    
@@ -88,26 +88,13 @@ console.log(filterPlayer);
 	  //console.log(response.data)  
 let filterData = [];
    			
-const startIndex = response.data.indexOf("[");
-    if (startIndex !== -1) {
-      const jsonString = response.data.slice(startIndex);
+
       
-      
-      try {
-        // Parse the extracted JSON string into a JavaScript array
-        
-      
-        filterData = JSON.parse(jsonString);
-        
-        console.log(JSON.parse(jsonString));
+        filterData = response.data;
+       
           playerData(filterData);
      
-      } catch (error) {
-        console.error("Error parsing JSON:", error);
-      }
-    } else {
-      console.error("JSON data not found in the response.");
-    }	    
+          
     
   })
   .catch(function (error) {

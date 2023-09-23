@@ -41,7 +41,7 @@ public class AddGroundBooking extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
 
 		PrintWriter out = response.getWriter();
 		String bookDate = request.getParameter("bookDate");
@@ -57,8 +57,8 @@ public class AddGroundBooking extends HttpServlet {
 		String userId = request.getParameter("userId");
 		String paymentDate = request.getParameter("paymentDate");
 		String[] selectedTimings = request.getParameterValues("selectedTimings");
-		System.out.println(Arrays.toString(selectedTimings) + "datas");
-		System.out.println(selectDuration+"durrrrrrrrrrrrrrrrrrrrrrrr mama");
+		System.out.println(Arrays.toString(selectedTimings));
+		System.out.println(selectDuration);
 		System.out.println(payment+"payment");
 		System.out.println(bookDate);
 		System.out.println(paymentDate);
@@ -86,20 +86,20 @@ public class AddGroundBooking extends HttpServlet {
 		 try {
 			 isBookingExists = gbs.checkBookingExists(bookingLocalDate, selectedTimingsarr, selectedCourts, groId);
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+		
 			e.printStackTrace();
 		} catch (DAOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		 
 		 if(isBookingExists) {
-			 System.out.println("no chance");
+			 response.getWriter().write("This Ground is already booked on the selected ground court");
 		 }
 		 else {
 		try {
 			gbs.addGroundBooking(groundbooking);
-			System.out.println("success booking daaa uuuuuuuuuu");
+			 response.getWriter().write("success");
 		} catch (DAOException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

@@ -37,7 +37,7 @@ public class GetFriendList extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		
 		
 		List<FriendRequest> friendrList=null;
 		
@@ -46,10 +46,8 @@ public class GetFriendList extends HttpServlet {
 	      try {
 	    	  friendrList=frs.getAllFriendList(Integer.parseInt(receiverId));
 			JSONArray reListJSonArray = new JSONArray(friendrList);
-			PrintWriter out = response.getWriter();
-			out.println(reListJSonArray.toString());
-			out.flush();
-			out.close();
+			response.getWriter().write(reListJSonArray.toString());
+
 		} catch (NumberFormatException | DAOException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

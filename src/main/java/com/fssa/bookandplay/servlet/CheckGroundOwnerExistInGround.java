@@ -3,32 +3,29 @@ package com.fssa.bookandplay.servlet;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
-import java.util.List;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.json.JSONArray;
+import org.json.JSONObject;
 
 import com.fssa.bookandplay.exceptions.DAOException;
-import com.fssa.bookandplay.model.User;
-import com.fssa.bookandplay.service.UserService;
+import com.fssa.bookandplay.service.GroundOwnerService;
 
 /**
- * Servlet implementation class GetAllPlayer
+ * Servlet implementation class CheckGroundOwnerExistInGround
  */
-@WebServlet("/GetAllPlayer")
-public class GetAllPlayer extends HttpServlet {
+@WebServlet("/CheckGroundOwnerExistInGround")
+public class CheckGroundOwnerExistInGround extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public GetAllPlayer() {
+    public CheckGroundOwnerExistInGround() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -38,26 +35,22 @@ public class GetAllPlayer extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
-			UserService us=new UserService();
-		List<User>  userPlayerList = null;
-		try {
-			userPlayerList=	us.getAllPlayerStatus();
-		//request.setAttribute("PlayerList", userPlayerList);
-		JSONArray userJSonArray = new JSONArray(userPlayerList);
-		response.getWriter().write(userJSonArray.toString());
 	
+	        int groundOnwerId = Integer.parseInt(request.getParameter("Id"));
+	        GroundOwnerService gos=new GroundOwnerService();
 
-		} catch (DAOException e) {
-		
-			e.printStackTrace();
-		} catch (SQLException e) {
-	
-			e.printStackTrace();
-		} 
+	        boolean groundOwner = false;
+			try {
+				groundOwner = gos.checkGroundOwnerExistInGround(groundOnwerId);
+			} catch (DAOException | SQLException e) {
+				
+				e.printStackTrace();
+			}
+	        
+	        JSONObject jsonResponse = new JSONObject();
+	        jsonResponse.put("exists", groundOwner);
 
-//		RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/ground.jsp");
-//	dispatcher.forward(request, response);
+	        response.getWriter().write(jsonResponse.toString());
 	}
 
 	/**

@@ -1,7 +1,7 @@
 
 //admin proile edit//
 
-
+const fillBtn = document.querySelector(".fillbutton");
 const editbtn = document.getElementById("editbutton");
 const sideBar2part = document.querySelector("div.sidebar2")
 const containerprofile = document.querySelector("div.container2");
@@ -22,9 +22,11 @@ axios.get(url)
          .then(function (response) {
              // handle success
             console.log(response.data);
-             const responseUserData = response.data.substring(response.data.indexOf('{'));
-             const userLogin = JSON.parse(responseUserData);
- console.log(userLogin);
+          //   const responseUserData = response.data.substring(response.data.indexOf('{'));
+             const userLogin = response.data;
+ 
+ const userId=userLogin.groundOwnerId;
+ console.log(userId);
 
       
 fsidename.innerText=userLogin.organisationName;
@@ -33,6 +35,37 @@ namebox.value = userLogin.name;
 groundnamebox.value = userLogin.organisationName;
 user_email.value = userLogin.email;
 user_phone.value =userLogin.phoneNumber;
+
+
+
+
+
+
+
+
+
+
+ axios.get(`http://localhost:8080/bookandplay-web/CheckGroundOwnerExistInGround?Id=${userId}`)
+  .then(function (response) {
+
+   // const responseData = response.data.substring(response.data.indexOf('{'));
+    const jsonResponse = response.data;
+    console.log(jsonResponse);
+   const groundOwnerExistsGround = jsonResponse.exists;
+    if (groundOwnerExistsGround) {
+      console.log("A ground  already exists ");
+       fillBtn.style.display = "none"
+    } else {
+      console.log("No existing ground");
+    }
+  })
+  .catch(function (error) {
+   
+    console.error(error);
+  });
+   
+   
+   
 
 
 const editbutn = document.getElementById("formbox");

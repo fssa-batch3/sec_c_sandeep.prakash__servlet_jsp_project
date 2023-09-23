@@ -1,4 +1,4 @@
- const urlParams = new URLSearchParams(window.location.search);
+const urlParams = new URLSearchParams(window.location.search);
 const groundId = urlParams.get('groundId');
 
 
@@ -6,10 +6,13 @@ const urllink = `/bookandplay-web/GetGroundDetail?groundId=${groundId}`;
 axios.get(urllink)
   .then(function (response) {
     // handle success
- const responseData = response.data.substring(response.data.indexOf('{'));
-    const show2 = JSON.parse(responseData);
+// const responseData = response.data.substring(response.data.indexOf('{'));
+ //   const show2 = JSON.parse(responseData);
    
-    
+     console.log(response.data);
+             //const responseUserData = response.data.substring(response.data.indexOf('{'));
+             //const userLogin = JSON.parse(responseUserData);
+             const show2 =  response.data;
     // Move the code to access properties inside the .then() callback
     console.log(response.data);
     console.log("Ground Location: " + show2.groundLocationLink);
@@ -532,7 +535,7 @@ const sportsAvailable1 = show2.sportsAvailable;
 // for loopla podu
 
 for(let i=0;i<sportsAvailable1.length;i++){
-	if (sportsAvailable1[i]== "cricket") {
+	if (sportsAvailable1[i]== "Cricket") {
   symbolimage1 = document.createElement("img");
   symbolimage1.setAttribute("class", "sportsicon");
   symbolimage1.setAttribute("src", showimage[0].sportsiconcric);
@@ -540,14 +543,14 @@ for(let i=0;i<sportsAvailable1.length;i++){
   div_sportssymbol.append(symbolimage1);
   // you alrady have an current index "show" show["sportsAvailImg"]["sportsicon"+i]
 }
-if (sportsAvailable1[i] == "football") {
+if (sportsAvailable1[i] == "Football") {
   symbolimage2 = document.createElement("img");
   symbolimage2.setAttribute("class", "sportsicon");
   symbolimage2.setAttribute("src", showimage[0].sportsiconfoot);
   // symbolimage.setAttribute("alt",)
   div_sportssymbol.append(symbolimage2);
 }
-if (sportsAvailable1[i] == "tennis") {
+if (sportsAvailable1[i] == "Tennis") {
   symbolimage3 = document.createElement("img");
   symbolimage3.setAttribute("class", "sportsicon");
   symbolimage3.setAttribute("src", showimage[0].sportsiconten);
@@ -1045,16 +1048,47 @@ document.getElementById("formbook_btn").append(popupdiv);
 popbox = document.getElementById("popupdivmessage");
 yesbtn = document.getElementById("yesbtn");
 nobtn = document.getElementById("wrong");
+
+
+const url = "http://localhost:8080/bookandplay-web/GetUserSession";
+
+let userId;
+axios.get(url)
+         .then(function (response) {
+	let userLogin;
+            console.log(response.data);
+       if(response.data==null){
+		   
+		   userLogin=null;
+	   }
+	   else{
+		   userLogin=  response.data;
+	   
+   
+userId=userLogin.userId;
+ }
+           
+
+
 const bookingBtn = document.getElementById("formbook_btn");
 const bookbtn = document.querySelector(".paycash");
 bookbtn.addEventListener("click", (e) => {
-  e.preventDefault();
+ e.preventDefault();
   
+  if (userLogin==null) {
+    alert("Please login to book grounds ");
 
+  }
+  else{
+  
   // alert("ok");
 
   popbox.style.display = "block";
+  }
 });
+
+
+
 nobtn.addEventListener("click", (e) => {
   e.preventDefault();
 
@@ -1063,7 +1097,9 @@ nobtn.addEventListener("click", (e) => {
   popbox.style.display = "none";
 });
 
-    
+ 
+
+
 const pricediv = parseInt(p_priceamount.innerText);
 const newadded = parseInt(show2.increasingPriceForExtraHours);
 let newprice = pricediv;
@@ -1137,7 +1173,7 @@ function getBookingInfo() {
   const groundPrice = document.querySelector(".pricelast").innerText;
   const payment=document.querySelector(`input[name="pay"]:checked`)
   // const date=new Date().toLocaleString();
-  alert(selectTimings);
+ 
 
 
   let selectedTimingsArray; 
@@ -1160,18 +1196,7 @@ if (selectDuration === "Select an Option") {
   }
 }
 
-  const url = "http://localhost:8080/bookandplay-web/GetUserSession";
-
-let userId;
-axios.get(url)
-         .then(function (response) {
-             // handle success
-            console.log(response.data);
-             const responseUserData = response.data.substring(response.data.indexOf('{'));
-             const userLogin = JSON.parse(responseUserData);
  
-
-userId=userLogin.userId;
 
 
 
@@ -1210,13 +1235,14 @@ axios.post(url, requestData)
 			  .then(function (response) {
 			    // handle success
 			    console.log(response.data);
-			    const serverMsg = response.data;
+			    const serverMsg = response.data.trim();
 			    
-			    if(serverMsg.trim() === 'success') {
-			    	console.log("success");
+			    if(serverMsg === 'success') {
+			    alert("Your ground is booked successfully");
+					   window.location.href = "/bookandplay-web/mybooking.jsp";
 			    }  
 			    else {
-			    	console.log("not success");
+			    	alert(serverMsg);
 			    }
 			  })
 			  .catch(function (error) {
@@ -1224,20 +1250,18 @@ axios.post(url, requestData)
 			    console.log(error);
 			  })
 
+            
 
-
-	  })
-			
-			  .catch(function (error) {
-			    // handle error
-			    console.log(error);
-			  })
+	
 
 
 }
-
-
-
+})
+			
+.catch(function (error) {
+  // handle error
+  console.log(error);
+})
 
    
   })

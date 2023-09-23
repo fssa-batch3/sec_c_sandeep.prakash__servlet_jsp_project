@@ -56,11 +56,10 @@
          .then(function (response) {
              // handle success
              
-             const responseUserData = response.data.substring(response.data.indexOf('{'));
-             const userLogin = JSON.parse(responseUserData);
-          
-                 // You can now access the "userLogin" session attribute in userLogin variable
-                 console.log(userLogin);
+              console.log(response.data);
+             //const responseUserData = response.data.substring(response.data.indexOf('{'));
+             //const userLogin = JSON.parse(responseUserData);
+             const userLogin =  response.data;
                  
                  
                  const loginbtn = document.querySelector(".login")

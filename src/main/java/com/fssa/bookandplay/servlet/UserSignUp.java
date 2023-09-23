@@ -19,6 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.fssa.bookandplay.builder.UserBuilder;
 import com.fssa.bookandplay.exceptions.DAOException;
+import com.fssa.bookandplay.exceptions.InvalidUserDetailException;
 import com.fssa.bookandplay.model.User;
 import com.fssa.bookandplay.service.UserService;
 
@@ -43,12 +44,11 @@ public class UserSignUp extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
+	
 		PrintWriter out = response.getWriter();
 		System.out.println("call1");
 		
-		response.getWriter().append("Served at: ").append(request.getContextPath());
-
+		
 		String fName = request.getParameter("fname");
 		String lName = request.getParameter("lname");
 		String userEmail = request.getParameter("email-id");
@@ -121,21 +121,27 @@ public class UserSignUp extends HttpServlet {
 					passwordBuild(userPass)
 					.playerStatusBuild(status)
 					.ageBuild(Integer.parseInt(userAge))
-					.genderBuild(userGender).knownSportsBuild(Arrays.asList(selectedSports)).locationBuild(userLocation)
-					.timingAvailFromBuild(localTime).timingAvailToBuild(localTime2).aboutBuilder("HelloWorld")
+					.genderBuild(userGender)
+					.knownSportsBuild(Arrays.asList(selectedSports)).
+					locationBuild(userLocation)
+					.timingAvailFromBuild(localTime).timingAvailToBuild(localTime2).aboutBuilder(" ")
 					.imageBuilder("https://example.com/image1.jpg").build();
 
 			try {
-				if (us.addUserPlayer(user1)) {
+				us.addUserPlayer(user1);
 					out.append("<h1>success registereds</h1>");
 					out.println("success");
+					request.setAttribute("Successmessage","Successfully registered" );
 					RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/userlogin.jsp");
 					dispatcher.forward(request, response);
-				}
+				
 
-			} catch (DAOException | SQLException e) {
+			} catch (DAOException | SQLException | InvalidUserDetailException e) {
 				
 				e.printStackTrace();
+				request.setAttribute("ErrorMessage", e.getMessage());
+				RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/usersignup.jsp");
+				dispatcher.forward(request, response);
 			}
 			
 		}
@@ -149,20 +155,20 @@ public class UserSignUp extends HttpServlet {
 					.playerStatusBuild(status).imageBuilder("https://example.com/image1.jpg")
 					.build();
 			try {
-				if (us.addUserOnly(user2)) {
+			us.addUserOnly(user2);
 					out.append("<h1>success registereds</h1>");
 					out.println("success");
+					request.setAttribute("Successmessage","Successfully registered" );
 					RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/userlogin.jsp");
 					dispatcher.forward(request, response);
-				}
-				else {
-					
-					out.println("fail");
-				}
-
-			} catch (DAOException | SQLException e) {
+				
+			
+			} catch (DAOException | SQLException  | InvalidUserDetailException e) {
 				
 				e.printStackTrace();
+				request.setAttribute("ErrorMessage", e.getMessage());	
+				RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/usersignup.jsp");
+				dispatcher.forward(request, response);
 			}
 		}
 		
