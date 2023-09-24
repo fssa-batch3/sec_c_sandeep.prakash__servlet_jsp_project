@@ -1238,7 +1238,41 @@ axios.post(url, requestData)
 			    const serverMsg = response.data.trim();
 			    
 			    if(serverMsg === 'success') {
-			    alert("Your ground is booked successfully");
+			    alert("Your ground is Booked Congraulation.If you choose upi method upi link will be sent via email you can make the method there and  you will receive a 7 digit code after 5 min show this code when you visit the turf .if you want to cancel the booking cancel within 20 minutes");
+			     let code = "";
+
+    for (let i = 0; i < 7; i++) {
+      code += Math.floor(Math.random() * 10);
+    }
+    console.log(code);
+/*
+    // email
+
+    Email.send({
+      Host: "smtp.elasticemail.com",
+      Username: "bookandplay@gmail.com",
+      Password: "6EC1D4698F820B43605EF4F4AAEC706EFA99",
+      To: userLogin.email,
+      From: "sandeep909600@gmail.com",
+      Subject: "Your Booking Confirmation code is here",
+      Body: `Hi ${userLogin.firstName} Your ground is booked on this ${selectedTimingsArray.join("&selectedTimings=")} on ${bookDate} Your Confirmation code is here ${code} and your order id is Please show the confirmation 7 digit code  on turf entrance to visit`,
+    }).then((success) => {
+      alert(
+        "Your ground is Booked Congraulation.If you choose upi method upi link will be sent via email you can make the method there and  you will receive a 7 digit code after 5 min show this code when you visit the turf .if you want to cancel the booking cancel within 20 minutes"
+      );
+    });
+
+    Email.send({
+      Host: "smtp.elasticemail.com",
+      Username: "bookandplay@gmail.com",
+      Password: "6EC1D4698F820B43605EF4F4AAEC706EFA99",
+      To: show2.groundOwner.email,
+      From: "sandeep909600@gmail.com",
+      Subject: "Your Booking Confirmation code is here",
+      Body: `Hi ${show2.groundOwner.email} Your ground is booked on this ${selectedTimingsArray.join("&selectedTimings=")} on ${bookDate} The  Confirmation code is here ${code} and the order id  the visitor will show the code  on turf entrance to visit.if you want to cancel the booking cancel within 20 minutes`,
+    });
+  
+	*/		    
 					   window.location.href = "/bookandplay-web/mybooking.jsp";
 			    }  
 			    else {

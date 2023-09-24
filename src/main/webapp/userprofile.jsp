@@ -49,7 +49,7 @@
  <i class="bx bxs-grid-alt"></i>
                         <span>Dash Board</span>
                     </div> -->
-                    <a href="../../pages/player/playermessages.html">
+                    <a href="/bookandplay-web/playermessages.jsp">
                         <div class="message">
                             <i class="fa-solid fa-message"></i>
                             <span>Messages</span>

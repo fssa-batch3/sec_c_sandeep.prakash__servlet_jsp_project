@@ -69,6 +69,7 @@ public class UserSignUp extends HttpServlet {
 		String endTimeStr = request.getParameter("uendTime");
 		String[] selectedSports = request.getParameterValues("sportsKnown");
 		System.out.println(Arrays.toString(selectedSports)+"poda");
+		System.out.println(startTimeStr+"dara");
 
 		LocalTime localTime = null;
 		LocalTime localTime2 = null;

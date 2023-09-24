@@ -43,6 +43,7 @@
   <!-- footer  -->
 	<jsp:include page="footer.jsp"></jsp:include>
   <!-- footer -->
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
     	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script>
 

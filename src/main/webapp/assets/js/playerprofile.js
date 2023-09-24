@@ -25,48 +25,7 @@ const showimage = [
    sportsiconten: "/bookandplay-web/assets/images/tennisicon.png",
  },
 ];
-/*
-// own profile
-const imageShow = document.querySelector(".userlogo");
-const userRecords = JSON.parse(localStorage.getItem("user_details"));
-const user_logged = JSON.parse(localStorage.getItem("user_logged_in"));
-for (let i = 0; i < userRecords.length; i++) {
- if (user_logged[0].user_email == userRecords[i].user_email) {
-   const savedImage = userRecords[i];
-   console.log(savedImage);
-   if (savedImage && savedImage.url) {
-     imageShow.src = savedImage.url;
-   } else {
-     imageShow.src = "https://iili.io/HkW7U4S.jpg";
-   }
-   break;
- }
-}
-*/
-// const user_record = JSON.parse(localStorage.getItem("user_details"));
 
-// let filterPlayer=[];
-
-//let filterPlayer;
-//filterPlayer = user_record.filter((item) => item.player == true);
-
-// console.log(filterPlayer);
-/*
-//const url2 = window.location.search; // ?userid=97;
-// console.log(url2);
-const urlParameter2 = new URLSearchParams(url2);
-// console.log(urlParameter)   // "userid":"97"
-const playerSearch = urlParameter2.get("player_id");
-// console.log(groundSearch2); // get value of name
-
-//let show2;
-//filterPlayer.find((e) => {
- f (e.user_id == playerSearch) {
-   return (show2 = e);
- }
- return (show2 = 0);
-});
-*/
 const urlParams = new URLSearchParams(window.location.search);
 const playerId1 = urlParams.get('playerId');
 const urllink = `/bookandplay-web/GetPlayerDetails?playerId=${playerId1}`;
@@ -79,39 +38,14 @@ axios.get(urllink)
    const show2 = response.data;
     console.log(show2);
  
+ 
+   axios.get(`http://localhost:8080/bookandplay-web/GetMessages?userId=${userId}&playerId=${playerId1}`)
+  .then(function (response) {
+	  console.log(response.data);
+    const messageResponse = response.data;
+  
 
-/*
-const MessageofUser = JSON.parse(localStorage.getItem("user_Messages"));
-const playerIdmessage = show2.user_id;
-const loginUser = JSON.parse(localStorage.getItem("user_logged_in"));
-const loginUserID = loginUser[0].user_id;
-// for usersendedmessage
-
-if (MessageofUser == null) {
-} else {
- const messageUser = MessageofUser.find(
-   (message) =>
-     playerIdmessage === message.receiver_id &&
-     loginUserID == message.sender_id
- );
- show2.user_messages = messageUser;
- console.log(show2);
-}
-// for userreceivedmessage
-
-
-if (MessageofUser == null) {
-} else {
- const messageUser2 = MessageofUser.find(
-   (message) =>
-     loginUserID === message.receiver_id &&
-     playerIdmessage === message.sender_id
- );
- show2.received_messages = messageUser2;
-}
-
-*/
-
+  
 
 // JSON
 
@@ -324,7 +258,7 @@ div_chat_main = document.createElement("div");
 div_chat_main.setAttribute("class", "main");
 div_container_sidebar2.append(div_chat_main);
 
-if (show2.received_messages == undefined && show2.user_messages == undefined) {
+if (messageResponse.receivedMessages == [] && messageResponse.receivedMessages == []) {
  // Display a notification that the conversation is not started
  p_mess_noti = document.createElement("p");
  p_mess_noti.setAttribute("class", "noti");
@@ -335,21 +269,21 @@ if (show2.received_messages == undefined && show2.user_messages == undefined) {
  const allmess = [];
 
  // all received mesages
- if (show2.received_messages != undefined) {
-   for (let i = 0; i < show2.received_messages.messages.length; i++) {
-     const receivedMess = show2.received_messages.messages[i];
+ if (messageResponse != []) {
+   for (let i = 0; i < messageResponse.receivedMessages.length; i++) {
+     const receivedMess = messageResponse.receivedMessages[i];
      receivedMess.type = "received";
      allmess.push(receivedMess);
    }
  }
 
  if (
-   show2.user_messages !== undefined &&
-   show2.user_messages.messages != null
- ) {
+   messageResponse.sentMessages.length !== 0 
+ )
+  {
    // all usrr message
-   for (let i = 0; i < show2.user_messages.messages.length; i++) {
-     const userMess = show2.user_messages.messages[i];
+   for (let i = 0; i < messageResponse.sentMessages.length; i++) {
+     const userMess = messageResponse.sentMessages[i];
      userMess.type = "sent";
      allmess.push(userMess);
    }
@@ -376,6 +310,7 @@ if (show2.received_messages == undefined && show2.user_messages == undefined) {
    // delete btn
    const delbtn = document.createElement("button");
    delbtn.setAttribute("class", "delbtn");
+   delbtn.setAttribute("value",particularmessage.id);
    delbtn.innerHTML = `<i class="fa-solid fa-trash"></i>`;
    if (particularmessage.type == "received") {
      delbtn.style.display = "none";
@@ -383,7 +318,7 @@ if (show2.received_messages == undefined && show2.user_messages == undefined) {
 
    delbtn.addEventListener("click", () => {
      console.log(particularmessage)
-     deletemess(particularmessage);
+     deletemess(particularmessage.id);
     
      messageofchat.remove(particularmessage);
    });
@@ -648,6 +583,7 @@ let receiveaccept= requestrecords.some(
 }
  */
 // chat feature
+// chat feature
 
 const sendBtn = document.getElementById("send_button");
 const formbtn = document.getElementById("sendbtn");
@@ -656,89 +592,6 @@ formbtn.addEventListener("submit", (e) => {
  sendMessage();
  // location.reload();
 });
-
-let messagebox;
-
-function sendMessage() {
- messagebox = document.getElementById("message").value;
-
- const receiver = show2.user_id;
- let usersMessage = new Array();
- usersMessage = JSON.parse(localStorage.getItem("user_Messages"))
-   ? JSON.parse(localStorage.getItem("user_Messages"))
-   : [];
-
- const existingmessagedUser = usersMessage.findIndex(
-   (mess) => mess.sender_id === loginUserID && mess.receiver_id === receiver
- );
-
- const existingmessage = {
-   text: messagebox,
-   sender: "user",
-   timestamp: new Date().getTime(),
- };
-
- if (existingmessagedUser !== -1) {
-   usersMessage[existingmessagedUser].messages.push(existingmessage);
- } else {
-   usersMessage.push({
-     sender_id: loginUserID,
-     receiver_id: receiver,
-     messages: [
-       {
-         text: messagebox,
-         sender: "user",
-         timestamp: new Date().getTime(),
-       },
-     ],
-   });
- }
-
- localStorage.setItem("user_Messages", JSON.stringify(usersMessage));
-
-
- const mainChat = document.querySelector(".main");
- const messageto = document.createElement("p");
- messageto.setAttribute("class", "messageto");
-
- messageto.innerHTML = `${messagebox} <span class="timeside"> ${timestampconvert(
-   existingmessage.timestamp
- )}</span>`;
- mainChat.append(messageto);
-
- console.log(messageto);
-
- const del_btn = document.createElement("button");
- del_btn.setAttribute("class", "delbtn");
- del_btn.innerHTML = `<i class="fa-solid fa-trash"></i>`;
-
- del_btn.addEventListener("click", () => {
-
-   // let delmess={
-   //   text:messagebox,
-   //   sender: "user",
-   //   timestamp:existingmessage.timestamp,
-   // };
-  
-   deletemess(existingmessage);
-
-   // console.log(delmess);
-
-   // console.log("okok");
-   messageto.remove(existingmessage);
- });
- messageto.append(del_btn);
-
-
-
- document.getElementById("message").value = "";
- // mess_from=document.createElement("p");
- // mess_from.setAttribute("class","messagefrom");
- // mess_from.innerText=messagebox;
- // div_chat_main.append(mess_from);
- mainChat.scrollTop = mainChat.scrollHeight;
-}
-
 
 //timebased
 function timestampconvert(timestamp) {
@@ -763,25 +616,98 @@ const formattime= `${hours.toString().padStart(2, "0")}:${minutes
    return `${format_date} ${formattime} ${ampmformat}`
 }
 
+let messagebox;
+
+
+function sendMessage() {
+ messagebox = document.getElementById("message").value;
+
+
+
+ const requestData =
+ "&senderId=" + userId +
+ "&receiverId=" + playerId1 +
+ "&message=" + messagebox +
+ "&timeStamp=" +  new Date().getTime();
+
+
+
+ let timestamp= new Date().getTime();
+ 
+const url = "http://localhost:8080/bookandplay-web/AddChat?"; 
+
+axios.post(url, requestData)
+           .then(function (response) {
+             // handle success
+             console.log(response.data);
+             const serverMsg = response.data.trim();
+             
+             if(serverMsg === 'success') {
+             alert("Your message sent successfully");
+    
+             }  
+             else {
+                 alert(serverMsg);
+             }
+           })
+           .catch(function (error) {
+             // handle error
+             console.log(error);
+           })
+
+
+ const mainChat = document.querySelector(".main");
+ const messageto = document.createElement("p");
+ messageto.setAttribute("class", "messageto");
+
+ messageto.innerHTML = `${messagebox} <span class="timeside"> ${timestampconvert(timestamp
+ )}</span>`;
+ mainChat.append(messageto);
+
+ console.log(messageto);
+
+console.log(timestampconvert(
+   timestamp));
+ 
+
+ document.getElementById("message").value = "";
+ 
+ mainChat.scrollTop = mainChat.scrollHeight;
+}
+
+
+
+
 // delete messages
 
 function deletemess(message) {
- const messageofUser = JSON.parse(localStorage.getItem("user_Messages"));
- const existingmessageuser = messageofUser.findIndex(
-   (mess) =>
-     mess.sender_id === loginUserID && mess.receiver_id === show2.user_id
- );
+	
+	
+	 
+     const requestData =
+ "&messageId="+ message;
+ 
+        
+const url = "http://localhost:8080/bookandplay-web/DeleteMessage?"; 
 
- if (existingmessageuser !== -1) {
-   const exitingmesss = messageofUser[existingmessageuser].messages.findIndex(
-     (messs) =>
-       messs.text === message.text && message.timestamp === messs.timestamp
-   );
-   if (exitingmesss !== -1) {
-     messageofUser[existingmessageuser].messages.splice(exitingmesss, 1);
-     localStorage.setItem("user_Messages", JSON.stringify(messageofUser));
-   }
- }
+axios.post(url, requestData)
+			  .then(function (response) {
+			    // handle success
+			    console.log(response.data);
+			    const serverMsg = response.data;
+			    
+			    if(serverMsg.trim() === 'success') {
+			    	console.log("success");
+			    }  
+			    else {
+			    	console.log("not success");
+			    }
+			  })
+			  .catch(function (error) {
+			    // handle error
+			    console.log(error);
+			  })
+ 
 }
 
 
@@ -802,5 +728,12 @@ function deletemess(message) {
        })
        
        
+       
+       })
+  .catch(function (error) {
+   
+    console.error(error);
+  });
+   
    
 

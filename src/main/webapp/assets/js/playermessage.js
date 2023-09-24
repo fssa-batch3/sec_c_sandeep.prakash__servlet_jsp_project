@@ -1,84 +1,89 @@
 // side bar2
 
-// filter
 
-const loginUser = JSON.parse(localStorage.getItem("user_logged_in"));
-const loginuserid = loginUser[0].user_id;
 
-const messageofUser = JSON.parse(localStorage.getItem("user_Messages"));
-let allmessagedUser;
-if(messageofUser==null){
- let maincon=document.querySelector(".maincontainer");
-  let ptag=document.createElement("h4")
-  ptag.setAttribute("class","h5tag");
-  ptag.innerHTML=`Hi You dont have any  current please chat and connect mutually and send a  message to your friedn to chat in your profile`
-  maincon.append(ptag)
+
+const url = "http://localhost:8080/bookandplay-web/GetUserSession";
+
+axios.get(url)
+    .then(function (response) {
+        // handle success
+        console.log(response.data);
+       //  const responseUserData = response.data.substring(response.data.indexOf('{'));
+        const userLogin = response.data;
+
+  let userId  = userLogin.userId; 
   
-  document.body.style.overflow="hidden"
-  let bookplay=document.querySelector(".logoletter")
-  bookplay.style.display="none"
-  let btn=document.createElement("button")
-  btn.setAttribute("class","btnok");
-  btn.innerText="OK"
-  ptag.append(btn)
-  btn.addEventListener("click",()=>{
-    window.location.href="../../pages/player/newprofile.html"
-  })
+  
+  
+  
+  
+  
+    
+  
+  axios.get(`http://localhost:8080/bookandplay-web/GetFriendList?receiverId=${userId}`)
+ .then(function (response) {
+     console.log(response.data)  
+let filterData = [];
+              
+
+          filterData = response.data;
+  
+  
+const messageofUser = JSON.parse(localStorage.getItem("user_Messages"));
+//let allmessagedUser;
+if(filterData==null){
+let maincon=document.querySelector(".maincontainer");
+ let ptag=document.createElement("h4")
+ ptag.setAttribute("class","h5tag");
+ ptag.innerHTML=`Hi You dont have any  current please chat and connect mutually and send a  message to your friedn to chat in your profile`
+ maincon.append(ptag)
+ 
+ document.body.style.overflow="hidden"
+ let bookplay=document.querySelector(".logoletter")
+ bookplay.style.display="none"
+ let btn=document.createElement("button")
+ btn.setAttribute("class","btnok");
+ btn.innerText="OK"
+ ptag.append(btn)
+ btn.addEventListener("click",()=>{
+   window.location.href="../../pages/player/newprofile.html"
+ })
 
 }
 else{
 
-  console.log("ok");
- allmessagedUser = messageofUser.filter(
-  (data) => data.sender_id == loginuserid 
-  //  || data.receiver_id===loginuserid
-);
-console.log(allmessagedUser);
-
-// let allmessagedUser;
-let receivedmess;
-
 
 //  allmessagedUser = messageofUser.filter(
 //   (data) => data.receiver_id===loginuserid
- 
+
 // );
 
 // console.log(allmessagedUser);
 
-if(allmessagedUser.length==0){
-  console.log("okda");
-  let maincon=document.querySelector(".maincontainer");
-  let ptag=document.createElement("h4")
-  ptag.setAttribute("class","h5tag");
-  ptag.innerHTML=`Hi You dont have any  current please chat and connect mutually and send a  message to your friend to chat in your profile`
-  maincon.append(ptag)
-  document.body.style.overflow="hidden"
-  let btn=document.createElement("button")
-  btn.setAttribute("class","btnok");
-  btn.innerText="OK"
-  ptag.append(btn);
-  let bookplay=document.querySelector(".logoletter")
-  bookplay.style.display="none"
-  btn.addEventListener("click",()=>{
-    window.location.href="../../pages/player/newprofile.html"
-  })
+if(filterData.length==0){
+ console.log("okda");
+ let maincon=document.querySelector(".maincontainer");
+ let ptag=document.createElement("h4")
+ ptag.setAttribute("class","h5tag");
+ ptag.innerHTML=`Hi You dont have any  current please chat and connect mutually and send a  message to your friend to chat in your profile`
+ maincon.append(ptag)
+ document.body.style.overflow="hidden"
+ let btn=document.createElement("button")
+ btn.setAttribute("class","btnok");
+ btn.innerText="OK"
+ ptag.append(btn);
+ let bookplay=document.querySelector(".logoletter")
+ bookplay.style.display="none"
+ btn.addEventListener("click",()=>{
+   window.location.href="../../pages/player/newprofile.html"
+ })
 
 }
 else{
 //
 console.log("Pl");
-//  allmessagedUser = messageofUser.filter(
-//   (data) => data.sender_id == loginuserid 
-//   //  || data.receiver_id===loginuserid
-// );
-console.log(allmessagedUser);
-const user_record = JSON.parse(localStorage.getItem("user_details"));
 
-let filterPlayer = [];
-filterPlayer = user_record.filter((item) => item.player == true);
-
-// console.log(filterPlayer);
 
 let anchor;
 let div_chatseparate;
@@ -98,58 +103,59 @@ let i_send_symbol;
 let text;
 
 
-
+/*
 
 for (const messages of allmessagedUser) {
-  const { receiver_id } = messages;
-  const { sender_id } = messages;
-  const message = filterPlayer.find((data) => data.user_id == receiver_id
-  );
+ const { receiver_id } = messages;
+ const { sender_id } = messages;
+ const message = filterPlayer.find((data) => data.user_id == receiver_id
+ );
 
 
-  
-  messages.data = message;
-  // const message2 = filterPlayer.find((data) => data.user_id == sender_id
-  // );
 
-  // messages.data2 = message2;
-  
+ messages.data = message;
+ // const message2 = filterPlayer.find((data) => data.user_id == sender_id
+ // );
+
+ // messages.data2 = message2;
+ 
 }
-console.log(allmessagedUser);
-for (let i = 0; i < allmessagedUser.length; i++) {
-  anchor = document.createElement("a");
-  anchor.setAttribute("href", `?user_id=${allmessagedUser[i].data.user_id}`);
-  anchor.setAttribute("class", "anchor_div");
-  // console.log(anchor);
-  document.querySelector(".side2").append(anchor);
+*/ 
+//console.log(allmessagedUser);
+for (let i = 0; i < filterData.length; i++) {
+ anchor = document.createElement("a");
+ anchor.setAttribute("href", `?user_id=${filterData[i].sender.userId}`);
+ anchor.setAttribute("class", "anchor_div");
+ // console.log(anchor);
+ document.querySelector(".side2").append(anchor);
 
-  div_chatseparate = document.createElement("div");
-  div_chatseparate.setAttribute("class", "chatdiv");
-  anchor.append(div_chatseparate);
-  // anchor.append(div_img);
+ div_chatseparate = document.createElement("div");
+ div_chatseparate.setAttribute("class", "chatdiv");
+ anchor.append(div_chatseparate);
+ // anchor.append(div_img);
 
-  div_img = document.createElement("div");
-  div_img.setAttribute("class", "img");
-  div_chatseparate.append(div_img);
+ div_img = document.createElement("div");
+ div_img.setAttribute("class", "img");
+ div_chatseparate.append(div_img);
 
-  player_img = document.createElement("img");
-  if (allmessagedUser[i].data.url == "") {
-    player_img.setAttribute("src", "https://iili.io/HkW7U4S.jpg");
-  } else {
-    player_img.setAttribute("src", allmessagedUser[i].data.url);
-  }
-  // player_img.setAttribute("alt", "playerProfile");
-  player_img.setAttribute("class", "peopleimage");
-  div_img.append(player_img);
+ player_img = document.createElement("img");
+ if (filterData[i].sender.image == "") {
+   player_img.setAttribute("src", "https://iili.io/HkW7U4S.jpg");
+ } else {
+   player_img.setAttribute("src", "https://iili.io/HkW7U4S.jpg");
+ }
+ // player_img.setAttribute("alt", "playerProfile");
+ player_img.setAttribute("class", "peopleimage");
+ div_img.append(player_img);
 
-  div_name = document.createElement("div");
-  div_name.setAttribute("class", "name");
-  div_chatseparate.append(div_name);
+ div_name = document.createElement("div");
+ div_name.setAttribute("class", "name");
+ div_chatseparate.append(div_name);
 
-  p_name = document.createElement("p");
-  p_name.innerText = allmessagedUser[i].data.user_name;
-  p_name.setAttribute("class", "playername");
-  div_name.append(p_name);
+ p_name = document.createElement("p");
+ p_name.innerText = filterData[i].sender.firstName;
+ p_name.setAttribute("class", "playername");
+ div_name.append(p_name);
 
 
 
@@ -163,102 +169,42 @@ const url = window.location.search; // ?userid=97;
 const urlParameter = new URLSearchParams(url);
 
 const searchuser_id = urlParameter.get("user_id");
-// console.log(searchuser_id);
+ console.log(searchuser_id+"hi");
 
 const chat_cont = document.querySelector(".container");
 
+let messageResponse;
+
+messageResponse = filterData.find((data) => data.sender.userId == searchuser_id);
 
 
-let messagesshown;
-// allmessagedUser.find((e)=>{
-//     if(e.receiver_id==searchuser_id && e.sender_id==loginuserid ){
-//         return messagesshown=e;
-//     }
-//     else{
-//         return messagesshown=0
-//     }
 
-// })
+if(messageResponse){
+	console.log("podasvennsa");
+	console.log(messageResponse);
+}
+else{
+	console.log("dum");
+}
+  axios.get(`http://localhost:8080/bookandplay-web/GetMessages?userId=${userId}&playerId=${searchuser_id}`)
+ .then(function (response) {
+    // console.log(response.data);
+    // console.log("data");
+       messageResponse.message = response.data;
 
-// console.log(messagesshown);
+ console.log(messageResponse);
 
-allmessagedUser.find((e) => {
-  if (e.data.user_id == searchuser_id) {
-    return (messagesshown = e);
-  }
+ 
 
-  return (messagesshown = 0);
-});
-
-receivedmess = messageofUser.find(
-  (mess) => mess.receiver_id == loginuserid && mess.sender_id == searchuser_id
-);
-messagesshown.user_receivedmess = receivedmess;
-
-console.log(messagesshown);
-
-//  for(const mess of allmessagedUser){
-//     const {receiver_id}=mess
-//     let messagesshown2= messageofUser.find((e)=>{
-//         receiver_id==loginuserid && e.sender_id==searchuser_id
-
-//    })
-//    allmessagedUser["received_mess"]=messagesshown2
-
-//    console.log(allmessagedUser);
-
-//  }
-
-// let messagesshown2;
-// messageofUser.find((e)=>{
-//     if( e.receiver_id==loginuserid && e.sender_id==searchuser_id
-
-//         ){
-//         return messagesshown2=e
-//     }
-//     else{
-//         return messagesshown2=0
-//     }
-
-// })
-
-// console.log(messagesshown2);
-
-// let ok={...messagesshown, ...messagesshown2};
-// console.log(ok);
-
-// const messseparate=messagesshown["messages"].find((data)=>{
-//     data.receiver_id==searchuser_id && data.sender_id==loginuserid
-// })
-
-// messagesshown["received_messages"]=messseparate;
-
-// console.log(messseparate);
-
-// let messagesshown2=messagesshown.find((e)=>
-// e["receiver_id"]==searchuser_id && e["sender_id"]==loginuserid
-
-// )
-
-// const anchordiv = document.querySelectorAll(".anchor_div");
-// anchordiv.forEach((data) => {
-//   data.addEventListener("click", (e) => {
-//     // e.preventDefault()
-  
-
-//       //  alert("ok")
-//     // chat_cont.style.display="none"
-//   });
-// });
 
 // chatting
 
-if(messagesshown.data==null){
+if(messageResponse==null){
 
 }
 else{
-  console.log("ok");
-  // console.log(messagesshown);
+ console.log("ok");
+ // console.log(messagesshown);
 
 div_container_sidebar2 = document.createElement("div");
 div_container_sidebar2.setAttribute("class", "container");
@@ -270,16 +216,18 @@ div_container_sidebar2.append(div_top);
 
 h2_web = document.createElement("h2");
 h2_web.setAttribute("class", "h2head");
-h2_web.innerText = messagesshown.data.user_name;
+h2_web.innerText = messageResponse.sender.firstName;
 div_top.append(h2_web);
 
 profile_dp = document.createElement("img");
-
-if (messagesshown.data.url == "") {
-  profile_dp.setAttribute("src", "https://iili.io/HkW7U4S.jpg");
+/*
+if (messageResponse.sender.image == "") {
+ profile_dp.setAttribute("src", "https://iili.io/HkW7U4S.jpg");
 } else {
-  profile_dp.setAttribute("src", messagesshown.data.url);
+ profile_dp.setAttribute("src", messagesshown.data.url);
 }
+*/
+profile_dp.setAttribute("src", "https://iili.io/HkW7U4S.jpg");
 // player_img.setAttribute("alt", "playerProfile");
 profile_dp.setAttribute("class", "player_dp");
 div_top.append(profile_dp);
@@ -288,103 +236,57 @@ div_chat_main = document.createElement("div");
 div_chat_main.setAttribute("class", "main");
 div_container_sidebar2.append(div_chat_main);
 
-//     let p_mess_from = document.createElement("p");
-//     p_mess_from.setAttribute("class", "messageto");
-//     p_mess_from.innerText = "osmolsmkmmkdm kdmkdmdms";
-//     div_chat_main.append(p_mess_from);
-
-//     let p_mess_to = document.createElement("p");
-//     p_mess_to.setAttribute("class", "messagefrom");
-//     p_mess_to.innerText = "helkoldmsndddd";
-//     div_chat_main.append(p_mess_to);
-
-//     // p_mess_noti = document.createElement("p");
-//     // p_mess_noti.setAttribute("class", "noti");
-//     // p_mess_noti.innerText = "* Your conversation has not started. Say hello to get started.";
-//     // div_chat_main.append(p_mess_noti);
-
-// div_chat_bottom = document.createElement("div");
-// div_chat_bottom.setAttribute("class", "bottom");
-// div_container_sidebar2.append(div_chat_bottom);
-
-// form_box = document.createElement("form");
-// form_box.setAttribute("id", "sendbtn");
-// div_chat_bottom.append(form_box);
-
-// input_mess_box = document.createElement("input");
-// input_mess_box.setAttribute("type", "text");
-// input_mess_box.setAttribute("placeholder", "Send message");
-// input_mess_box.setAttribute("id", "message");
-// input_mess_box.setAttribute("required", "");
-// form_box.append(input_mess_box);
-
-// send_btn = document.createElement("button");
-// send_btn.setAttribute("id", "send_button");
-// send_btn.setAttribute("type", "submit");
-// form_box.append(send_btn);
-
-// i_send_symbol = document.createElement("i");
-// i_send_symbol.setAttribute("class", "bx bx-send");
-// send_btn.append(i_send_symbol);
-
-// if (messagesshown.received_messages == undefined && messagesshown.user_messages==undefined) {
-//     // Display a notification that the conversation hasn't started yet
-//     p_mess_noti = document.createElement("p");
-//     p_mess_noti.setAttribute("class", "noti");
-//     p_mess_noti.innerText = "* Your conversation has not started. Say hello to get started.";
-//     div_chat_main.append(p_mess_noti);
-//   }
-//   else {
 
 const allmess = [];
 
 // all received mesages
-if (messagesshown.user_receivedmess != undefined) {
-  for (let i = 0; i < messagesshown.user_receivedmess.messages.length; i++) {
-    const receivedMess = messagesshown.user_receivedmess.messages[i];
-    receivedMess.type = "received";
-    allmess.push(receivedMess);
-  }
+if (messageResponse != []) {
+   for (let i = 0; i < messageResponse.message.receivedMessages.length; i++) {
+     const receivedMess = messageResponse.message.receivedMessages[i];
+     receivedMess.type = "received";
+     allmess.push(receivedMess);
+   }
 }
 
-if (messagesshown.messages !== undefined && messagesshown.messages != null) {
-  // all usrr message
-  for (let i = 0; i < messagesshown.messages.length; i++) {
-    const userMess = messagesshown.messages[i];
-    userMess.type = "sent";
-    allmess.push(userMess);
-  }
+if ( messageResponse.message.sentMessages.length !== 0 ) {
+ // all usrr message
+   for (let i = 0; i < messageResponse.message.sentMessages.length; i++) {
+     const userMess = messageResponse.message.sentMessages[i];
+     userMess.type = "sent";
+     allmess.push(userMess);
+   }
 }
 // sorting message based on time
 allmess.sort((a, b) => a.timestamp - b.timestamp);
 
 for (let i = 0; i < allmess.length; i++) {
-  const particularmessage = allmess[i];
-  const messageofchat = document.createElement("p");
-  if (particularmessage.type == "received") {
-    messageofchat.setAttribute("class", "messagefrom");
-  } else {
-    messageofchat.setAttribute("class", "messageto");
-  }
-  messageofchat.innerHTML = `${
-    particularmessage.text
-  }<span class="timeside">${timestampconvert(
-    particularmessage.timestamp
-  )} </span>`;
-  div_chat_main.append(messageofchat);
-  // delete btn
-  const delbtn = document.createElement("button");
-  delbtn.setAttribute("class", "delbtn");
-  delbtn.innerHTML = `<i class="fa-solid fa-trash"></i>`;
-  if (particularmessage.type == "received") {
-    delbtn.style.display = "none";
-  }
+ const particularmessage = allmess[i];
+ const messageofchat = document.createElement("p");
+ if (particularmessage.type == "received") {
+   messageofchat.setAttribute("class", "messagefrom");
+ } else {
+   messageofchat.setAttribute("class", "messageto");
+ }
+ messageofchat.innerHTML = `${
+   particularmessage.text
+ }<span class="timeside">${timestampconvert(
+   particularmessage.timestamp
+ )} </span>`;
+ div_chat_main.append(messageofchat);
+ // delete btn
+ const delbtn = document.createElement("button");
+ delbtn.setAttribute("class", "delbtn");
+  delbtn.setAttribute("value",particularmessage.id);
+ delbtn.innerHTML = `<i class="fa-solid fa-trash"></i>`;
+ if (particularmessage.type == "received") {
+   delbtn.style.display = "none";
+ }
 
-  delbtn.addEventListener("click", () => {
-    deletemess(particularmessage);
-    messageofchat.remove();
-  });
-  messageofchat.append(delbtn);
+ delbtn.addEventListener("click", () => {
+   deletemess(particularmessage.id);
+   messageofchat.remove();
+ });
+ messageofchat.append(delbtn);
 }
 
 //   }
@@ -418,8 +320,8 @@ send_btn.append(i_send_symbol);
 // const sendBtn = document.getElementById("send_button");
 const formbtn = document.getElementById("sendbtn");
 formbtn.addEventListener("submit", (e) => {
-  e.preventDefault();
-  sendMessage();
+ e.preventDefault();
+ sendMessage();
 
 });
 }
@@ -427,148 +329,164 @@ formbtn.addEventListener("submit", (e) => {
 let messagebox;
 
 function sendMessage() {
-  messagebox = document.getElementById("message").value;
+ messagebox = document.getElementById("message").value;
 
-  const receiver = Number(searchuser_id);
-  let usersMessage = new Array();
-  usersMessage = JSON.parse(localStorage.getItem("user_Messages"))
-    ? JSON.parse(localStorage.getItem("user_Messages"))
-    : [];
+ 
 
-  const existingmessagedUser = usersMessage.findIndex(
-    (mess) => mess.sender_id === loginuserid && mess.receiver_id === receiver
-  );
 
-  const existingmessage = {
-    text: messagebox,
-    sender: "user",
-    timestamp: new Date().getTime(),
-  };
+ const requestData =
+ "&senderId=" + userId +
+ "&receiverId=" + searchuser_id +
+ "&message=" + messagebox +
+ "&timeStamp=" +  new Date().getTime();
 
-  if (existingmessagedUser !== -1) {
-    usersMessage[existingmessagedUser].messages.push(existingmessage);
-  } else {
-    usersMessage.push({
-      sender_id: loginuserid,
-      receiver_id: receiver,
-      messages: [
-        {
-          text: messagebox,
-          sender: "user",
-          timestamp: new Date().getTime(),
-        },
-      ],
-    });
-  }
 
-  localStorage.setItem("user_Messages", JSON.stringify(usersMessage));
-  // location.reload();
 
-  // let div_chat_main = document.querySelector(".main");
-  //   let p_mess_from = document.createElement("p");
-  //   p_mess_from.setAttribute("class", "messageto");
-  //   p_mess_from.innerText = messagebox;
-  //   div_chat_main.append(p_mess_from);
+ let timestamp= new Date().getTime();
+ 
+const url = "http://localhost:8080/bookandplay-web/AddChat?"; 
 
-  //   document.getElementById("message").value = "";
+axios.post(url, requestData)
+           .then(function (response) {
+             // handle success
+             console.log(response.data);
+             const serverMsg = response.data.trim();
+             
+             if(serverMsg === 'success') {
+             alert("Your message sent successfully");
+    
+             }  
+             else {
+                 alert(serverMsg);
+             }
+           })
+           .catch(function (error) {
+             // handle error
+             console.log(error);
+           })
 
-  const mainChat = document.querySelector(".main");
-  const messageto = document.createElement("p");
-  messageto.setAttribute("class", "messageto");
 
-  messageto.innerHTML = `${messagebox} <span class="timeside"> ${timestampconvert(
-    existingmessage.timestamp
-  )}</span>`;
-  mainChat.append(messageto);
+ const mainChat = document.querySelector(".main");
+ const messageto = document.createElement("p");
+ messageto.setAttribute("class", "messageto");
 
-  
-  const del_btn = document.createElement("button");
-  del_btn.setAttribute("class", "delbtn");
-  del_btn.innerHTML = `<i class="fa-solid fa-trash"></i>`;
+ messageto.innerHTML = `${messagebox} <span class="timeside"> ${timestampconvert(timestamp
+ )}</span>`;
+ mainChat.append(messageto);
 
-  del_btn.addEventListener("click", () => {
+ /*
+ const del_btn = document.createElement("button");
+ del_btn.setAttribute("class", "delbtn");
+ del_btn.innerHTML = `<i class="fa-solid fa-trash"></i>`;
 
-    // let delmess={
-    //   text:messagebox,
-    //   sender: "user",
-    //   timestamp:existingmessage.timestamp,
-    // };
-   
-    deletemess(existingmessage);
+ del_btn.addEventListener("click", () => {
 
-    // console.log(delmess);
 
-    // console.log("okok");
-    messageto.remove(existingmessage);
-  });
-  messageto.append(del_btn);
+   deletemess(existingmessage);
 
-  document.getElementById("message").value = "";
-  // mess_from=document.createElement("p");
-  // mess_from.setAttribute("class","messagefrom");
-  // mess_from.innerText=messagebox;
-  // div_chat_main.append(mess_from);
-  mainChat.scrollTop = mainChat.scrollHeight;
+   messageto.remove(existingmessage);
+ });
+ messageto.append(del_btn);
+*/
+ document.getElementById("message").value = "";
+
+ mainChat.scrollTop = mainChat.scrollHeight;
 }
 
-// function formatTime(timestamp) {
-//   let date = new Date(timestamp);
-//   let hours = date.getHours();
-//   let minutes = date.getMinutes();
-//   let ampm = hours >= 12 ? 'PM' : 'AM';
-//   hours = hours % 12;
-//   hours = hours ? hours : 12;
-//   return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')} ${ampm}`;
-// }
+
 
 
 function timestampconvert(timestamp) {
-  const date = new Date(timestamp);
-  let day=date.getDate();
-  let month =date.getMonth()+1;
-  let year=date.getFullYear();
-  let hours = date.getHours();
-  const minutes = date.getMinutes();
-  const ampmformat = hours >= 12 ? `PM` : `AM`;
-  hours %= 12;
-  hours = hours || 12;
-  const format_date=`${day.toString().padStart(2, "0")}/${month
-    .toString()
-    .padStart(2, "0")}/${year.toString()
-      .padStart(4, "0")}`;
+ const date = new Date(timestamp);
+ let day=date.getDate();
+ let month =date.getMonth()+1;
+ let year=date.getFullYear();
+ let hours = date.getHours();
+ const minutes = date.getMinutes();
+ const ampmformat = hours >= 12 ? `PM` : `AM`;
+ hours %= 12;
+ hours = hours || 12;
+ const format_date=`${day.toString().padStart(2, "0")}/${month
+   .toString()
+   .padStart(2, "0")}/${year.toString()
+     .padStart(4, "0")}`;
 
- const formattime= `${hours.toString().padStart(2, "0")}:${minutes
-    .toString()
-    .padStart(2, "0")}`;
+const formattime= `${hours.toString().padStart(2, "0")}:${minutes
+   .toString()
+   .padStart(2, "0")}`;
 
-    return `${format_date} ${formattime}${ampmformat}`
+   return `${format_date} ${formattime}${ampmformat}`
 }
 
 
 // delete messages
 
 function deletemess(message) {
-  const messageofUser = JSON.parse(localStorage.getItem("user_Messages"));
-  const existingmessageuser = messageofUser.findIndex(
-    (mess) =>
-      mess.sender_id === loginuserid && mess.receiver_id === Number(searchuser_id)
-  );
+	
+	
+	 
+     const requestData =
+ "&messageId="+ message;
+ 
+        
+const url = "http://localhost:8080/bookandplay-web/DeleteMessage?"; 
 
-  if (existingmessageuser !== -1) {
-    const exitingmesss = messageofUser[existingmessageuser].messages.findIndex(
-      (messs) =>
-        messs.text === message.text && messs.timestamp === message.timestamp
-    );
-    if (exitingmesss !== -1) {
-      messageofUser[existingmessageuser].messages.splice(exitingmesss, 1);
-      localStorage.setItem("user_Messages", JSON.stringify(messageofUser));
-    }
-  }
+axios.post(url, requestData)
+			  .then(function (response) {
+			    // handle success
+			    console.log(response.data);
+			    const serverMsg = response.data;
+			    
+			    if(serverMsg.trim() === 'success') {
+			    	console.log("success");
+			    }  
+			    else {
+			    	console.log("not success");
+			    }
+			  })
+			  .catch(function (error) {
+			    // handle error
+			    console.log(error);
+			  })
+ 
 }
 
+
+
+
+})
+.catch(function (error) {
+ 
+  console.error(error);
+});
 }
 
 
 }
+
+
+
+
+
+ 
+
+})
+
+
+
+
+
+    .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+
+
+})
+ .catch(function (error) {
+  
+   console.error(error);
+ });
+  
 
 

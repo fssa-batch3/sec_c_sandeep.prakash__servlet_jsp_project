@@ -50,6 +50,15 @@ let div_box6;
 let div_box7;
 let div_box8;
 let btndecline;
+        function encodeData(value) {
+  const encoded = btoa(value); // Base64 encode the value
+  return encoded;
+}
+
+function decodeData(encodedValue) {
+  const decoded = atob(encodedValue); // Decode the Base64 encoded value
+  return decoded;
+}
 
 
 
@@ -57,12 +66,17 @@ for (let i = 0; i < filterData.length; i++) {
   console.log(childdiv);
   childdiv = document.createElement("div");
   childdiv.setAttribute("class", "child");
-
+  childdiv.setAttribute("data-email", encodeData(filterData[i].user.email));
+childdiv.setAttribute("data-booking-date", filterData[i].bookingDate);
+childdiv.setAttribute("data-booking-time", filterData[i].bookingTime);
+childdiv.setAttribute("data-booking-sports", filterData[i].bookingSports);
+childdiv.setAttribute("data-booking-duration", filterData[i].bookingDuration);
 
   columndiv2 = document.createElement("div");
   columndiv2.setAttribute("class", "column2");
-  childdiv.append(columndiv2);
 
+  childdiv.append(columndiv2);
+  
   divbox1 = document.createElement("div");
   divbox1.setAttribute("class", "box1");
   divbox1.innerHTML = `<h4>User Name</h4>${filterData[i].user.email}`;
@@ -159,10 +173,14 @@ parentElements.forEach(parentElement => {
   parentElement.addEventListener("click", function(event) {
     if (event.target.classList.contains("declinebtn")) {
       const bookingId = event.target.value;
-      const groundMainArea = event.target.parentElement.getAttribute("value");
+const userEmail = decodeData(event.target.parentElement.getAttribute("data-email"));
+const bookingDate = event.target.parentElement.getAttribute("data-booking-date");
+const bookingTime = event.target.parentElement.getAttribute("data-booking-time");
+const bookingSports = event.target.parentElement.getAttribute("data-booking-sports");
+const bookingDuration = event.target.parentElement.getAttribute("data-booking-duration");
 
       console.log("Booking ID:", bookingId);
-      console.log("Ground Main Area:", groundMainArea);
+      console.log("Ground Main Area:",bookingDate);
 
       const requestData = "&bookingId=" + bookingId;
 
@@ -178,8 +196,25 @@ parentElements.forEach(parentElement => {
             if (serverMsg.trim() === "success") {
               console.log("success");
               
-              // Remove the canceled booking div from the DOM
+
               parentElement.remove();
+              
+                      
+        Email.send({
+          Host: "smtp.elasticemail.com",
+          Username: "bookandplay@gmail.com",
+          Password: "6EC1D4698F820B43605EF4F4AAEC706EFA99",
+          To: userEmail,
+          From: "sandeep909600@gmail.com",
+          Subject: "Your Booking Confirmation code is here",
+          Body: `Hi  Your ground is booked on this ${ bookingTime
+          } on ${bookingDate
+          } is cancelled by the   seller  `,
+        }).then((success) => {
+          alert(
+            "Your ground Booking is cancelled"
+          );
+        });
             } else {
               console.log("not success");
             }
