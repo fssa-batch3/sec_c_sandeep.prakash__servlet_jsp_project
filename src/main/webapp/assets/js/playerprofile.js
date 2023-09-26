@@ -643,7 +643,9 @@ axios.post(url, requestData)
              const serverMsg = response.data.trim();
              
              if(serverMsg === 'success') {
-             alert("Your message sent successfully");
+        setTimeout(function() {
+    window.location.reload();
+}, 1000); 
     
              }  
              else {

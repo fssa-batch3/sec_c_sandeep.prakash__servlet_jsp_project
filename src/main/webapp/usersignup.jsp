@@ -15,13 +15,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     	    <link rel="icon" type="image/icon" href="https://iili.io/J9lLgxR.png">
 </head>
+  	   	 <script src="/bookandplay-web/assets/js/sweetalert.min.js"></script>
 <body>
 
 
  <!-- signup container -->
+ 
+ 
     <div id="container">
       
-        <%
+ 
+   <script>
+   <%
         String successmessage=(String)request.getAttribute("Successmessage");
         String errormessage=(String)request.getAttribute("ErrorMessage");
         
@@ -43,13 +48,22 @@
            if(errormessage!=null){
         
         %>
-            
-        <h1><%=errormessage %></h1>
+        
+        swal("Failed!","<%=errormessage%>", "error");
+        setTimeout(() => {
+           
+            window.location.href="usersignup.jsp";
+        }, 4000);
+     
+
+       
            <%
         
         }
          
         %>
+        </script>
+       
         
         <!-- signup form -->
         <div class="forms">
@@ -223,8 +237,10 @@
     </div>
     <!-- signup form -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   	 <script src="/bookandplay-web/assets/js/usersignup.js"></script>
+
 
 
 </body>

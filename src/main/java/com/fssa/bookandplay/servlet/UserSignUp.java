@@ -9,6 +9,7 @@ import java.time.LocalTime;
 import java.time.ZoneId;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -70,6 +71,11 @@ public class UserSignUp extends HttpServlet {
 		String[] selectedSports = request.getParameterValues("sportsKnown");
 		System.out.println(Arrays.toString(selectedSports)+"poda");
 		System.out.println(startTimeStr+"dara");
+		 List<String> sportsList=null;
+		if(selectedSports!=null) {
+			
+			sportsList=	Arrays.asList(selectedSports);
+		}
 
 		LocalTime localTime = null;
 		LocalTime localTime2 = null;
@@ -123,7 +129,7 @@ public class UserSignUp extends HttpServlet {
 					.playerStatusBuild(status)
 					.ageBuild(Integer.parseInt(userAge))
 					.genderBuild(userGender)
-					.knownSportsBuild(Arrays.asList(selectedSports)).
+					.knownSportsBuild(sportsList).
 					locationBuild(userLocation)
 					.timingAvailFromBuild(localTime).timingAvailToBuild(localTime2).aboutBuilder(" ")
 					.imageBuilder("https://example.com/image1.jpg").build();

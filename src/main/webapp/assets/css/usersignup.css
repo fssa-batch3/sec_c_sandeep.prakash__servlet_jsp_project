@@ -467,3 +467,30 @@ input[type="tel"]::placeholder {
     position: relative;
     top: 48px;
 }
+/*
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  width:800px;
+  position:relative;
+  left:320px;
+  border-radius:20px;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+*/

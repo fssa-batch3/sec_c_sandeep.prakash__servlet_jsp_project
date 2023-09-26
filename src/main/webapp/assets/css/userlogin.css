@@ -129,3 +129,39 @@ input[type="password"]::placeholder {
     background-color: rgb(15, 190, 15);
 
 }
+
+
+ 
+.alert {
+  padding: 20px;
+  background-color: #04AA6D;
+  color: white;
+  width:300px;
+  position:relative;
+  left:560px;
+  border-radius:20px;
+}
+.alert1 {
+  padding: 20px;
+  background-color: #FF9494;
+  color: white;
+  width:300px;
+  position:relative;
+  left:560px;
+  border-radius:20px;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}

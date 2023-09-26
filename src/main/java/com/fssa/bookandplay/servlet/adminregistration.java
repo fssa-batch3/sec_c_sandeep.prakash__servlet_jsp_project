@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.fssa.bookandplay.exceptions.DAOException;
+import com.fssa.bookandplay.exceptions.InvalidGroundOwnerDetailException;
 import com.fssa.bookandplay.model.GroundOwner;
 import com.fssa.bookandplay.service.GroundOwnerService;
 
@@ -21,51 +22,61 @@ import com.fssa.bookandplay.service.GroundOwnerService;
 @WebServlet("/adminregistration1")
 public class adminregistration extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
-    public adminregistration() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
 
 	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#HttpServlet()
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public adminregistration() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+	 *      response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 		PrintWriter out = response.getWriter();
 		String name = request.getParameter("adminname");
-		String organisationName= request.getParameter("orgname");
+		String organisationName = request.getParameter("orgname");
 		String email = request.getParameter("email-id");
-	
 
-		long phoneNumber =Long.parseLong( request.getParameter("mobile-number"));
+		long phoneNumber = Long.parseLong(request.getParameter("mobile-number"));
 		String password = request.getParameter("adminpassword");
-		
-		GroundOwnerService gws=new GroundOwnerService();
-		
-		GroundOwner user1 = new GroundOwner(name,organisationName,email,phoneNumber,password,"https://example.com/image1.jpg");
+
+		GroundOwnerService gws = new GroundOwnerService();
+
+		GroundOwner user1 = new GroundOwner(name, organisationName, email, phoneNumber, password,
+				"https://example.com/image1.jpg");
 		try {
 			if (gws.addgroundOwner(user1)) {
 				out.append("<h1>success</h1>");
+				request.setAttribute("Successmessage", "Successfully registered");
+				RequestDispatcher dispatcher = request.getServletContext()
+						.getRequestDispatcher("/groundadminlogin.jsp");
+				dispatcher.forward(request, response);
+
 			}
 
-		} catch (DAOException | SQLException e) {
-			
+		} catch (DAOException | SQLException | InvalidGroundOwnerDetailException e) {
+
 			e.printStackTrace();
+			request.setAttribute("ErrorMessage", e.getMessage());
+			RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/groundadminregister.jsp");
+			dispatcher.forward(request, response);
 		}
-		RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/groundadminlogin.jsp");
-		dispatcher.forward(request, response);
 
 	}
 
 	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+	 *      response)
 	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
 	}

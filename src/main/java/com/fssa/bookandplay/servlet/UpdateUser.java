@@ -41,8 +41,7 @@ public class UpdateUser extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+
 		PrintWriter out = response.getWriter();
 		String id = request.getParameter("uId");
 		System.out.println(id);

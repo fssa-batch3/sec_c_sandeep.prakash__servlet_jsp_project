@@ -9,8 +9,53 @@
 <title>Book and Play</title>
 	    <link rel="icon" type="image/icon" href="https://iili.io/J9lLgxR.png">
 </head>
+  	   	 <script src="/bookandplay-web/assets/js/sweetalert.min.js"></script>
 <body>
    <div id="container">
+   
+   
+
+   <script>
+   <%
+        String successmessage=(String)request.getAttribute("Successmessage");
+        String errormessage=(String)request.getAttribute("ErrorMessage");
+        
+        %>
+        
+        <%
+        
+        if(successmessage!=null){
+        
+        %>
+            
+        <h1><%=successmessage %></h1>
+           <%
+        
+        }%>
+         <%
+        
+        
+           if(errormessage!=null){
+        
+        %>
+        
+        swal("Failed!","<%=errormessage%>", "error");
+        setTimeout(() => {
+           
+            window.location.href="groundadminregister.jsp";
+        }, 4000);
+     
+
+       
+           <%
+        
+        }
+         
+        %>
+        </script>
+       
+
+   
         <!-- signup form -->
         <div class="forms">
             <!-- <h1>Seller Signup</h1> -->

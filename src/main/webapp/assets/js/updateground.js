@@ -37,7 +37,6 @@ editbtn.addEventListener("click",()=>{
   groundName.removeAttribute("disabled");
   groundPlace.removeAttribute("disabled");
   groundaddress.removeAttribute("disabled");
-  groundLocationLink.removeAttribute("disabled");
   groundImage1.removeAttribute("disabled");
   groundImage2.removeAttribute("disabled");
   groundImage3.removeAttribute("disabled"); 
@@ -48,7 +47,7 @@ editbtn.addEventListener("click",()=>{
     groundTimingfrom.removeAttribute("disabled");
     groundTimingTo.removeAttribute("disabled");
     groundRules.removeAttribute("disabled");
-    groundCity.removeAttribute("disabled");
+ 
     groundPrice.removeAttribute("disabled");
     groundincreasingPrice.removeAttribute("disabled");
     groundCourts.removeAttribute("disabled");
