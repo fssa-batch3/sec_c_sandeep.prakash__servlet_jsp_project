@@ -25,13 +25,13 @@
 </label>
     <ul>
      <li>
-<a href="../../index.html">Home</a> 
+<a href="<%=request.getContextPath()%>/index.jsp">Home</a> 
 </li>
     <li>
-<a href="../../pages/bookinground/bookground.html">Book Grounds</a>
+<a href="<%=request.getContextPath()%>/ground.jsp">Book Grounds</a>
 </li>
     <li>
-<a href="../../pages/contactus/contact.html">Contact us</a>
+<a href="<%=request.getContextPath()%>/contact.jsp">Contact us</a>
 </li>
      </ul>
     <a href="../../index.html">

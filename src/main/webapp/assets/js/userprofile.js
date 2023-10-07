@@ -403,21 +403,20 @@ const requestData =
 			axios.post(url, requestData)
 			  .then(function (response) {
 			    // handle success
-			    console.log(response.data);
+			    console.log(response.data+"dadeep");
 			    const serverMsg = response.data;
 			    
 			    if(serverMsg.trim() === 'success') {
-			    	console.log("success");
-			    }  
-			    else {
-			    	console.log("not success");
-			    }
-			  })
-			  .catch(function (error) {
-			    // handle error
-			    console.log(error);
-			  })
-        editbutn1.innerHTML = "Edit";
+			    	console.log("success ");
+			    	      swal("Success!","Your Profile Updated successfully", "success");
+        setTimeout(() => {
+           
+           
+        }, 4000);
+        
+        
+        
+                editbutn1.innerHTML = "Edit";
         namebox1.setAttribute("disabled", "");
                 namebox2.setAttribute("disabled", "");
         // user_email.setAttribute("disabled","")
@@ -435,6 +434,21 @@ const requestData =
         user_genders.setAttribute("disabled", "");
         playerjoin.style.display = "none";
         p_jointext.style.display = "none";
+			    }  
+			    else {
+			    	console.log("not success");
+			    	 swal("Failed!",serverMsg, "error");
+        setTimeout(() => {
+
+        }, 4000);
+     
+			    }
+			  })
+			  .catch(function (error) {
+			    // handle error
+			    console.log(error);
+			  })
+
         
         
 

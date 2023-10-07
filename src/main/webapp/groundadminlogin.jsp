@@ -31,7 +31,7 @@
         swal("Success!","<%=successmessage%>", "success");
         setTimeout(() => {
            
-            window.location.href="userlogin.jsp";
+            window.location.href="groundadminlogin.jsp";
         }, 4000);
  
            <%

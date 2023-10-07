@@ -42,7 +42,7 @@
             </div>
         </a> -->
 
-        <a class="anpro" href="./newprofile.html">
+        <a class="anpro" href="<%=request.getContextPath()%>/playerprofile.jsp">
             <div class="propage">
                 <i class="bx bx-log-out">
                 </i>

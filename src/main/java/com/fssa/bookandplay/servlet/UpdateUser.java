@@ -9,6 +9,7 @@ import java.time.LocalTime;
 import java.time.ZoneId;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -19,6 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.fssa.bookandplay.builder.UserBuilder;
 import com.fssa.bookandplay.exceptions.DAOException;
+import com.fssa.bookandplay.exceptions.InvalidUserDetailException;
 import com.fssa.bookandplay.model.User;
 import com.fssa.bookandplay.service.UserService;
 
@@ -71,6 +73,11 @@ public class UpdateUser extends HttpServlet {
 		System.out.println(aboutplayer+"sand");
 System.out.println(startTimeStr+"mavan");
 System.out.println(endTimeStr+"mavaniii");
+List<String> sportsList=null;
+if(selectedSports!=null) {
+	
+	sportsList=	Arrays.asList(selectedSports);
+}
 
 		LocalTime localTime = null;
 		LocalTime localTime2 = null;
@@ -119,22 +126,23 @@ System.out.println(endTimeStr+"mavaniii");
 					.phoneNumberBuild(phoneNumber)
 					.playerStatusBuild(status)
 					.ageBuild(Integer.parseInt(userAge))
-					.genderBuild(userGender).knownSportsBuild(Arrays.asList(selectedSports)).locationBuild(userLocation)
+					.genderBuild(userGender).knownSportsBuild(sportsList).locationBuild(userLocation)
 					.timingAvailFromBuild(localTime).timingAvailToBuild(localTime2).aboutBuilder(aboutplayer)
 					.imageBuilder("https://example.com/image1.jpg").build();
 
 			try {
 				if (us.updateUserPlayer(user1)) {
-					out.append("<h1>success registereds</h1>");
+
 					out.println("success");
 					System.out.println("update don");
 //					RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/userlogin.jsp");
 //					dispatcher.forward(request, response);
 				}
 
-			} catch (DAOException | SQLException e) {
+			} catch (DAOException | SQLException | InvalidUserDetailException  e) {
 				
 				e.printStackTrace();
+				out.println(e.getMessage());
 			}
 			
 		}
@@ -147,7 +155,7 @@ System.out.println(endTimeStr+"mavaniii");
 					.build();
 			try {
 				if (us.updateUserOnly(user2)) {
-					out.append("<h1>success updated</h1>");
+				
 					out.println("success");
 					System.out.println("update don");
 //					RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/userlogin.jsp");
@@ -158,9 +166,10 @@ System.out.println(endTimeStr+"mavaniii");
 					out.println("fail");
 				}
 
-			} catch (DAOException | SQLException e) {
+			} catch (DAOException | SQLException | InvalidUserDetailException  e) {
 				
 				e.printStackTrace();
+				out.println(e.getMessage());
 			}
 		}
 

@@ -50,10 +50,11 @@ public class AdminProfileUpdate extends HttpServlet {
 	try {
 		gros.updategroundOwner(user1);
 		System.out.println("ground admin profile updated");
-		 response.getWriter().write("success");
+		out.println("success");
 	} catch (DAOException | SQLException |InvalidGroundOwnerDetailException e) {
-		 response.getWriter().write(e.getMessage());
+		out.println(e.getMessage());
 		e.printStackTrace();
+		
 		
 	}
 	}

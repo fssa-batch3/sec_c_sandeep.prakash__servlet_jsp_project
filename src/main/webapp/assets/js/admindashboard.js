@@ -74,12 +74,9 @@ editbutn.addEventListener("submit", (e) => {
     e.preventDefault()
 
 
-
-
     if (editbutn1.innerHTML == "Edit") {
 
-
-        editbutn1.innerHTML = "Save"
+   editbutn1.innerHTML = "Save"
         namebox.removeAttribute("disabled");
         groundnamebox.removeAttribute("disabled")
         user_phone.removeAttribute("disabled");
@@ -106,19 +103,16 @@ editbutn.addEventListener("submit", (e) => {
 			    const serverMsg = response.data;
 			    
 			    if(serverMsg.trim() === 'success') {
-			    	alert("Your Profile Updated Successfully ")
-			    }  
-			    else {
-			    	alert(serverMsg);
-			    }
-			  })
-			  .catch(function (error) {
-			    // handle error
-			    console.log(error);
-			  })
-		
-		
-        editbutn1.innerHTML = "Edit";
+			          swal("Success!","Your Profile Updated successfully", "success");
+        setTimeout(() => {
+           
+           
+        }, 4000);
+        
+        
+        
+        
+                editbutn1.innerHTML = "Edit";
         namebox.setAttribute("disabled", "");
         groundnamebox.setAttribute("disabled","")
         // user_email.setAttribute("disabled","")
@@ -127,7 +121,24 @@ editbutn.addEventListener("submit", (e) => {
        
  }
 
+			    else {
+			    	swal("Failed!",serverMsg, "error");
+        setTimeout(() => {
 
+        }, 4000);
+			    }
+
+            })
+			
+			  .catch(function (error) {
+			    // handle error
+			    console.log(error);
+			  })
+		
+		
+
+
+            }
 
 })
 
@@ -158,17 +169,9 @@ eye.addEventListener("click",()=>{
 })
 
 
-
-
-
-
-
-
          })
+       
          .catch(function (error) {
              // handle error
              console.log(error+"sandyyyyyyy");
          });
-
-
-

@@ -32,7 +32,7 @@ Ground selectedGround = (Ground) request.getAttribute("adminGround");
 	
 
 
-<a href="./adminproduct.html"><button class="backbtn">Back to your profile</button></a>
+<a href="<%=request.getContextPath()%>/admindashboard.jsp"><button class="backbtn">Back to your profile</button></a>
     <div class="formcontainer">
         <!-- <button class="closebtn">
             <i class="fa-solid fa-xmark fa-bounce"></i>

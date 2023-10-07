@@ -25,24 +25,24 @@
     
 <ul>
     <li>
-<a href="../../index.html">Home</a> 
+<a href="<%=request.getContextPath()%>/index.jsp">Home</a> 
 </li>
     <li>
-<a href="../../pages/bookinground/bookground.html">Book Grounds</a>
+<a href="<%=request.getContextPath()%>/ground.jsp">Book Grounds</a>
 </li>
     <li>
-<a href="../../pages/player/findplayers.html">Find Players</a>
+<a href="<%=request.getContextPath()%>/findplayers.jsp">Find Players</a>
 </li>
     
 </ul>
-<a href="../../index.html">
- <img class="logo" src="/bookandplay-web/assets/images/Logo.png" alt="Book and play">
+<a href="<%=request.getContextPath()%>/index.jsp">
+ <img class="logo" src="<%=request.getContextPath()%>/assets/images/Logo.png" alt="Book and play">
 </a>
    
 <br>
 <div class="cont2">
        <div class="userbar">
-        <img class="userlogo" src="../../assets/images/userlogo.png" alt="profilepicofplayer">
+        <img class="userlogo" src="<%=request.getContextPath()%>/assets/images/userlogo.png" alt="profilepicofplayer">
 <a href="../../pages/player/newprofile.html">
  <button class="userprofile"> Your Profile</button>
 </a>

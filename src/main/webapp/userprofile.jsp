@@ -15,7 +15,10 @@
       <link rel="stylesheet" type="text/css"
 	href="/bookandplay-web/assets/css/userprofile.css">
 	    <link rel="icon" type="image/icon" href="https://iili.io/J9lLgxR.png">
+	    
+	    
 </head>
+  	 <script src="/bookandplay-web/assets/js/sweetalert.min.js"></script>
 <body>
 
 <div class="mainpoage">

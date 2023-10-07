@@ -21,6 +21,7 @@ import javax.servlet.http.HttpSession;
 
 import com.fssa.bookandplay.builder.GroundBuilder;
 import com.fssa.bookandplay.exceptions.DAOException;
+import com.fssa.bookandplay.exceptions.InvalidGroundDetailException;
 import com.fssa.bookandplay.model.Ground;
 import com.fssa.bookandplay.model.GroundOwner;
 import com.fssa.bookandplay.service.GroundService;
@@ -115,7 +116,7 @@ public class GroundRegistration extends HttpServlet {
 				out.append("<h1>success</h1>");
 			}
 
-		} catch (DAOException | SQLException e) {
+		} catch (DAOException | SQLException |InvalidGroundDetailException e) {
 			
 			e.printStackTrace();
 		}

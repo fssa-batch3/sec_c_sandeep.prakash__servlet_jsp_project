@@ -1,0 +1,9 @@
+@charset "ISO-8859-1";
+
+#container {
+    background-image: url(../../assets/images/pagenotfound.jpg);
+    height: 110vh;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}

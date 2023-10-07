@@ -17,6 +17,7 @@
 	href="/bookandplay-web/assets/css/admindashboard.css">
 	 <link rel="icon" type="image/icon" href="https://iili.io/J9lLgxR.png">
 </head>
+<script src="/bookandplay-web/assets/js/sweetalert.min.js"></script>
 <body>
 
 

@@ -6,25 +6,25 @@
 
     <ul>
       <li>
-<a href="/bookandplay-web/index.jsp">Home</a> 
+<a href="<%=request.getContextPath()%>/index.jsp">Home</a> 
 </li>
       <li>
-<a href="/bookandplay-web/ground.jsp">Book Grounds</a>
+<a href="<%=request.getContextPath()%>/ground.jsp">Book Grounds</a>
 </li>
       <li >
-<a class="findplayers" href="/bookandplay-web/findplayers.jsp">Find Players</a>
+<a class="findplayers" href="<%=request.getContextPath()%>/findplayers.jsp">Find Players</a>
 </li>
       <li class="contact ">
-<a href="/bookandplay-web//contact.jsp">Contact us</a>
+<a href="<%=request.getContextPath()%>/contact.jsp">Contact us</a>
 </li>
       <li>
-<a href="/bookandplay-web/userlogin.jsp">
+<a href="<%=request.getContextPath()%>/userlogin.jsp">
  <button class="login">Login</button>
 </a>
 </li>
     </ul>
     <a href="/index.html">
-<img class="logo" src="./assets/images/Logo.png " alt="Book and play">
+<img class="logo" src="<%=request.getContextPath()%>/assets/images/Logo.png " alt="Book and play">
 </a>
 
   </header>
