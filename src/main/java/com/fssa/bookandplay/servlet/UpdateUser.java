@@ -57,7 +57,7 @@ public class UpdateUser extends HttpServlet {
 		//String userPass = request.getParameter("upassword");
 		String userPlayerStatus = request.getParameter("joinplayer");
 		
-		System.out.println(userPlayerStatus);
+		System.out.println(userPlayerStatus +"okkkkkkkkk");
 		String userAge = request.getParameter("uage1");
 			
 		System.out.println(userAge);

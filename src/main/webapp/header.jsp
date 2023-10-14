@@ -23,7 +23,7 @@
 </a>
 </li>
     </ul>
-    <a href="/index.html">
+    <a href="<%=request.getContextPath()%>/index.jsp">
 <img class="logo" src="<%=request.getContextPath()%>/assets/images/Logo.png " alt="Book and play">
 </a>
 

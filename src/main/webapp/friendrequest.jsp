@@ -34,7 +34,7 @@
 <a href="<%=request.getContextPath()%>/contact.jsp">Contact us</a>
 </li>
      </ul>
-    <a href="../../index.html">
+    <a href="<%=request.getContextPath()%>/index.jsp">
  <img class="logo" src="/bookandplay-web/assets/images/Logo.png" alt="Book and play">
 </a>   
     </header>

@@ -76,7 +76,7 @@ if(filterData.length==0){
  let bookplay=document.querySelector(".logoletter")
  bookplay.style.display="none"
  btn.addEventListener("click",()=>{
-   window.location.href="../../pages/player/newprofile.html"
+   window.location.href="userprofile.jsp"
  })
 
 }

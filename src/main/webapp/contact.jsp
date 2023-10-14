@@ -172,7 +172,7 @@
              //const responseUserData = response.data.substring(response.data.indexOf('{'));
              //const userLogin = JSON.parse(responseUserData);
              const userLogin =  response.data;
-                 zzxszx
+             
                  
                  
                  const loginbtn = document.querySelector(".login")

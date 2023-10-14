@@ -42,8 +42,8 @@
 <br>
 <div class="cont2">
        <div class="userbar">
-        <img class="userlogo" src="<%=request.getContextPath()%>/assets/images/userlogo.png" alt="profilepicofplayer">
-<a href="../../pages/player/newprofile.html">
+        <img class="userlogo" src="https://iili.io/HkW7U4S.jpg" alt="profilepicofplayer">
+<a href="<%=request.getContextPath()%>/userprofile.jsp">
  <button class="userprofile"> Your Profile</button>
 </a>
 </div>

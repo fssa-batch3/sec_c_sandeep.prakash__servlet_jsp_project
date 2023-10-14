@@ -21,6 +21,36 @@
 <body>
 
 
+   <script>
+   <%
+        String successmessage=(String)request.getAttribute("Successmessage");
+
+        
+        %>
+        
+
+         <%
+        
+        
+           if(successmessage!=null){
+        
+        %>
+        
+        swal("Success!","<%=successmessage%>", "success");
+        setTimeout(() => {
+           
+            window.location.href="admindashboard.jsp";
+        }, 4000);
+     
+
+       
+           <%
+        
+        }
+         
+        %>
+        </script>
+
 
  <div class="mainpoage">
         <div class="sidebar">

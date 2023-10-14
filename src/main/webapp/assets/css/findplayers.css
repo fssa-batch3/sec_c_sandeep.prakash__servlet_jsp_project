@@ -54,16 +54,19 @@ ul li a:hover{
 
 .login{
   font-size: medium;
-  padding: 5px 15px;
-  height: 113%;
-  width: 102%;
-  background-color: rgb(5, 34, 120);
-  color: white;
+    padding: 2px 17px;
+  height: 102%;
+  width: 100%;
+ background-color: #ffffff;
+    color: rgb(0, 0, 0);
   position: relative;
   bottom: 15%;
   font-weight: bold;
   cursor: pointer;
   border: none;
+     border-radius: 10px;
+    box-shadow: 0 3px 10px rgb(10, 9, 46);
+    letter-spacing: 1px;
   
 
 }

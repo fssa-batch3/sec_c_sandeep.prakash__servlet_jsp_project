@@ -69,6 +69,11 @@ public class GroundRegistration extends HttpServlet {
 		String endTimeStr = request.getParameter("endTime1");
 		String selectedCourtsValue = request.getParameter("selectedCourts");
 		String[] selectedSports = request.getParameterValues("sportsAvailable");
+		List<String> sportsList=null;
+		if(selectedSports!=null) {
+			
+			sportsList=	Arrays.asList(selectedSports);
+		}
 		LocalTime localTime = null;
 		LocalTime localTime2 = null;
 		try {
@@ -102,7 +107,8 @@ public class GroundRegistration extends HttpServlet {
 		Ground ground1 = new GroundBuilder().groundNameBuild(groundName).groundMainAreaBuild(groundMainArea)
 				.groundAddressBuild(groundAddress).groundLocationLinkBuild(groundLocationLink)
 				.districtBuild(selecteddistrictValue).groundImagesBuild(validImages)
-				.sportsAvailableBuild(Arrays.asList(selectedSports)).startTimeBuild(localTime).endTimeBuild(localTime2)
+				.sportsAvailableBuild(sportsList).
+				startTimeBuild(localTime).endTimeBuild(localTime2)
 				.groundRulesBuild(groundRulesValue).priceBuild(Double.parseDouble(price))
 				.increasingPriceForExtraHoursBuild(Double.parseDouble(increaseprice))
 				.groundOwnerIdBuild(loggedInowner.getGroundOwnerId())
@@ -114,11 +120,17 @@ public class GroundRegistration extends HttpServlet {
 		try {
 			if (gs.addGround(ground1)) {
 				out.append("<h1>success</h1>");
+				request.setAttribute("Successmessage","Successfully Ground registered" );
+				RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/admindashboard.jsp");
+				dispatcher.forward(request, response);
 			}
 
 		} catch (DAOException | SQLException |InvalidGroundDetailException e) {
 			
 			e.printStackTrace();
+			request.setAttribute("ErrorMessage", e.getMessage());	
+			RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/groundregistration.jsp");
+			dispatcher.forward(request, response);
 		}
 		RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/admindashboard.jsp");
 		dispatcher.forward(request, response);

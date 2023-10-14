@@ -18,8 +18,38 @@
 	href="/bookandplay-web/assets/css/groundregistration.css">
 		    <link rel="icon" type="image/icon" href="https://iili.io/J9lLgxR.png">
 </head>
+  	   	 <script src="/bookandplay-web/assets/js/sweetalert.min.js"></script>
 <body>
       <div class="formcontainer">
+         <script>
+   <%
+      
+        String errormessage=(String)request.getAttribute("ErrorMessage");
+        
+        %>
+        
+ 
+         <%
+        
+        
+           if(errormessage!=null){
+        
+        %>
+        
+        swal("Failed!","<%=errormessage%>", "error");
+        setTimeout(() => {
+           
+         
+        }, 4000);
+     
+
+       
+           <%
+        
+        }
+         
+        %>
+        </script>
 
         <form id="formbtn" action="groundregistration1" method="post">
             <div class="box1">

@@ -23,7 +23,54 @@
  <link rel="stylesheet" type="text/css" href="/bookandplay-web/assets/css/updateground.css">
  	    <link rel="icon" type="image/icon" href="https://iili.io/J9lLgxR.png">
 </head>
+ <script src="/bookandplay-web/assets/js/sweetalert.min.js"></script>
 <body>
+   <script>
+   <%
+        String successmessage=(String)request.getAttribute("Successmessage");
+        String errormessage=(String)request.getAttribute("ErrorMessage");
+        
+        %>
+        
+        <%
+        	
+        if(successmessage!=null){
+            
+     %>
+     
+     swal("Success!","<%=successmessage%>", "success");
+     setTimeout(() => {
+        
+     }, 4000);
+  
+
+    
+        <%
+     
+     }%>
+         <%
+        
+        
+           if(errormessage!=null){
+        
+        %>
+        
+        swal("Failed!","<%=errormessage%>", "error");
+        setTimeout(() => {
+           
+ 
+        }, 4000);
+     
+
+       
+           <%
+        
+        }
+         
+        %>
+        </script>
+       
+        
 
 	<%
 Ground selectedGround = (Ground) request.getAttribute("adminGround");

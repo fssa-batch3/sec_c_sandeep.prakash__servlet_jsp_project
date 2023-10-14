@@ -433,11 +433,14 @@ axios.post(url, requestData)
              console.log(error);
            })
 
+ setTimeout(function() {
+    window.location.reload();
+}, 1000); 
 
 
-
-     alert("you requested");
-     conBtn.innerHTML = "Requested"
+     alert("You Given a Request");
+     conBtn.innerHTML = "Requested";
+     
 
    }
 
@@ -455,6 +458,23 @@ axios.post(url, requestData)
        connectBtn.innerText = "Requested";
     } else {
       console.log("No existing friend request found from the sender to the receiver.");
+    }
+  })
+  .catch(function (error) {
+   
+    console.error(error);
+  });
+   
+    axios.get(`http://localhost:8080/bookandplay-web/CheckFriendRequestAccept?senderId=${userId}&receiverId=${playerId1}`)
+  .then(function (response) {
+	  console.log(response.data);
+    const jsonResponse = response.data;
+   const friendRequestExists = jsonResponse.exists;
+    if (friendRequestExists) {
+      console.log("A friend request already exists from the sender to the receiver.");
+       connectBtn.innerText = "Accepted";	
+    } else {
+      console.log("No friend request accept");
     }
   })
   .catch(function (error) {

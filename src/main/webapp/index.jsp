@@ -8,7 +8,7 @@
 <meta charset="ISO-8859-1">
 <title>Book and Play</title>
   <link rel="stylesheet" type="text/css"
-	href="<%=request.getContextPath()%>/assets/css/index.css">
+	href="<%=request.getContextPath()%>/assets/css/style.css">
 		    <link rel="icon" type="image/icon" href="https://iili.io/J9lLgxR.png">
 </head>
 <body>

@@ -58,7 +58,7 @@ public class AddChat extends HttpServlet {
 		chat.setSentMessages(messages);
 		
 		try {
-			chatService.addChatg(chat);
+			chatService.addChat(chat);
 			 response.getWriter().write("success");
 			System.out.println("message sent success");
 		} catch (DAOException | SQLException e) {

@@ -20,6 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.fssa.bookandplay.builder.GroundBuilder;
 import com.fssa.bookandplay.exceptions.DAOException;
+import com.fssa.bookandplay.exceptions.InvalidGroundDetailException;
 import com.fssa.bookandplay.model.Ground;
 import com.fssa.bookandplay.service.GroundService;
 
@@ -67,6 +68,11 @@ public class GroundUpdateById extends HttpServlet {
 		String endTimeStr = request.getParameter("groundendTime1");
 		String selectedCourtsValue = request.getParameter("groundselectedCourts");
 		String[] selectedSports = request.getParameterValues("sportsAvailable1");
+		List<String> sportsList=null;
+		if(selectedSports!=null) {
+			
+			sportsList=	Arrays.asList(selectedSports);
+		}
 		LocalTime localTime = null;
 		LocalTime localTime2 = null;
 		
@@ -122,26 +128,30 @@ public class GroundUpdateById extends HttpServlet {
 			Ground ground1 = new GroundBuilder().groundIdBuild(data).groundNameBuild(groundName).groundMainAreaBuild(groundMainArea)
 					.groundAddressBuild(groundAddress).groundLocationLinkBuild(groundLocationLink)
 					.districtBuild(selecteddistrictValue).groundImagesBuild(validImages)
-					.sportsAvailableBuild(Arrays.asList(selectedSports)).startTimeBuild(localTime).endTimeBuild(localTime2)
+					.sportsAvailableBuild(sportsList).startTimeBuild(localTime).endTimeBuild(localTime2)
 					.groundRulesBuild(groundRulesValue).priceBuild(Double.parseDouble(price))
 					.increasingPriceForExtraHoursBuild(Double.parseDouble(increaseprice))
 					.courtsAvailableBuild(Integer.parseInt(selectedCourtsValue)).build();
 			if (gs.updateGround(ground1)) {
 				out.append("<h1>success update</h1>");
+				request.setAttribute("Successmessage","Successfully Ground Updated" );
 				RequestDispatcher dispatcher = request.getRequestDispatcher("/UpdateGround");
 				dispatcher.forward(request, response);
 			}
 
-		} catch (DAOException | SQLException e) {
+		} catch (DAOException | SQLException |InvalidGroundDetailException  e) {
 			
 			e.printStackTrace();
+			request.setAttribute("ErrorMessage", e.getMessage());	
+			RequestDispatcher dispatcher = request.getRequestDispatcher("/UpdateGround");
+			dispatcher.forward(request, response);
 		}
 		}
 		else {
 	        out.append("<h1>No changes made</h1>");
 	    }
-		//RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/groundupdate.jsp");
-		//dispatcher.forward(request, response);
+//		RequestDispatcher dispatcher = request.getServletContext().getRequestDispatcher("/groundupdate.jsp");
+//		dispatcher.forward(request, response);
 
 		
 	}

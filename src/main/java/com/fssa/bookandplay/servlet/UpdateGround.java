@@ -39,6 +39,8 @@ public class UpdateGround extends HttpServlet {
 		HttpSession session = request.getSession();
 		
 		GroundService gs=new GroundService();
+		 String errormessage=(String)request.getAttribute("ErrorMessage");
+		 String successmessage=(String)request.getAttribute("Successmessage");
 		try {
 
 
@@ -51,8 +53,8 @@ public class UpdateGround extends HttpServlet {
         	
             Ground selectedGround = gs.getGroundByOwnerId(selectedGroundId); 
             request.setAttribute("adminGround", selectedGround);
-            System.out.println("Selected Ground: " + selectedGround); 
-    
+         request.setAttribute("ErrorMessage", errormessage);
+         request.setAttribute("Successmessage", successmessage);
   
 			}
 		

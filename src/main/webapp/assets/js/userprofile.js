@@ -172,8 +172,9 @@ agelabel.style.display = "none"
               // if a user is   a player
 
             //  p_jointext.style.display="none";
-            join_as_player.style.display = "none"
-            join_player_word.style.display = "none"
+            join_as_player.style.display = "none";
+             join_as_player.checked = true;
+            join_player_word.style.display = "none";
 
 
                 fsidename.innerText = userLogin.firstName;
@@ -410,9 +411,9 @@ const requestData =
 			    	console.log("success ");
 			    	      swal("Success!","Your Profile Updated successfully", "success");
         setTimeout(() => {
+             window.location.href="userprofile.jsp";
            
-           
-        }, 4000);
+        }, 1000);
         
         
         

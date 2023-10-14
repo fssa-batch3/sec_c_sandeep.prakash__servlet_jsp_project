@@ -90,7 +90,24 @@ let filterData = [];
       
       
         filterData = response.data;
-        
+        if(filterData.length==0||filterData==null ){
+  let maincon=document.querySelector(".main2");
+  let ptag=document.createElement("h4")
+  ptag.setAttribute("class","h5tag");
+  ptag.innerHTML=`Hi You dont have any friend request`
+  maincon.append(ptag)
+  
+
+  document.body.style.overflow="hidden"
+  
+  let btn=document.createElement("button")
+  btn.setAttribute("class","btnok");
+  btn.innerText="OK"
+  ptag.append(btn)
+  btn.addEventListener("click",()=>{
+    window.location.href="userprofile.jsp"
+  })
+}
  
           playerData(filterData);
      
@@ -151,7 +168,7 @@ function playerData(array = []) {
     anchor = document.createElement("a");
     anchor.setAttribute(
       "href",
-      `../../pages/player/playerprofile.html?player_id=${ 
+      `playerprofile.jsp?playerId=${ 
         item.sender.userId}`
     );
     // anchor.setAttribute("href", player_list[i]["anchorlocataion"])
