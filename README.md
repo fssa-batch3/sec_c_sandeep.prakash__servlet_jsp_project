@@ -16,6 +16,7 @@ Hi This project was developed using HTML, CSS,JavaScript,Java ,MYSql,Servlet,JDB
 - Elasticemail for sending emails
 - Flatpickr for Time Picker Functionality
 - SweetAlert for Enhanced User Alerts
+-  Used Stored Procedure in Mysql
 
 
 Welcome to the **Book and Play** platform!
